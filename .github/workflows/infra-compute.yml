@@ -1,0 +1,69 @@
+name: Base optimizer compute (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      input_file:
+        description: Repository JSON conditions (ignored when resuming)
+        default: tools/base-enumerator/examples/quality-trading.json
+        required: true
+        type: string
+      workers:
+        description: Validation workers (3 for the public 4-vCPU runner)
+        default: '3'
+        type: choice
+        options: ['3', '4', '2', '1', 'auto']
+      minutes:
+        description: Compute budget in minutes (1-300)
+        default: 60
+        type: number
+      resume_run_id:
+        description: Previous run ID to resume; leave empty for a new calculation
+        default: ''
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: base-optimizer-compute
+  cancel-in-progress: false
+jobs:
+  compute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      COMPUTE_INPUT: ${{ inputs.input_file }}
+      COMPUTE_WORKERS: ${{ inputs.workers }}
+      COMPUTE_MINUTES: ${{ inputs.minutes }}
+      RESUME_RUN_ID: ${{ inputs.resume_run_id }}
+      COMPUTE_OUTPUT: ${{ runner.temp }}/infra-compute
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Validate compute settings
+        run: node --input-type=module -e 'import {remoteSettings} from "./tools/base-enumerator/actions-run.mjs"; remoteSettings(process.env);'
+      - name: Test calculator
+        working-directory: tools/base-enumerator
+        run: node --test test.mjs batch.test.mjs trading.test.mjs search.test.mjs parallel.test.mjs resources.test.mjs
+      - name: Restore previous results and checkpoint
+        if: inputs.resume_run_id != ''
+        uses: actions/download-artifact@v5
+        with:
+          name: infra-compute-state
+          path: ${{ env.COMPUTE_OUTPUT }}
+          run-id: ${{ inputs.resume_run_id }}
+          github-token: ${{ github.token }}
+      - name: Compute without deploying the site
+        run: node tools/base-enumerator/actions-run.mjs
+      - name: Save results and checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: infra-compute-state
+          path: ${{ env.COMPUTE_OUTPUT }}/
+          if-no-files-found: warn
+          retention-days: 7
