@@ -1,0 +1,101 @@
+{
+  "base": {
+    "rooms": {
+      "control": {
+        "type": "CONTROL",
+        "level": 3
+      },
+      "power": {
+        "type": "POWER",
+        "level": 2
+      },
+      "factory": {
+        "type": "MANUFACTURE",
+        "level": 1
+      },
+      "workshop": {
+        "type": "WORKSHOP",
+        "level": 1
+      },
+      "meeting": {
+        "type": "MEETING",
+        "level": 1
+      },
+      "office": {
+        "type": "HIRE",
+        "level": 1
+      },
+      "dorm": {
+        "type": "DORMITORY",
+        "level": 3,
+        "ambience": 3000
+      }
+    }
+  },
+  "progress": {
+    "char_502_nblade": {
+      "owned": true,
+      "elite": 0,
+      "level": 30
+    },
+    "char_500_noirc": {
+      "owned": true,
+      "elite": 0,
+      "level": 30
+    },
+    "char_503_rang": {
+      "owned": true,
+      "elite": 0,
+      "level": 30
+    }
+  },
+  "products": {
+    "factory": "4"
+  },
+  "options": {
+    "teams": 2,
+    "rotation": "12h",
+    "extraActions": false,
+    "priority": [
+      "F_GOLD",
+      "F_EXP",
+      "F_DIAMOND"
+    ],
+    "missingClues": [],
+    "development": "current",
+    "maxHours": 168,
+    "rankingWindow": "24h",
+    "optimizeDormSupport": true
+  },
+  "dormSupport": {},
+  "residents": [],
+  "layoutSearch": {
+    "enabled": true,
+    "controlLevels": [
+      1
+    ],
+    "powerCounts": [
+      1,
+      2,
+      3
+    ],
+    "factoryCount": [
+      1,
+      1
+    ],
+    "tradingCount": [
+      0,
+      0
+    ],
+    "dormCount": [
+      1,
+      1
+    ],
+    "recipes": [
+      "1",
+      "4"
+    ],
+    "ambience": "max",
+    "allSupportBuilt": true
+  }
+}

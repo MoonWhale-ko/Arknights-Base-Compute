@@ -1,0 +1,83 @@
+{
+  "version": "24h-cycle-lab-6",
+  "generatedAt": "2026-10-17T15:41:15.742Z",
+  "scope": "Two small fixtures; no full-roster timing or optimality claim.",
+  "cases": [
+    {
+      "file": "demo.json",
+      "exhaustive": {
+        "strategy": "exhaustive",
+        "simulated": 21,
+        "boundPruned": 0,
+        "candidateCacheHits": 78,
+        "controlEffectsCacheHits": 404,
+        "score": [
+          1.1249999999999998,
+          0,
+          0,
+          0.9166666666666666,
+          0,
+          0
+        ],
+        "medianMilliseconds": 10.575316
+      },
+      "bounded": {
+        "strategy": "bounded",
+        "simulated": 17,
+        "boundPruned": 2,
+        "candidateCacheHits": 74,
+        "controlEffectsCacheHits": 348,
+        "score": [
+          1.1249999999999998,
+          0,
+          0,
+          0.9166666666666666,
+          0,
+          0
+        ],
+        "medianMilliseconds": 6.541315999999995
+      },
+      "sameBestScore": true,
+      "reduction": 0.19047619047619047
+    },
+    {
+      "file": "examples/quality-trading.json",
+      "exhaustive": {
+        "strategy": "exhaustive",
+        "simulated": 1659,
+        "boundPruned": 0,
+        "candidateCacheHits": 9098,
+        "controlEffectsCacheHits": 23165,
+        "score": [
+          1.125,
+          1,
+          1.6099999999999997,
+          0,
+          0,
+          0,
+          792.4053925728372
+        ],
+        "medianMilliseconds": 427.5163799999998
+      },
+      "bounded": {
+        "strategy": "bounded",
+        "simulated": 1151,
+        "boundPruned": 44,
+        "candidateCacheHits": 5276,
+        "controlEffectsCacheHits": 16501,
+        "score": [
+          1.125,
+          1,
+          1.6099999999999997,
+          0,
+          0,
+          0,
+          792.4053925728372
+        ],
+        "medianMilliseconds": 260.23213699999997
+      },
+      "sameBestScore": true,
+      "reduction": 0.3062085593731163
+    }
+  ]
+}
