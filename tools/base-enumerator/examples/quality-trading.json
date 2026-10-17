@@ -1,0 +1,94 @@
+{
+  "base": {
+    "rooms": {
+      "trading": {
+        "type": "TRADING",
+        "level": 3
+      },
+      "meeting": {
+        "type": "MEETING",
+        "level": 3
+      },
+      "office": {
+        "type": "HIRE",
+        "level": 3
+      },
+      "dorm": {
+        "type": "DORMITORY",
+        "level": 5,
+        "ambience": 5000
+      },
+      "control": {
+        "type": "CONTROL",
+        "level": 5
+      },
+      "power": {
+        "type": "POWER",
+        "level": 3
+      },
+      "workshop": {
+        "type": "WORKSHOP",
+        "level": 1
+      }
+    }
+  },
+  "progress": {
+    "char_254_vodfox": {
+      "owned": true,
+      "elite": 2,
+      "level": 1
+    },
+    "char_486_takila": {
+      "owned": true,
+      "elite": 2,
+      "level": 1
+    },
+    "char_252_bibeak": {
+      "owned": true,
+      "elite": 2,
+      "level": 1
+    },
+    "char_497_ctable": {
+      "owned": true,
+      "elite": 2,
+      "level": 1
+    },
+    "char_4017_puzzle": {
+      "owned": true,
+      "elite": 2,
+      "level": 1
+    },
+    "char_503_rang": {
+      "owned": true,
+      "elite": 0,
+      "level": 30
+    },
+    "char_283_midn": {
+      "owned": true,
+      "elite": 0,
+      "level": 30
+    }
+  },
+  "options": {
+    "teams": 2,
+    "rotation": "12h",
+    "maxHours": 24,
+    "missingClues": [
+      1,
+      3
+    ],
+    "optimizeDormSupport": false
+  },
+  "candidates": {
+    "trading": [
+      "char_254_vodfox",
+      "char_486_takila",
+      "char_252_bibeak",
+      "char_283_midn"
+    ],
+    "meeting": [
+      "char_497_ctable",
+      "char_4017_puzzle"
+    ]
+  }
+}
