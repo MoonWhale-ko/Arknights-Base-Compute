@@ -35,7 +35,7 @@ jobs:
       COMPUTE_WORKERS: ${{ inputs.workers }}
       COMPUTE_MINUTES: ${{ inputs.minutes }}
       RESUME_RUN_ID: ${{ inputs.resume_run_id }}
-      COMPUTE_OUTPUT: ${{ runner.temp }}/infra-compute
+      COMPUTE_OUTPUT: ${{ github.workspace }}/infra-compute-output
     steps:
       - uses: actions/checkout@v6
         with:
