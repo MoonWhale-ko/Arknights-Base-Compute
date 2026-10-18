@@ -1,0 +1,56 @@
+{
+  "format": "factory-local-catalog-1",
+  "modelVersion": "24h-cycle-lab-7",
+  "fingerprint": "0cfc9267f2a3439a4f1bd0ef54587a84d5a7e735982cfc0315712f93f6c6e721",
+  "complete": true,
+  "scope": "Supported local factory effects only; not a full-base or shift optimizer, not proof of game accuracy.",
+  "operatorsExamined": 415,
+  "supportedOperators": 75,
+  "supportedProfiles": 103,
+  "unsupportedProfiles": 34,
+  "unsupportedOperators": 22,
+  "noFactoryOperators": 325,
+  "combinations": 179352,
+  "programs": 28056,
+  "bySeats": [
+    1,
+    103,
+    5225,
+    174023
+  ],
+  "records": 207410,
+  "rawBytes": 8774147,
+  "gzipBytes": 1139132,
+  "seconds": 4.791271545000001,
+  "combinationsPerSecond": 37433.06934610403,
+  "peakProcessRssMiB": 131.24609375,
+  "rawSha256": "fb5b231a0a16c92ac6cde8dc34d4ce8d7e98d75ce0c532dc4057095de28109a1",
+  "nodeVersion": "v24.19.0",
+  "platform": "linux",
+  "arch": "x64",
+  "externalDependencies": [
+    "powerCount",
+    "tradingCount",
+    "dormLevelSum",
+    "trainingLevel",
+    "controlCount",
+    "controlProduction",
+    "exportRecovery",
+    "workedHours"
+  ],
+  "allOwnedRostersEnumerated": false,
+  "fullBaseOptimizer": false,
+  "warnings": [
+    "Matches only the existing supported local factory model; game accuracy is not established.",
+    "No top-N operator pruning; identities and local skill unlock requirements are preserved.",
+    "Full-base linkage, fatigue, dorms, shifts and 24h/cycle results still require final simulation.",
+    "Timing is for this machine and this limited scope, not a full-base runtime prediction."
+  ],
+  "fullOwnedMaxUnlockProbe": {
+    "loadMs": 178.9861719999999,
+    "filterMs": 18.227598999999827,
+    "availableProfiles": 68,
+    "excludedOperators": 22,
+    "candidates": 52463
+  }
+}
