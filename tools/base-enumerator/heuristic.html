@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>현재 보유 조건 배치 추천 · 계산 실험판</title>
+<style>body{background:#10141b;color:#e3e9f0;font:16px/1.6 system-ui,sans-serif;max-width:1060px;margin:40px auto;padding:0 20px}h1{font-size:28px}textarea{box-sizing:border-box;width:100%;height:300px;background:#171f2b;color:inherit;border:1px solid #63738b;padding:16px;font:14px/1.5 monospace}button,input{font:inherit;padding:8px;background:#202d40;color:inherit;border:1px solid #71829b}button:disabled{opacity:.4}label{display:inline-block;margin:8px 16px 8px 0}input[type=number]{width:80px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#17202b;padding:18px}summary{cursor:pointer}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:8px;border-bottom:1px solid #36465d}.note{color:#bbc6d6}.error{color:#ffaaa3}</style>
+<main><h1>현재 보유 조건 배치 추천</h1>
+<p>시설별 후보 선별 → 연계 조합으로 여러 배치 구성 → 시설 간 교체 → 컨디션·교대 시뮬레이션</p>
+<p class="note">테라아카이브의 공개 탐색 구조를 참고한 독립 구현 실험판입니다. 미지원 스킬은 제외하며 최고 효율을 보장하지 않습니다. 입력과 계산은 이 브라우저에서 처리합니다.</p>
+<label>조건 JSON 불러오기 <input id="file" type="file" accept=".json,application/json"></label><button id="demo">예제 불러오기</button>
+<p>현재 보유·육성 상태와 시설 구성 하나를 입력하세요. 기존 계산기의 조건 JSON을 사용할 수 있습니다.</p>
+<textarea id="input" aria-label="현재 보유 조건 JSON" spellcheck="false"></textarea>
+<div><label>계산 제한(초) <input id="seconds" type="number" value="10" min="1" max="300"></label><label>시작 배치 수 <input id="starts" type="number" value="2" min="1" max="16"></label></div>
+<button id="run">배치 계산</button> <button id="stop" disabled>중단</button> <button id="save" disabled>결과 JSON 저장</button>
+<p id="status" role="status">대기 중</p><section id="result"></section></main>
+<script type="module" src="./heuristic-app.mjs"></script></html>

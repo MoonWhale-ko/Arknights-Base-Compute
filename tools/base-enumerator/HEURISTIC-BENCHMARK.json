@@ -1,0 +1,5362 @@
+{
+  "format": "heuristic-measurements-1",
+  "node": "v24.19.0",
+  "platform": "linux",
+  "fingerprint": "0cfc9267f2a3439a4f1bd0ef54587a84d5a7e735982cfc0315712f93f6c6e721",
+  "source": {
+    "url": "https://terra-archive.net/infra",
+    "inspection": "Search mechanism inspected from a previously saved public deployment snapshot, downloaded 2026-10-16. The live page was also viewed 2026-10-19. Latest engine bundle was not retrieved; no claim of byte-for-byte or current-version parity.",
+    "snapshotFile": "planner-engine-DV9XFkhq.js",
+    "redistributedThirdPartyCode": false
+  },
+  "qualityOracle": {
+    "plans": 1659,
+    "elapsedMs": 777.191595,
+    "score": [
+      1.125,
+      1,
+      1.6099999999999997,
+      0,
+      0,
+      0,
+      792.4053925728372
+    ]
+  },
+  "small": {
+    "matchesOracle": true,
+    "modelVersion": "24h-cycle-lab-7",
+    "fingerprint": "0cfc9267f2a3439a4f1bd0ef54587a84d5a7e735982cfc0315712f93f6c6e721",
+    "preparationMs": 2.394855000000007,
+    "format": "facility-seeded-search-1",
+    "algorithm": "bounded-multistart-facility-greedy-and-exchange",
+    "best": {
+      "plan": {
+        "groups": [
+          {
+            "team": 0,
+            "room": "office",
+            "operators": [
+              "char_503_rang"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "meeting",
+            "operators": [
+              "char_4017_puzzle"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "control",
+            "operators": []
+          },
+          {
+            "team": 0,
+            "room": "trading",
+            "operators": [
+              "char_254_vodfox",
+              "char_486_takila",
+              "char_252_bibeak"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "power",
+            "operators": []
+          },
+          {
+            "team": 1,
+            "room": "office",
+            "operators": []
+          },
+          {
+            "team": 1,
+            "room": "meeting",
+            "operators": [
+              "char_497_ctable"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "control",
+            "operators": []
+          },
+          {
+            "team": 1,
+            "room": "trading",
+            "operators": [
+              "char_283_midn"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "power",
+            "operators": []
+          }
+        ]
+      },
+      "score": [
+        1.125,
+        1,
+        1.6099999999999997,
+        0,
+        0,
+        0,
+        792.4053925728372
+      ],
+      "status": "ok",
+      "reason": "",
+      "at24": {
+        "hour": 24,
+        "produced": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "collected": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "pending": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "inventory": {},
+        "trade": {
+          "model": "baseline-mature-scenarios-v2",
+          "estimated": true,
+          "generated": {
+            "lmd": 19017.729421748092,
+            "gold": 33.540938295550994,
+            "orders": 9.924839374469634
+          },
+          "collected": {
+            "lmd": 19017.729421748092,
+            "gold": 33.54093829555098,
+            "orders": 9.924839374469634
+          },
+          "pending": {
+            "trading": {
+              "lmd": 0,
+              "gold": 0,
+              "orders": 0
+            }
+          },
+          "hourlyLmd": 792.4053925728372,
+          "rangeKind": "baseline-versus-mature-scenario-expectations",
+          "confidenceLevel": null,
+          "rankingBasis": "mature",
+          "range": {
+            "generatedLmd": [
+              17313.274336283193,
+              19017.729421748092
+            ],
+            "collectedLmd": [
+              17313.274336283186,
+              19017.729421748092
+            ]
+          },
+          "baseline": {
+            "generated": {
+              "lmd": 17313.274336283193,
+              "gold": 33.26017699115046,
+              "orders": 11.46902654867257
+            },
+            "collected": {
+              "lmd": 17313.274336283186,
+              "gold": 33.260176991150445,
+              "orders": 11.46902654867257
+            }
+          }
+        },
+        "officeEquivalentHours": 27,
+        "meetingEquivalentHours": 38.63999999999999,
+        "missingSkillPolicyHours": 24,
+        "morale": {
+          "char_252_bibeak": 24,
+          "char_254_vodfox": 24,
+          "char_283_midn": 15,
+          "char_4017_puzzle": 24,
+          "char_486_takila": 24,
+          "char_497_ctable": 12,
+          "char_503_rang": 24
+        },
+        "hourly": {
+          "office": 1.125,
+          "meeting": 1.6099999999999997,
+          "products": {
+            "F_GOLD": 0,
+            "F_EXP": 0,
+            "F_DIAMOND": 0
+          }
+        },
+        "completedShifts": 2
+      },
+      "cycle": {
+        "hour": 24,
+        "produced": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "collected": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "pending": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "inventory": {},
+        "trade": {
+          "model": "baseline-mature-scenarios-v2",
+          "estimated": true,
+          "generated": {
+            "lmd": 19017.729421748092,
+            "gold": 33.540938295550994,
+            "orders": 9.924839374469634
+          },
+          "collected": {
+            "lmd": 19017.729421748092,
+            "gold": 33.54093829555098,
+            "orders": 9.924839374469634
+          },
+          "pending": {
+            "trading": {
+              "lmd": 0,
+              "gold": 0,
+              "orders": 0
+            }
+          },
+          "hourlyLmd": 792.4053925728372,
+          "rangeKind": "baseline-versus-mature-scenario-expectations",
+          "confidenceLevel": null,
+          "rankingBasis": "mature",
+          "range": {
+            "generatedLmd": [
+              17313.274336283193,
+              19017.729421748092
+            ],
+            "collectedLmd": [
+              17313.274336283186,
+              19017.729421748092
+            ]
+          },
+          "baseline": {
+            "generated": {
+              "lmd": 17313.274336283193,
+              "gold": 33.26017699115046,
+              "orders": 11.46902654867257
+            },
+            "collected": {
+              "lmd": 17313.274336283186,
+              "gold": 33.260176991150445,
+              "orders": 11.46902654867257
+            }
+          }
+        },
+        "officeEquivalentHours": 27,
+        "meetingEquivalentHours": 38.63999999999999,
+        "missingSkillPolicyHours": 24,
+        "morale": {
+          "char_252_bibeak": 24,
+          "char_254_vodfox": 24,
+          "char_283_midn": 15,
+          "char_4017_puzzle": 24,
+          "char_486_takila": 24,
+          "char_497_ctable": 12,
+          "char_503_rang": 24
+        },
+        "hourly": {
+          "office": 1.125,
+          "meeting": 1.6099999999999997,
+          "products": {
+            "F_GOLD": 0,
+            "F_EXP": 0,
+            "F_DIAMOND": 0
+          }
+        },
+        "completedShifts": 2
+      },
+      "cycleStatus": "completed",
+      "endHour": 24,
+      "endMorale": {
+        "char_252_bibeak": 24,
+        "char_254_vodfox": 24,
+        "char_283_midn": 15,
+        "char_4017_puzzle": 24,
+        "char_486_takila": 24,
+        "char_497_ctable": 12,
+        "char_503_rang": 24
+      }
+    },
+    "complete": false,
+    "modelOptimalityProven": false,
+    "gameOptimalityProven": false,
+    "stopReason": "heuristic-finished",
+    "elapsedMs": 29.252928999999995,
+    "stats": {
+      "simulations": 22,
+      "proxyEvaluations": 59,
+      "invalidPlans": 0,
+      "evaluationErrors": 0,
+      "cacheHits": 29,
+      "startsCompleted": 2,
+      "improvementRounds": 1,
+      "acceptedMoves": 0
+    },
+    "errors": [],
+    "search": {
+      "starts": 2,
+      "rounds": 8,
+      "topCandidates": 40,
+      "exactThreshold": 0,
+      "unfilteredCombinationUpperBound": "14400",
+      "shortlistSizes": [
+        {
+          "team": 0,
+          "room": "office",
+          "available": 1,
+          "retained": 1
+        },
+        {
+          "team": 0,
+          "room": "meeting",
+          "available": 2,
+          "retained": 2
+        },
+        {
+          "team": 0,
+          "room": "control",
+          "available": 0,
+          "retained": 0
+        },
+        {
+          "team": 0,
+          "room": "trading",
+          "available": 4,
+          "retained": 4
+        },
+        {
+          "team": 0,
+          "room": "power",
+          "available": 0,
+          "retained": 0
+        },
+        {
+          "team": 1,
+          "room": "office",
+          "available": 1,
+          "retained": 1
+        },
+        {
+          "team": 1,
+          "room": "meeting",
+          "available": 2,
+          "retained": 2
+        },
+        {
+          "team": 1,
+          "room": "control",
+          "available": 0,
+          "retained": 0
+        },
+        {
+          "team": 1,
+          "room": "trading",
+          "available": 4,
+          "retained": 4
+        },
+        {
+          "team": 1,
+          "room": "power",
+          "available": 0,
+          "retained": 0
+        }
+      ],
+      "proxyIsUpperBound": false
+    },
+    "excluded": [],
+    "warnings": [
+      "응접실 기본 속도·분위기 공식은 검토 중인 실험식입니다. 종류별 확률과 단서 자동 획득은 계산하지 않습니다.",
+      "무역소는 순금 거래·재료 충분·교대 시 납품을 가정한 기대 작업량 근사입니다. 품질 우대 없는 기본 분포와 충분히 누적된 분포의 두 시나리오 기대값 범위를 표시합니다. 실제 수익 보장 구간이나 신뢰구간이 아니며 초기 3/5시간의 확률 변화와 개별 주문의 교대 이월을 재현하지 않습니다. 배치 비교는 성숙 시나리오 수익 기준입니다. 고품질 분포는 3레벨의 관측된 조합만 지원합니다.",
+      "첫 24시간과 첫 교대 사이클만 검사합니다. 반복 운영의 지속 가능성과 실제 게임의 최고 효율을 보장하지 않습니다.",
+      "테라아카이브의 공개 탐색 구조를 참고해 독립 구현한 실험판입니다. 원본 엔진과 결과가 동일하다는 보장은 없습니다.",
+      "제한 탐색은 전체 최적해나 99% 정확도를 보장하지 않습니다. 미지원 스킬은 기존 모델과 동일하게 제외합니다.",
+      "시작점 구성에는 근사 점수를 사용하고, 보고하는 배치는 기존 컨디션·숙소·교대 시뮬레이터로 재계산합니다."
+    ]
+  },
+  "fullRoster": {
+    "owned": 415,
+    "layout": "243; 3 power level 3, 2 trading level 3, 4 factories level 3; 4 dorms level 5/5000; office/meeting/training level 3; workshop level 1",
+    "synthetic": true,
+    "modelVersion": "24h-cycle-lab-7",
+    "fingerprint": "0cfc9267f2a3439a4f1bd0ef54587a84d5a7e735982cfc0315712f93f6c6e721",
+    "preparationMs": 12.135302000000024,
+    "format": "facility-seeded-search-1",
+    "algorithm": "bounded-multistart-facility-greedy-and-exchange",
+    "best": {
+      "plan": {
+        "groups": [
+          {
+            "team": 0,
+            "room": "office",
+            "operators": [
+              "char_4065_judge"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "meeting",
+            "operators": [
+              "char_4017_puzzle",
+              "char_4036_forcer"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "control",
+            "operators": [
+              "char_4064_mlynar",
+              "char_4023_rfalcn",
+              "char_4179_monstr",
+              "char_130_doberm",
+              "char_144_red"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "factory0",
+            "operators": [
+              "char_381_bubble",
+              "char_163_hpsts",
+              "char_1039_thorn2"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "factory1",
+            "operators": [
+              "char_190_clour",
+              "char_2013_cerber",
+              "char_4138_narant"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "factory2",
+            "operators": [
+              "char_400_weedy",
+              "char_416_zumama",
+              "char_433_windft"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "factory3",
+            "operators": [
+              "char_1042_phatm2",
+              "char_1502_crosly",
+              "char_159_peacok"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "trade0",
+            "operators": [
+              "char_254_vodfox",
+              "char_486_takila",
+              "char_214_kafka"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "trade1",
+            "operators": [
+              "char_103_angel",
+              "char_4045_heidi",
+              "char_101_sora"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "power0",
+            "operators": [
+              "char_1040_blaze2"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "power1",
+            "operators": [
+              "char_107_liskam"
+            ]
+          },
+          {
+            "team": 0,
+            "room": "power2",
+            "operators": [
+              "char_253_greyy"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "office",
+            "operators": [
+              "char_145_prove"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "meeting",
+            "operators": [
+              "char_4199_makiri",
+              "char_4087_ines"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "control",
+            "operators": [
+              "char_003_kalts",
+              "char_010_chen",
+              "char_1011_lava2",
+              "char_1020_reed2",
+              "char_1021_kroos2"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "factory0",
+            "operators": [
+              "char_237_gravel",
+              "char_1031_slent2",
+              "char_141_nights"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "factory1",
+            "operators": [
+              "char_242_otter",
+              "char_284_spot",
+              "char_4081_warmy"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "factory2",
+            "operators": [
+              "char_241_panda",
+              "char_4225_tanya",
+              "char_1032_excu2"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "factory3",
+            "operators": [
+              "char_118_yuki",
+              "char_193_frostl",
+              "char_286_cast3"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "trade0",
+            "operators": [
+              "char_123_fang",
+              "char_185_frncat",
+              "char_196_sunbr"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "trade1",
+            "operators": [
+              "char_201_moeshd",
+              "char_282_catap",
+              "char_283_midn"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "power0",
+            "operators": [
+              "char_377_gdglow"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "power1",
+            "operators": [
+              "char_4079_haini"
+            ]
+          },
+          {
+            "team": 1,
+            "room": "power2",
+            "operators": [
+              "char_4213_skybx"
+            ]
+          }
+        ],
+        "dormSupport": {
+          "dorm0": [
+            "char_258_podego",
+            "char_501_durin",
+            "char_300_phenxi",
+            "char_147_shining"
+          ],
+          "dorm1": [
+            "char_4122_grabds",
+            "char_112_siege",
+            "char_4187_graceb"
+          ],
+          "dorm2": [
+            "char_115_headbr",
+            "char_449_glider"
+          ],
+          "dorm3": [
+            "char_179_cgbird",
+            "char_479_sleach"
+          ]
+        }
+      },
+      "score": [
+        1.5249999999999997,
+        1,
+        2.1441666666666648,
+        3.2916666666666665,
+        1333.3333333333333,
+        0,
+        1771.903917646583
+      ],
+      "status": "ok",
+      "reason": "",
+      "at24": {
+        "hour": 24,
+        "produced": {
+          "F_GOLD": 79,
+          "F_EXP": 32000,
+          "F_DIAMOND": 0
+        },
+        "collected": {
+          "F_GOLD": 79,
+          "F_EXP": 32000,
+          "F_DIAMOND": 0
+        },
+        "pending": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "inventory": {
+          "factory0": {
+            "count": 0,
+            "progress": 1295.9999999998956
+          },
+          "factory1": {
+            "count": 0,
+            "progress": 2483.9999999999054
+          },
+          "factory2": {
+            "count": 0,
+            "progress": 0
+          },
+          "factory3": {
+            "count": 0,
+            "progress": 2159.999999999938
+          }
+        },
+        "trade": {
+          "model": "baseline-mature-scenarios-v2",
+          "estimated": true,
+          "generated": {
+            "lmd": 42525.69402351799,
+            "gold": 80.55686749909083,
+            "orders": 26.137228755000606
+          },
+          "collected": {
+            "lmd": 42525.69402351799,
+            "gold": 80.55686749909074,
+            "orders": 26.1372287550006
+          },
+          "pending": {
+            "trade0": {
+              "lmd": 0,
+              "gold": 0,
+              "orders": 0
+            },
+            "trade1": {
+              "lmd": 0,
+              "gold": 0,
+              "orders": 0
+            }
+          },
+          "hourlyLmd": 1771.903917646583,
+          "rangeKind": "baseline-versus-mature-scenario-expectations",
+          "confidenceLevel": null,
+          "rankingBasis": "mature",
+          "range": {
+            "generatedLmd": [
+              40821.2389380531,
+              42525.69402351799
+            ],
+            "collectedLmd": [
+              40821.23893805309,
+              42525.69402351799
+            ]
+          },
+          "baseline": {
+            "generated": {
+              "lmd": 40821.2389380531,
+              "gold": 80.2761061946903,
+              "orders": 27.68141592920356
+            },
+            "collected": {
+              "lmd": 40821.23893805309,
+              "gold": 80.2761061946902,
+              "orders": 27.68141592920353
+            }
+          }
+        },
+        "officeEquivalentHours": 36.599999999999994,
+        "meetingEquivalentHours": 51.45999999999995,
+        "missingSkillPolicyHours": 24,
+        "morale": {
+          "char_002_amiya": 24,
+          "char_003_kalts": 19.2,
+          "char_009_12fce": 24,
+          "char_010_chen": 19.2,
+          "char_017_huang": 24,
+          "char_1011_lava2": 19.2,
+          "char_1012_skadi2": 24,
+          "char_1013_chen2": 24,
+          "char_1014_nearl2": 24,
+          "char_1016_agoat2": 24,
+          "char_1019_siege2": 24,
+          "char_101_sora": 24,
+          "char_1020_reed2": 19.2,
+          "char_1021_kroos2": 19.2,
+          "char_1022_flwr2": 24,
+          "char_1023_ghost2": 24,
+          "char_1024_hbisc2": 24,
+          "char_1026_gvial2": 24,
+          "char_1027_greyy2": 24,
+          "char_1028_texas2": 24,
+          "char_1029_yato2": 24,
+          "char_102_texas": 24,
+          "char_1030_noirc2": 24,
+          "char_1031_slent2": 16.200000000000003,
+          "char_1032_excu2": 16.200000000000003,
+          "char_1033_swire2": 24,
+          "char_1034_jesca2": 24,
+          "char_1035_wisdel": 24,
+          "char_1036_fang2": 24,
+          "char_1038_whitw2": 24,
+          "char_1039_thorn2": 24,
+          "char_103_angel": 24,
+          "char_1040_blaze2": 19.2,
+          "char_1041_angel2": 24,
+          "char_1042_phatm2": 22.199999999999985,
+          "char_1043_leizi2": 24,
+          "char_1044_hsgma2": 24,
+          "char_1045_svash2": 24,
+          "char_1046_sbell2": 24,
+          "char_1047_halo2": 24,
+          "char_1050_chen3": 24,
+          "char_1051_headb2": 24,
+          "char_1052_kalts2": 24,
+          "char_106_franka": 24,
+          "char_107_liskam": 19.2,
+          "char_108_silent": 24,
+          "char_109_fmout": 24,
+          "char_110_deepcl": 24,
+          "char_112_siege": 24,
+          "char_113_cqbw": 24,
+          "char_115_headbr": 24,
+          "char_117_myrrh": 24,
+          "char_118_yuki": 16.200000000000003,
+          "char_120_hibisc": 24,
+          "char_121_lava": 24,
+          "char_122_beagle": 24,
+          "char_123_fang": 16.200000000000003,
+          "char_124_kroos": 24,
+          "char_126_shotst": 24,
+          "char_127_estell": 24,
+          "char_128_plosis": 24,
+          "char_129_bluep": 24,
+          "char_130_doberm": 24,
+          "char_131_flameb": 24,
+          "char_133_mm": 24,
+          "char_134_ifrit": 24,
+          "char_135_halo": 24,
+          "char_136_hsguma": 24,
+          "char_137_brownb": 24,
+          "char_140_whitew": 24,
+          "char_141_nights": 16.200000000000003,
+          "char_143_ghost": 24,
+          "char_144_red": 24,
+          "char_145_prove": 15.00000000000002,
+          "char_147_shining": 24,
+          "char_148_nearl": 24,
+          "char_149_scave": 24,
+          "char_1502_crosly": 19.2,
+          "char_150_snakek": 24,
+          "char_151_myrtle": 24,
+          "char_154_morgan": 24,
+          "char_155_tiger": 24,
+          "char_157_dagda": 24,
+          "char_158_milu": 24,
+          "char_159_peacok": 19.2,
+          "char_163_hpsts": 22.199999999999985,
+          "char_164_nightm": 24,
+          "char_166_skfire": 24,
+          "char_171_bldsk": 24,
+          "char_172_svrash": 24,
+          "char_173_slchan": 24,
+          "char_174_slbell": 24,
+          "char_179_cgbird": 24,
+          "char_180_amgoat": 24,
+          "char_181_flower": 24,
+          "char_183_skgoat": 24,
+          "char_185_frncat": 16.200000000000003,
+          "char_187_ccheal": 24,
+          "char_188_helage": 24,
+          "char_190_clour": 22.199999999999985,
+          "char_192_falco": 24,
+          "char_193_frostl": 16.200000000000003,
+          "char_194_leto": 24,
+          "char_195_glassb": 24,
+          "char_196_sunbr": 19.199999999999996,
+          "char_197_poca": 24,
+          "char_198_blackd": 24,
+          "char_199_yak": 24,
+          "char_2012_typhon": 24,
+          "char_2013_cerber": 22.199999999999985,
+          "char_2014_nian": 24,
+          "char_2015_dusk": 24,
+          "char_201_moeshd": 16.200000000000003,
+          "char_2023_ling": 24,
+          "char_2024_chyue": 24,
+          "char_2025_shu": 24,
+          "char_2026_yu": 24,
+          "char_2027_wang": 24,
+          "char_202_demkni": 24,
+          "char_204_platnm": 24,
+          "char_206_gnosis": 24,
+          "char_208_melan": 24,
+          "char_209_ardign": 24,
+          "char_210_stward": 24,
+          "char_211_adnach": 24,
+          "char_212_ansel": 24,
+          "char_213_mostma": 24,
+          "char_214_kafka": 19.2,
+          "char_215_mantic": 24,
+          "char_218_cuttle": 24,
+          "char_219_meteo": 24,
+          "char_220_grani": 24,
+          "char_222_bpipe": 24,
+          "char_225_haak": 24,
+          "char_226_hmau": 24,
+          "char_230_savage": 24,
+          "char_235_jesica": 24,
+          "char_236_rope": 24,
+          "char_237_gravel": 16.200000000000003,
+          "char_240_wyvern": 24,
+          "char_241_panda": 16.200000000000003,
+          "char_242_otter": 16.200000000000003,
+          "char_243_waaifu": 24,
+          "char_245_cello": 24,
+          "char_248_mgllan": 24,
+          "char_249_mlyss": 24,
+          "char_250_phatom": 24,
+          "char_252_bibeak": 24,
+          "char_253_greyy": 19.2,
+          "char_254_vodfox": 19.2,
+          "char_258_podego": 24,
+          "char_260_durnar": 24,
+          "char_261_sddrag": 24,
+          "char_263_skadi": 24,
+          "char_264_f12yin": 24,
+          "char_265_sophia": 24,
+          "char_271_spikes": 24,
+          "char_272_strong": 24,
+          "char_274_astesi": 24,
+          "char_275_breeze": 24,
+          "char_277_sqrrel": 24,
+          "char_278_orchid": 24,
+          "char_279_excu": 24,
+          "char_281_popka": 24,
+          "char_282_catap": 19.199999999999996,
+          "char_283_midn": 19.199999999999996,
+          "char_284_spot": 16.200000000000003,
+          "char_285_medic2": 24,
+          "char_286_cast3": 16.200000000000003,
+          "char_289_gyuki": 24,
+          "char_290_vigna": 24,
+          "char_291_aglina": 24,
+          "char_293_thorns": 24,
+          "char_294_ayer": 24,
+          "char_297_hamoni": 24,
+          "char_298_susuro": 24,
+          "char_300_phenxi": 23.999999999999975,
+          "char_301_cutter": 24,
+          "char_302_glaze": 24,
+          "char_304_zebra": 24,
+          "char_306_leizi": 24,
+          "char_308_swire": 24,
+          "char_311_mudrok": 24,
+          "char_322_lmlee": 24,
+          "char_325_bison": 24,
+          "char_326_glacus": 24,
+          "char_328_cammou": 24,
+          "char_332_archet": 24,
+          "char_333_sidero": 24,
+          "char_336_folivo": 24,
+          "char_337_utage": 24,
+          "char_338_iris": 24,
+          "char_340_shwaz": 24,
+          "char_341_sntlla": 24,
+          "char_343_tknogi": 24,
+          "char_344_beewax": 24,
+          "char_345_folnic": 24,
+          "char_346_aosta": 24,
+          "char_347_jaksel": 24,
+          "char_348_ceylon": 24,
+          "char_349_chiave": 24,
+          "char_350_surtr": 24,
+          "char_355_ethan": 24,
+          "char_356_broca": 24,
+          "char_358_lisa": 24,
+          "char_362_saga": 24,
+          "char_363_toddi": 24,
+          "char_365_aprl": 24,
+          "char_366_acdrop": 24,
+          "char_367_swllow": 24,
+          "char_369_bena": 24,
+          "char_373_lionhd": 24,
+          "char_376_therex": 24,
+          "char_377_gdglow": 15.00000000000002,
+          "char_378_asbest": 24,
+          "char_379_sesa": 24,
+          "char_381_bubble": 22.199999999999985,
+          "char_383_snsant": 24,
+          "char_385_finlpp": 24,
+          "char_388_mint": 24,
+          "char_391_rosmon": 24,
+          "char_394_hadiya": 24,
+          "char_4000_jnight": 24,
+          "char_4004_pudd": 24,
+          "char_4006_melnte": 24,
+          "char_4009_irene": 24,
+          "char_400_weedy": 19.2,
+          "char_4010_etlchi": 24,
+          "char_4011_lessng": 24,
+          "char_4013_kjera": 24,
+          "char_4014_lunacu": 24,
+          "char_4015_spuria": 24,
+          "char_4016_kazema": 24,
+          "char_4017_puzzle": 19.2,
+          "char_4019_ncdeer": 24,
+          "char_401_elysm": 24,
+          "char_4023_rfalcn": 24,
+          "char_4025_aprot2": 24,
+          "char_4026_vulpis": 24,
+          "char_4027_heyak": 24,
+          "char_402_tuye": 24,
+          "char_4031_liesel": 24,
+          "char_4032_provs": 24,
+          "char_4036_forcer": 24,
+          "char_4037_demetr": 24,
+          "char_4039_horn": 24,
+          "char_4040_rockr": 24,
+          "char_4041_chnut": 24,
+          "char_4042_lumen": 24,
+          "char_4043_erato": 24,
+          "char_4045_heidi": 19.2,
+          "char_4046_ebnhlz": 24,
+          "char_4047_pianst": 24,
+          "char_4048_doroth": 24,
+          "char_4051_akkord": 24,
+          "char_4052_surfer": 24,
+          "char_4054_malist": 24,
+          "char_4055_bgsnow": 24,
+          "char_4056_titi": 24,
+          "char_4058_pepe": 24,
+          "char_405_absin": 24,
+          "char_4062_totter": 24,
+          "char_4063_quartz": 24,
+          "char_4064_mlynar": 24,
+          "char_4065_judge": 13.199999999999994,
+          "char_4066_highmo": 24,
+          "char_4067_lolxh": 24,
+          "char_4071_peper": 24,
+          "char_4072_ironmn": 24,
+          "char_4077_palico": 24,
+          "char_4078_bdhkgt": 24,
+          "char_4079_haini": 15.00000000000002,
+          "char_4080_lin": 24,
+          "char_4081_warmy": 16.200000000000003,
+          "char_4082_qiubai": 24,
+          "char_4083_chimes": 24,
+          "char_4087_ines": 15.00000000000002,
+          "char_4088_hodrer": 24,
+          "char_4091_ulika": 24,
+          "char_4093_frston": 24,
+          "char_4098_vvana": 24,
+          "char_4100_caper": 24,
+          "char_4102_threye": 24,
+          "char_4104_coldst": 24,
+          "char_4105_almond": 24,
+          "char_4106_bryota": 24,
+          "char_4107_vrdant": 24,
+          "char_4109_baslin": 24,
+          "char_4110_delphn": 24,
+          "char_4114_harold": 24,
+          "char_4116_blkkgt": 24,
+          "char_4117_ray": 24,
+          "char_4119_wanqin": 24,
+          "char_411_tomimi": 24,
+          "char_4121_zuole": 24,
+          "char_4122_grabds": 24,
+          "char_4123_ela": 24,
+          "char_4124_iana": 24,
+          "char_4125_rdoc": 24,
+          "char_4126_fuze": 24,
+          "char_4130_luton": 24,
+          "char_4131_odda": 24,
+          "char_4132_ascln": 24,
+          "char_4133_logos": 24,
+          "char_4134_cetsyr": 24,
+          "char_4136_phonor": 24,
+          "char_4137_udflow": 24,
+          "char_4138_narant": 22.199999999999985,
+          "char_4139_papyrs": 24,
+          "char_4140_lasher": 24,
+          "char_4141_marcil": 24,
+          "char_4142_laios": 24,
+          "char_4143_sensi": 24,
+          "char_4144_chilc": 24,
+          "char_4145_ulpia": 24,
+          "char_4146_nymph": 24,
+          "char_4147_mitm": 24,
+          "char_4148_philae": 24,
+          "char_4151_tinman": 24,
+          "char_4155_talr": 24,
+          "char_415_flint": 24,
+          "char_4162_cathy": 24,
+          "char_4163_rosesa": 24,
+          "char_4164_tecno": 24,
+          "char_4165_ctrail": 24,
+          "char_4166_varkis": 24,
+          "char_416_zumama": 19.2,
+          "char_4171_wulfen": 24,
+          "char_4172_xingzh": 24,
+          "char_4173_nowell": 24,
+          "char_4177_brigid": 24,
+          "char_4178_alanna": 24,
+          "char_4179_monstr": 24,
+          "char_4182_oblvns": 24,
+          "char_4183_mortis": 24,
+          "char_4184_dolris": 24,
+          "char_4185_amoris": 24,
+          "char_4186_tmoris": 24,
+          "char_4187_graceb": 24,
+          "char_4188_confes": 24,
+          "char_4191_tippi": 24,
+          "char_4193_lemuen": 24,
+          "char_4194_rmixer": 24,
+          "char_4195_radian": 24,
+          "char_4196_reckpr": 24,
+          "char_4198_christ": 24,
+          "char_4199_makiri": 15.00000000000002,
+          "char_4202_haruka": 24,
+          "char_4203_kichi": 24,
+          "char_4204_mantra": 24,
+          "char_4207_branch": 24,
+          "char_4208_wintim": 24,
+          "char_420_flamtl": 24,
+          "char_4211_snhunt": 24,
+          "char_4212_nasti": 24,
+          "char_4213_skybx": 15.00000000000002,
+          "char_4214_cairn": 24,
+          "char_421_crow": 24,
+          "char_4221_ju": 24,
+          "char_4222_taraxa": 24,
+          "char_4223_botany": 24,
+          "char_4224_turdus": 24,
+          "char_4225_tanya": 13.200000000000019,
+          "char_4226_veen": 24,
+          "char_4227_gallus": 24,
+          "char_4228_closur": 24,
+          "char_422_aurora": 24,
+          "char_423_blemsh": 24,
+          "char_426_billro": 24,
+          "char_427_vigil": 24,
+          "char_430_fartth": 24,
+          "char_431_ashlok": 24,
+          "char_433_windft": 19.2,
+          "char_436_whispr": 24,
+          "char_437_mizuki": 24,
+          "char_440_pinecn": 24,
+          "char_445_wscoot": 24,
+          "char_446_aroma": 24,
+          "char_449_glider": 24,
+          "char_450_necras": 24,
+          "char_451_robin": 24,
+          "char_452_bstalk": 24,
+          "char_455_nothin": 24,
+          "char_456_ash": 24,
+          "char_457_blitz": 24,
+          "char_458_rfrost": 24,
+          "char_459_tachak": 24,
+          "char_464_cement": 24,
+          "char_466_qanik": 24,
+          "char_469_indigo": 24,
+          "char_472_pasngr": 24,
+          "char_473_mberry": 24,
+          "char_474_glady": 24,
+          "char_475_akafyu": 24,
+          "char_476_blkngt": 24,
+          "char_478_kirara": 24,
+          "char_479_sleach": 24,
+          "char_484_robrta": 24,
+          "char_485_pallas": 24,
+          "char_486_takila": 19.2,
+          "char_487_bobb": 24,
+          "char_488_buildr": 24,
+          "char_489_serum": 24,
+          "char_491_humus": 24,
+          "char_492_quercu": 24,
+          "char_493_firwhl": 24,
+          "char_494_vendla": 24,
+          "char_496_wildmn": 24,
+          "char_497_ctable": 24,
+          "char_498_inside": 24,
+          "char_499_kaitou": 24,
+          "char_500_noirc": 24,
+          "char_501_durin": 24,
+          "char_502_nblade": 24,
+          "char_503_rang": 24
+        },
+        "hourly": {
+          "office": 1.5249999999999997,
+          "meeting": 2.1441666666666648,
+          "products": {
+            "F_GOLD": 3.2916666666666665,
+            "F_EXP": 1333.3333333333333,
+            "F_DIAMOND": 0
+          }
+        },
+        "completedShifts": 2
+      },
+      "cycle": {
+        "hour": 24,
+        "produced": {
+          "F_GOLD": 79,
+          "F_EXP": 32000,
+          "F_DIAMOND": 0
+        },
+        "collected": {
+          "F_GOLD": 79,
+          "F_EXP": 32000,
+          "F_DIAMOND": 0
+        },
+        "pending": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        },
+        "inventory": {
+          "factory0": {
+            "count": 0,
+            "progress": 1295.9999999998956
+          },
+          "factory1": {
+            "count": 0,
+            "progress": 2483.9999999999054
+          },
+          "factory2": {
+            "count": 0,
+            "progress": 0
+          },
+          "factory3": {
+            "count": 0,
+            "progress": 2159.999999999938
+          }
+        },
+        "trade": {
+          "model": "baseline-mature-scenarios-v2",
+          "estimated": true,
+          "generated": {
+            "lmd": 42525.69402351799,
+            "gold": 80.55686749909083,
+            "orders": 26.137228755000606
+          },
+          "collected": {
+            "lmd": 42525.69402351799,
+            "gold": 80.55686749909074,
+            "orders": 26.1372287550006
+          },
+          "pending": {
+            "trade0": {
+              "lmd": 0,
+              "gold": 0,
+              "orders": 0
+            },
+            "trade1": {
+              "lmd": 0,
+              "gold": 0,
+              "orders": 0
+            }
+          },
+          "hourlyLmd": 1771.903917646583,
+          "rangeKind": "baseline-versus-mature-scenario-expectations",
+          "confidenceLevel": null,
+          "rankingBasis": "mature",
+          "range": {
+            "generatedLmd": [
+              40821.2389380531,
+              42525.69402351799
+            ],
+            "collectedLmd": [
+              40821.23893805309,
+              42525.69402351799
+            ]
+          },
+          "baseline": {
+            "generated": {
+              "lmd": 40821.2389380531,
+              "gold": 80.2761061946903,
+              "orders": 27.68141592920356
+            },
+            "collected": {
+              "lmd": 40821.23893805309,
+              "gold": 80.2761061946902,
+              "orders": 27.68141592920353
+            }
+          }
+        },
+        "officeEquivalentHours": 36.599999999999994,
+        "meetingEquivalentHours": 51.45999999999995,
+        "missingSkillPolicyHours": 24,
+        "morale": {
+          "char_002_amiya": 24,
+          "char_003_kalts": 19.2,
+          "char_009_12fce": 24,
+          "char_010_chen": 19.2,
+          "char_017_huang": 24,
+          "char_1011_lava2": 19.2,
+          "char_1012_skadi2": 24,
+          "char_1013_chen2": 24,
+          "char_1014_nearl2": 24,
+          "char_1016_agoat2": 24,
+          "char_1019_siege2": 24,
+          "char_101_sora": 24,
+          "char_1020_reed2": 19.2,
+          "char_1021_kroos2": 19.2,
+          "char_1022_flwr2": 24,
+          "char_1023_ghost2": 24,
+          "char_1024_hbisc2": 24,
+          "char_1026_gvial2": 24,
+          "char_1027_greyy2": 24,
+          "char_1028_texas2": 24,
+          "char_1029_yato2": 24,
+          "char_102_texas": 24,
+          "char_1030_noirc2": 24,
+          "char_1031_slent2": 16.200000000000003,
+          "char_1032_excu2": 16.200000000000003,
+          "char_1033_swire2": 24,
+          "char_1034_jesca2": 24,
+          "char_1035_wisdel": 24,
+          "char_1036_fang2": 24,
+          "char_1038_whitw2": 24,
+          "char_1039_thorn2": 24,
+          "char_103_angel": 24,
+          "char_1040_blaze2": 19.2,
+          "char_1041_angel2": 24,
+          "char_1042_phatm2": 22.199999999999985,
+          "char_1043_leizi2": 24,
+          "char_1044_hsgma2": 24,
+          "char_1045_svash2": 24,
+          "char_1046_sbell2": 24,
+          "char_1047_halo2": 24,
+          "char_1050_chen3": 24,
+          "char_1051_headb2": 24,
+          "char_1052_kalts2": 24,
+          "char_106_franka": 24,
+          "char_107_liskam": 19.2,
+          "char_108_silent": 24,
+          "char_109_fmout": 24,
+          "char_110_deepcl": 24,
+          "char_112_siege": 24,
+          "char_113_cqbw": 24,
+          "char_115_headbr": 24,
+          "char_117_myrrh": 24,
+          "char_118_yuki": 16.200000000000003,
+          "char_120_hibisc": 24,
+          "char_121_lava": 24,
+          "char_122_beagle": 24,
+          "char_123_fang": 16.200000000000003,
+          "char_124_kroos": 24,
+          "char_126_shotst": 24,
+          "char_127_estell": 24,
+          "char_128_plosis": 24,
+          "char_129_bluep": 24,
+          "char_130_doberm": 24,
+          "char_131_flameb": 24,
+          "char_133_mm": 24,
+          "char_134_ifrit": 24,
+          "char_135_halo": 24,
+          "char_136_hsguma": 24,
+          "char_137_brownb": 24,
+          "char_140_whitew": 24,
+          "char_141_nights": 16.200000000000003,
+          "char_143_ghost": 24,
+          "char_144_red": 24,
+          "char_145_prove": 15.00000000000002,
+          "char_147_shining": 24,
+          "char_148_nearl": 24,
+          "char_149_scave": 24,
+          "char_1502_crosly": 19.2,
+          "char_150_snakek": 24,
+          "char_151_myrtle": 24,
+          "char_154_morgan": 24,
+          "char_155_tiger": 24,
+          "char_157_dagda": 24,
+          "char_158_milu": 24,
+          "char_159_peacok": 19.2,
+          "char_163_hpsts": 22.199999999999985,
+          "char_164_nightm": 24,
+          "char_166_skfire": 24,
+          "char_171_bldsk": 24,
+          "char_172_svrash": 24,
+          "char_173_slchan": 24,
+          "char_174_slbell": 24,
+          "char_179_cgbird": 24,
+          "char_180_amgoat": 24,
+          "char_181_flower": 24,
+          "char_183_skgoat": 24,
+          "char_185_frncat": 16.200000000000003,
+          "char_187_ccheal": 24,
+          "char_188_helage": 24,
+          "char_190_clour": 22.199999999999985,
+          "char_192_falco": 24,
+          "char_193_frostl": 16.200000000000003,
+          "char_194_leto": 24,
+          "char_195_glassb": 24,
+          "char_196_sunbr": 19.199999999999996,
+          "char_197_poca": 24,
+          "char_198_blackd": 24,
+          "char_199_yak": 24,
+          "char_2012_typhon": 24,
+          "char_2013_cerber": 22.199999999999985,
+          "char_2014_nian": 24,
+          "char_2015_dusk": 24,
+          "char_201_moeshd": 16.200000000000003,
+          "char_2023_ling": 24,
+          "char_2024_chyue": 24,
+          "char_2025_shu": 24,
+          "char_2026_yu": 24,
+          "char_2027_wang": 24,
+          "char_202_demkni": 24,
+          "char_204_platnm": 24,
+          "char_206_gnosis": 24,
+          "char_208_melan": 24,
+          "char_209_ardign": 24,
+          "char_210_stward": 24,
+          "char_211_adnach": 24,
+          "char_212_ansel": 24,
+          "char_213_mostma": 24,
+          "char_214_kafka": 19.2,
+          "char_215_mantic": 24,
+          "char_218_cuttle": 24,
+          "char_219_meteo": 24,
+          "char_220_grani": 24,
+          "char_222_bpipe": 24,
+          "char_225_haak": 24,
+          "char_226_hmau": 24,
+          "char_230_savage": 24,
+          "char_235_jesica": 24,
+          "char_236_rope": 24,
+          "char_237_gravel": 16.200000000000003,
+          "char_240_wyvern": 24,
+          "char_241_panda": 16.200000000000003,
+          "char_242_otter": 16.200000000000003,
+          "char_243_waaifu": 24,
+          "char_245_cello": 24,
+          "char_248_mgllan": 24,
+          "char_249_mlyss": 24,
+          "char_250_phatom": 24,
+          "char_252_bibeak": 24,
+          "char_253_greyy": 19.2,
+          "char_254_vodfox": 19.2,
+          "char_258_podego": 24,
+          "char_260_durnar": 24,
+          "char_261_sddrag": 24,
+          "char_263_skadi": 24,
+          "char_264_f12yin": 24,
+          "char_265_sophia": 24,
+          "char_271_spikes": 24,
+          "char_272_strong": 24,
+          "char_274_astesi": 24,
+          "char_275_breeze": 24,
+          "char_277_sqrrel": 24,
+          "char_278_orchid": 24,
+          "char_279_excu": 24,
+          "char_281_popka": 24,
+          "char_282_catap": 19.199999999999996,
+          "char_283_midn": 19.199999999999996,
+          "char_284_spot": 16.200000000000003,
+          "char_285_medic2": 24,
+          "char_286_cast3": 16.200000000000003,
+          "char_289_gyuki": 24,
+          "char_290_vigna": 24,
+          "char_291_aglina": 24,
+          "char_293_thorns": 24,
+          "char_294_ayer": 24,
+          "char_297_hamoni": 24,
+          "char_298_susuro": 24,
+          "char_300_phenxi": 23.999999999999975,
+          "char_301_cutter": 24,
+          "char_302_glaze": 24,
+          "char_304_zebra": 24,
+          "char_306_leizi": 24,
+          "char_308_swire": 24,
+          "char_311_mudrok": 24,
+          "char_322_lmlee": 24,
+          "char_325_bison": 24,
+          "char_326_glacus": 24,
+          "char_328_cammou": 24,
+          "char_332_archet": 24,
+          "char_333_sidero": 24,
+          "char_336_folivo": 24,
+          "char_337_utage": 24,
+          "char_338_iris": 24,
+          "char_340_shwaz": 24,
+          "char_341_sntlla": 24,
+          "char_343_tknogi": 24,
+          "char_344_beewax": 24,
+          "char_345_folnic": 24,
+          "char_346_aosta": 24,
+          "char_347_jaksel": 24,
+          "char_348_ceylon": 24,
+          "char_349_chiave": 24,
+          "char_350_surtr": 24,
+          "char_355_ethan": 24,
+          "char_356_broca": 24,
+          "char_358_lisa": 24,
+          "char_362_saga": 24,
+          "char_363_toddi": 24,
+          "char_365_aprl": 24,
+          "char_366_acdrop": 24,
+          "char_367_swllow": 24,
+          "char_369_bena": 24,
+          "char_373_lionhd": 24,
+          "char_376_therex": 24,
+          "char_377_gdglow": 15.00000000000002,
+          "char_378_asbest": 24,
+          "char_379_sesa": 24,
+          "char_381_bubble": 22.199999999999985,
+          "char_383_snsant": 24,
+          "char_385_finlpp": 24,
+          "char_388_mint": 24,
+          "char_391_rosmon": 24,
+          "char_394_hadiya": 24,
+          "char_4000_jnight": 24,
+          "char_4004_pudd": 24,
+          "char_4006_melnte": 24,
+          "char_4009_irene": 24,
+          "char_400_weedy": 19.2,
+          "char_4010_etlchi": 24,
+          "char_4011_lessng": 24,
+          "char_4013_kjera": 24,
+          "char_4014_lunacu": 24,
+          "char_4015_spuria": 24,
+          "char_4016_kazema": 24,
+          "char_4017_puzzle": 19.2,
+          "char_4019_ncdeer": 24,
+          "char_401_elysm": 24,
+          "char_4023_rfalcn": 24,
+          "char_4025_aprot2": 24,
+          "char_4026_vulpis": 24,
+          "char_4027_heyak": 24,
+          "char_402_tuye": 24,
+          "char_4031_liesel": 24,
+          "char_4032_provs": 24,
+          "char_4036_forcer": 24,
+          "char_4037_demetr": 24,
+          "char_4039_horn": 24,
+          "char_4040_rockr": 24,
+          "char_4041_chnut": 24,
+          "char_4042_lumen": 24,
+          "char_4043_erato": 24,
+          "char_4045_heidi": 19.2,
+          "char_4046_ebnhlz": 24,
+          "char_4047_pianst": 24,
+          "char_4048_doroth": 24,
+          "char_4051_akkord": 24,
+          "char_4052_surfer": 24,
+          "char_4054_malist": 24,
+          "char_4055_bgsnow": 24,
+          "char_4056_titi": 24,
+          "char_4058_pepe": 24,
+          "char_405_absin": 24,
+          "char_4062_totter": 24,
+          "char_4063_quartz": 24,
+          "char_4064_mlynar": 24,
+          "char_4065_judge": 13.199999999999994,
+          "char_4066_highmo": 24,
+          "char_4067_lolxh": 24,
+          "char_4071_peper": 24,
+          "char_4072_ironmn": 24,
+          "char_4077_palico": 24,
+          "char_4078_bdhkgt": 24,
+          "char_4079_haini": 15.00000000000002,
+          "char_4080_lin": 24,
+          "char_4081_warmy": 16.200000000000003,
+          "char_4082_qiubai": 24,
+          "char_4083_chimes": 24,
+          "char_4087_ines": 15.00000000000002,
+          "char_4088_hodrer": 24,
+          "char_4091_ulika": 24,
+          "char_4093_frston": 24,
+          "char_4098_vvana": 24,
+          "char_4100_caper": 24,
+          "char_4102_threye": 24,
+          "char_4104_coldst": 24,
+          "char_4105_almond": 24,
+          "char_4106_bryota": 24,
+          "char_4107_vrdant": 24,
+          "char_4109_baslin": 24,
+          "char_4110_delphn": 24,
+          "char_4114_harold": 24,
+          "char_4116_blkkgt": 24,
+          "char_4117_ray": 24,
+          "char_4119_wanqin": 24,
+          "char_411_tomimi": 24,
+          "char_4121_zuole": 24,
+          "char_4122_grabds": 24,
+          "char_4123_ela": 24,
+          "char_4124_iana": 24,
+          "char_4125_rdoc": 24,
+          "char_4126_fuze": 24,
+          "char_4130_luton": 24,
+          "char_4131_odda": 24,
+          "char_4132_ascln": 24,
+          "char_4133_logos": 24,
+          "char_4134_cetsyr": 24,
+          "char_4136_phonor": 24,
+          "char_4137_udflow": 24,
+          "char_4138_narant": 22.199999999999985,
+          "char_4139_papyrs": 24,
+          "char_4140_lasher": 24,
+          "char_4141_marcil": 24,
+          "char_4142_laios": 24,
+          "char_4143_sensi": 24,
+          "char_4144_chilc": 24,
+          "char_4145_ulpia": 24,
+          "char_4146_nymph": 24,
+          "char_4147_mitm": 24,
+          "char_4148_philae": 24,
+          "char_4151_tinman": 24,
+          "char_4155_talr": 24,
+          "char_415_flint": 24,
+          "char_4162_cathy": 24,
+          "char_4163_rosesa": 24,
+          "char_4164_tecno": 24,
+          "char_4165_ctrail": 24,
+          "char_4166_varkis": 24,
+          "char_416_zumama": 19.2,
+          "char_4171_wulfen": 24,
+          "char_4172_xingzh": 24,
+          "char_4173_nowell": 24,
+          "char_4177_brigid": 24,
+          "char_4178_alanna": 24,
+          "char_4179_monstr": 24,
+          "char_4182_oblvns": 24,
+          "char_4183_mortis": 24,
+          "char_4184_dolris": 24,
+          "char_4185_amoris": 24,
+          "char_4186_tmoris": 24,
+          "char_4187_graceb": 24,
+          "char_4188_confes": 24,
+          "char_4191_tippi": 24,
+          "char_4193_lemuen": 24,
+          "char_4194_rmixer": 24,
+          "char_4195_radian": 24,
+          "char_4196_reckpr": 24,
+          "char_4198_christ": 24,
+          "char_4199_makiri": 15.00000000000002,
+          "char_4202_haruka": 24,
+          "char_4203_kichi": 24,
+          "char_4204_mantra": 24,
+          "char_4207_branch": 24,
+          "char_4208_wintim": 24,
+          "char_420_flamtl": 24,
+          "char_4211_snhunt": 24,
+          "char_4212_nasti": 24,
+          "char_4213_skybx": 15.00000000000002,
+          "char_4214_cairn": 24,
+          "char_421_crow": 24,
+          "char_4221_ju": 24,
+          "char_4222_taraxa": 24,
+          "char_4223_botany": 24,
+          "char_4224_turdus": 24,
+          "char_4225_tanya": 13.200000000000019,
+          "char_4226_veen": 24,
+          "char_4227_gallus": 24,
+          "char_4228_closur": 24,
+          "char_422_aurora": 24,
+          "char_423_blemsh": 24,
+          "char_426_billro": 24,
+          "char_427_vigil": 24,
+          "char_430_fartth": 24,
+          "char_431_ashlok": 24,
+          "char_433_windft": 19.2,
+          "char_436_whispr": 24,
+          "char_437_mizuki": 24,
+          "char_440_pinecn": 24,
+          "char_445_wscoot": 24,
+          "char_446_aroma": 24,
+          "char_449_glider": 24,
+          "char_450_necras": 24,
+          "char_451_robin": 24,
+          "char_452_bstalk": 24,
+          "char_455_nothin": 24,
+          "char_456_ash": 24,
+          "char_457_blitz": 24,
+          "char_458_rfrost": 24,
+          "char_459_tachak": 24,
+          "char_464_cement": 24,
+          "char_466_qanik": 24,
+          "char_469_indigo": 24,
+          "char_472_pasngr": 24,
+          "char_473_mberry": 24,
+          "char_474_glady": 24,
+          "char_475_akafyu": 24,
+          "char_476_blkngt": 24,
+          "char_478_kirara": 24,
+          "char_479_sleach": 24,
+          "char_484_robrta": 24,
+          "char_485_pallas": 24,
+          "char_486_takila": 19.2,
+          "char_487_bobb": 24,
+          "char_488_buildr": 24,
+          "char_489_serum": 24,
+          "char_491_humus": 24,
+          "char_492_quercu": 24,
+          "char_493_firwhl": 24,
+          "char_494_vendla": 24,
+          "char_496_wildmn": 24,
+          "char_497_ctable": 24,
+          "char_498_inside": 24,
+          "char_499_kaitou": 24,
+          "char_500_noirc": 24,
+          "char_501_durin": 24,
+          "char_502_nblade": 24,
+          "char_503_rang": 24
+        },
+        "hourly": {
+          "office": 1.5249999999999997,
+          "meeting": 2.1441666666666648,
+          "products": {
+            "F_GOLD": 3.2916666666666665,
+            "F_EXP": 1333.3333333333333,
+            "F_DIAMOND": 0
+          }
+        },
+        "completedShifts": 2
+      },
+      "cycleStatus": "completed",
+      "endHour": 24,
+      "endMorale": {
+        "char_002_amiya": 24,
+        "char_003_kalts": 19.2,
+        "char_009_12fce": 24,
+        "char_010_chen": 19.2,
+        "char_017_huang": 24,
+        "char_1011_lava2": 19.2,
+        "char_1012_skadi2": 24,
+        "char_1013_chen2": 24,
+        "char_1014_nearl2": 24,
+        "char_1016_agoat2": 24,
+        "char_1019_siege2": 24,
+        "char_101_sora": 24,
+        "char_1020_reed2": 19.2,
+        "char_1021_kroos2": 19.2,
+        "char_1022_flwr2": 24,
+        "char_1023_ghost2": 24,
+        "char_1024_hbisc2": 24,
+        "char_1026_gvial2": 24,
+        "char_1027_greyy2": 24,
+        "char_1028_texas2": 24,
+        "char_1029_yato2": 24,
+        "char_102_texas": 24,
+        "char_1030_noirc2": 24,
+        "char_1031_slent2": 16.200000000000003,
+        "char_1032_excu2": 16.200000000000003,
+        "char_1033_swire2": 24,
+        "char_1034_jesca2": 24,
+        "char_1035_wisdel": 24,
+        "char_1036_fang2": 24,
+        "char_1038_whitw2": 24,
+        "char_1039_thorn2": 24,
+        "char_103_angel": 24,
+        "char_1040_blaze2": 19.2,
+        "char_1041_angel2": 24,
+        "char_1042_phatm2": 22.199999999999985,
+        "char_1043_leizi2": 24,
+        "char_1044_hsgma2": 24,
+        "char_1045_svash2": 24,
+        "char_1046_sbell2": 24,
+        "char_1047_halo2": 24,
+        "char_1050_chen3": 24,
+        "char_1051_headb2": 24,
+        "char_1052_kalts2": 24,
+        "char_106_franka": 24,
+        "char_107_liskam": 19.2,
+        "char_108_silent": 24,
+        "char_109_fmout": 24,
+        "char_110_deepcl": 24,
+        "char_112_siege": 24,
+        "char_113_cqbw": 24,
+        "char_115_headbr": 24,
+        "char_117_myrrh": 24,
+        "char_118_yuki": 16.200000000000003,
+        "char_120_hibisc": 24,
+        "char_121_lava": 24,
+        "char_122_beagle": 24,
+        "char_123_fang": 16.200000000000003,
+        "char_124_kroos": 24,
+        "char_126_shotst": 24,
+        "char_127_estell": 24,
+        "char_128_plosis": 24,
+        "char_129_bluep": 24,
+        "char_130_doberm": 24,
+        "char_131_flameb": 24,
+        "char_133_mm": 24,
+        "char_134_ifrit": 24,
+        "char_135_halo": 24,
+        "char_136_hsguma": 24,
+        "char_137_brownb": 24,
+        "char_140_whitew": 24,
+        "char_141_nights": 16.200000000000003,
+        "char_143_ghost": 24,
+        "char_144_red": 24,
+        "char_145_prove": 15.00000000000002,
+        "char_147_shining": 24,
+        "char_148_nearl": 24,
+        "char_149_scave": 24,
+        "char_1502_crosly": 19.2,
+        "char_150_snakek": 24,
+        "char_151_myrtle": 24,
+        "char_154_morgan": 24,
+        "char_155_tiger": 24,
+        "char_157_dagda": 24,
+        "char_158_milu": 24,
+        "char_159_peacok": 19.2,
+        "char_163_hpsts": 22.199999999999985,
+        "char_164_nightm": 24,
+        "char_166_skfire": 24,
+        "char_171_bldsk": 24,
+        "char_172_svrash": 24,
+        "char_173_slchan": 24,
+        "char_174_slbell": 24,
+        "char_179_cgbird": 24,
+        "char_180_amgoat": 24,
+        "char_181_flower": 24,
+        "char_183_skgoat": 24,
+        "char_185_frncat": 16.200000000000003,
+        "char_187_ccheal": 24,
+        "char_188_helage": 24,
+        "char_190_clour": 22.199999999999985,
+        "char_192_falco": 24,
+        "char_193_frostl": 16.200000000000003,
+        "char_194_leto": 24,
+        "char_195_glassb": 24,
+        "char_196_sunbr": 19.199999999999996,
+        "char_197_poca": 24,
+        "char_198_blackd": 24,
+        "char_199_yak": 24,
+        "char_2012_typhon": 24,
+        "char_2013_cerber": 22.199999999999985,
+        "char_2014_nian": 24,
+        "char_2015_dusk": 24,
+        "char_201_moeshd": 16.200000000000003,
+        "char_2023_ling": 24,
+        "char_2024_chyue": 24,
+        "char_2025_shu": 24,
+        "char_2026_yu": 24,
+        "char_2027_wang": 24,
+        "char_202_demkni": 24,
+        "char_204_platnm": 24,
+        "char_206_gnosis": 24,
+        "char_208_melan": 24,
+        "char_209_ardign": 24,
+        "char_210_stward": 24,
+        "char_211_adnach": 24,
+        "char_212_ansel": 24,
+        "char_213_mostma": 24,
+        "char_214_kafka": 19.2,
+        "char_215_mantic": 24,
+        "char_218_cuttle": 24,
+        "char_219_meteo": 24,
+        "char_220_grani": 24,
+        "char_222_bpipe": 24,
+        "char_225_haak": 24,
+        "char_226_hmau": 24,
+        "char_230_savage": 24,
+        "char_235_jesica": 24,
+        "char_236_rope": 24,
+        "char_237_gravel": 16.200000000000003,
+        "char_240_wyvern": 24,
+        "char_241_panda": 16.200000000000003,
+        "char_242_otter": 16.200000000000003,
+        "char_243_waaifu": 24,
+        "char_245_cello": 24,
+        "char_248_mgllan": 24,
+        "char_249_mlyss": 24,
+        "char_250_phatom": 24,
+        "char_252_bibeak": 24,
+        "char_253_greyy": 19.2,
+        "char_254_vodfox": 19.2,
+        "char_258_podego": 24,
+        "char_260_durnar": 24,
+        "char_261_sddrag": 24,
+        "char_263_skadi": 24,
+        "char_264_f12yin": 24,
+        "char_265_sophia": 24,
+        "char_271_spikes": 24,
+        "char_272_strong": 24,
+        "char_274_astesi": 24,
+        "char_275_breeze": 24,
+        "char_277_sqrrel": 24,
+        "char_278_orchid": 24,
+        "char_279_excu": 24,
+        "char_281_popka": 24,
+        "char_282_catap": 19.199999999999996,
+        "char_283_midn": 19.199999999999996,
+        "char_284_spot": 16.200000000000003,
+        "char_285_medic2": 24,
+        "char_286_cast3": 16.200000000000003,
+        "char_289_gyuki": 24,
+        "char_290_vigna": 24,
+        "char_291_aglina": 24,
+        "char_293_thorns": 24,
+        "char_294_ayer": 24,
+        "char_297_hamoni": 24,
+        "char_298_susuro": 24,
+        "char_300_phenxi": 23.999999999999975,
+        "char_301_cutter": 24,
+        "char_302_glaze": 24,
+        "char_304_zebra": 24,
+        "char_306_leizi": 24,
+        "char_308_swire": 24,
+        "char_311_mudrok": 24,
+        "char_322_lmlee": 24,
+        "char_325_bison": 24,
+        "char_326_glacus": 24,
+        "char_328_cammou": 24,
+        "char_332_archet": 24,
+        "char_333_sidero": 24,
+        "char_336_folivo": 24,
+        "char_337_utage": 24,
+        "char_338_iris": 24,
+        "char_340_shwaz": 24,
+        "char_341_sntlla": 24,
+        "char_343_tknogi": 24,
+        "char_344_beewax": 24,
+        "char_345_folnic": 24,
+        "char_346_aosta": 24,
+        "char_347_jaksel": 24,
+        "char_348_ceylon": 24,
+        "char_349_chiave": 24,
+        "char_350_surtr": 24,
+        "char_355_ethan": 24,
+        "char_356_broca": 24,
+        "char_358_lisa": 24,
+        "char_362_saga": 24,
+        "char_363_toddi": 24,
+        "char_365_aprl": 24,
+        "char_366_acdrop": 24,
+        "char_367_swllow": 24,
+        "char_369_bena": 24,
+        "char_373_lionhd": 24,
+        "char_376_therex": 24,
+        "char_377_gdglow": 15.00000000000002,
+        "char_378_asbest": 24,
+        "char_379_sesa": 24,
+        "char_381_bubble": 22.199999999999985,
+        "char_383_snsant": 24,
+        "char_385_finlpp": 24,
+        "char_388_mint": 24,
+        "char_391_rosmon": 24,
+        "char_394_hadiya": 24,
+        "char_4000_jnight": 24,
+        "char_4004_pudd": 24,
+        "char_4006_melnte": 24,
+        "char_4009_irene": 24,
+        "char_400_weedy": 19.2,
+        "char_4010_etlchi": 24,
+        "char_4011_lessng": 24,
+        "char_4013_kjera": 24,
+        "char_4014_lunacu": 24,
+        "char_4015_spuria": 24,
+        "char_4016_kazema": 24,
+        "char_4017_puzzle": 19.2,
+        "char_4019_ncdeer": 24,
+        "char_401_elysm": 24,
+        "char_4023_rfalcn": 24,
+        "char_4025_aprot2": 24,
+        "char_4026_vulpis": 24,
+        "char_4027_heyak": 24,
+        "char_402_tuye": 24,
+        "char_4031_liesel": 24,
+        "char_4032_provs": 24,
+        "char_4036_forcer": 24,
+        "char_4037_demetr": 24,
+        "char_4039_horn": 24,
+        "char_4040_rockr": 24,
+        "char_4041_chnut": 24,
+        "char_4042_lumen": 24,
+        "char_4043_erato": 24,
+        "char_4045_heidi": 19.2,
+        "char_4046_ebnhlz": 24,
+        "char_4047_pianst": 24,
+        "char_4048_doroth": 24,
+        "char_4051_akkord": 24,
+        "char_4052_surfer": 24,
+        "char_4054_malist": 24,
+        "char_4055_bgsnow": 24,
+        "char_4056_titi": 24,
+        "char_4058_pepe": 24,
+        "char_405_absin": 24,
+        "char_4062_totter": 24,
+        "char_4063_quartz": 24,
+        "char_4064_mlynar": 24,
+        "char_4065_judge": 13.199999999999994,
+        "char_4066_highmo": 24,
+        "char_4067_lolxh": 24,
+        "char_4071_peper": 24,
+        "char_4072_ironmn": 24,
+        "char_4077_palico": 24,
+        "char_4078_bdhkgt": 24,
+        "char_4079_haini": 15.00000000000002,
+        "char_4080_lin": 24,
+        "char_4081_warmy": 16.200000000000003,
+        "char_4082_qiubai": 24,
+        "char_4083_chimes": 24,
+        "char_4087_ines": 15.00000000000002,
+        "char_4088_hodrer": 24,
+        "char_4091_ulika": 24,
+        "char_4093_frston": 24,
+        "char_4098_vvana": 24,
+        "char_4100_caper": 24,
+        "char_4102_threye": 24,
+        "char_4104_coldst": 24,
+        "char_4105_almond": 24,
+        "char_4106_bryota": 24,
+        "char_4107_vrdant": 24,
+        "char_4109_baslin": 24,
+        "char_4110_delphn": 24,
+        "char_4114_harold": 24,
+        "char_4116_blkkgt": 24,
+        "char_4117_ray": 24,
+        "char_4119_wanqin": 24,
+        "char_411_tomimi": 24,
+        "char_4121_zuole": 24,
+        "char_4122_grabds": 24,
+        "char_4123_ela": 24,
+        "char_4124_iana": 24,
+        "char_4125_rdoc": 24,
+        "char_4126_fuze": 24,
+        "char_4130_luton": 24,
+        "char_4131_odda": 24,
+        "char_4132_ascln": 24,
+        "char_4133_logos": 24,
+        "char_4134_cetsyr": 24,
+        "char_4136_phonor": 24,
+        "char_4137_udflow": 24,
+        "char_4138_narant": 22.199999999999985,
+        "char_4139_papyrs": 24,
+        "char_4140_lasher": 24,
+        "char_4141_marcil": 24,
+        "char_4142_laios": 24,
+        "char_4143_sensi": 24,
+        "char_4144_chilc": 24,
+        "char_4145_ulpia": 24,
+        "char_4146_nymph": 24,
+        "char_4147_mitm": 24,
+        "char_4148_philae": 24,
+        "char_4151_tinman": 24,
+        "char_4155_talr": 24,
+        "char_415_flint": 24,
+        "char_4162_cathy": 24,
+        "char_4163_rosesa": 24,
+        "char_4164_tecno": 24,
+        "char_4165_ctrail": 24,
+        "char_4166_varkis": 24,
+        "char_416_zumama": 19.2,
+        "char_4171_wulfen": 24,
+        "char_4172_xingzh": 24,
+        "char_4173_nowell": 24,
+        "char_4177_brigid": 24,
+        "char_4178_alanna": 24,
+        "char_4179_monstr": 24,
+        "char_4182_oblvns": 24,
+        "char_4183_mortis": 24,
+        "char_4184_dolris": 24,
+        "char_4185_amoris": 24,
+        "char_4186_tmoris": 24,
+        "char_4187_graceb": 24,
+        "char_4188_confes": 24,
+        "char_4191_tippi": 24,
+        "char_4193_lemuen": 24,
+        "char_4194_rmixer": 24,
+        "char_4195_radian": 24,
+        "char_4196_reckpr": 24,
+        "char_4198_christ": 24,
+        "char_4199_makiri": 15.00000000000002,
+        "char_4202_haruka": 24,
+        "char_4203_kichi": 24,
+        "char_4204_mantra": 24,
+        "char_4207_branch": 24,
+        "char_4208_wintim": 24,
+        "char_420_flamtl": 24,
+        "char_4211_snhunt": 24,
+        "char_4212_nasti": 24,
+        "char_4213_skybx": 15.00000000000002,
+        "char_4214_cairn": 24,
+        "char_421_crow": 24,
+        "char_4221_ju": 24,
+        "char_4222_taraxa": 24,
+        "char_4223_botany": 24,
+        "char_4224_turdus": 24,
+        "char_4225_tanya": 13.200000000000019,
+        "char_4226_veen": 24,
+        "char_4227_gallus": 24,
+        "char_4228_closur": 24,
+        "char_422_aurora": 24,
+        "char_423_blemsh": 24,
+        "char_426_billro": 24,
+        "char_427_vigil": 24,
+        "char_430_fartth": 24,
+        "char_431_ashlok": 24,
+        "char_433_windft": 19.2,
+        "char_436_whispr": 24,
+        "char_437_mizuki": 24,
+        "char_440_pinecn": 24,
+        "char_445_wscoot": 24,
+        "char_446_aroma": 24,
+        "char_449_glider": 24,
+        "char_450_necras": 24,
+        "char_451_robin": 24,
+        "char_452_bstalk": 24,
+        "char_455_nothin": 24,
+        "char_456_ash": 24,
+        "char_457_blitz": 24,
+        "char_458_rfrost": 24,
+        "char_459_tachak": 24,
+        "char_464_cement": 24,
+        "char_466_qanik": 24,
+        "char_469_indigo": 24,
+        "char_472_pasngr": 24,
+        "char_473_mberry": 24,
+        "char_474_glady": 24,
+        "char_475_akafyu": 24,
+        "char_476_blkngt": 24,
+        "char_478_kirara": 24,
+        "char_479_sleach": 24,
+        "char_484_robrta": 24,
+        "char_485_pallas": 24,
+        "char_486_takila": 19.2,
+        "char_487_bobb": 24,
+        "char_488_buildr": 24,
+        "char_489_serum": 24,
+        "char_491_humus": 24,
+        "char_492_quercu": 24,
+        "char_493_firwhl": 24,
+        "char_494_vendla": 24,
+        "char_496_wildmn": 24,
+        "char_497_ctable": 24,
+        "char_498_inside": 24,
+        "char_499_kaitou": 24,
+        "char_500_noirc": 24,
+        "char_501_durin": 24,
+        "char_502_nblade": 24,
+        "char_503_rang": 24
+      }
+    },
+    "complete": false,
+    "modelOptimalityProven": false,
+    "gameOptimalityProven": false,
+    "stopReason": "time-budget",
+    "elapsedMs": 10000.462802999999,
+    "stats": {
+      "simulations": 121,
+      "proxyEvaluations": 15520,
+      "invalidPlans": 0,
+      "evaluationErrors": 0,
+      "cacheHits": 22,
+      "startsCompleted": 2,
+      "improvementRounds": 1,
+      "acceptedMoves": 1
+    },
+    "errors": [],
+    "search": {
+      "starts": 2,
+      "rounds": 8,
+      "topCandidates": 40,
+      "exactThreshold": 0,
+      "unfilteredCombinationUpperBound": "357073782407713815781168893216492560341429993904295174979952290630747501263491970705373394736040649414062500",
+      "shortlistSizes": [
+        {
+          "team": -1,
+          "room": "dorm0",
+          "available": 54,
+          "retained": 54
+        },
+        {
+          "team": -1,
+          "room": "dorm1",
+          "available": 54,
+          "retained": 54
+        },
+        {
+          "team": -1,
+          "room": "dorm2",
+          "available": 54,
+          "retained": 54
+        },
+        {
+          "team": -1,
+          "room": "dorm3",
+          "available": 54,
+          "retained": 54
+        },
+        {
+          "team": 0,
+          "room": "office",
+          "available": 17,
+          "retained": 17
+        },
+        {
+          "team": 0,
+          "room": "meeting",
+          "available": 40,
+          "retained": 40
+        },
+        {
+          "team": 0,
+          "room": "control",
+          "available": 32,
+          "retained": 32
+        },
+        {
+          "team": 0,
+          "room": "factory0",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 0,
+          "room": "factory1",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 0,
+          "room": "factory2",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 0,
+          "room": "factory3",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 0,
+          "room": "trade0",
+          "available": 40,
+          "retained": 40
+        },
+        {
+          "team": 0,
+          "room": "trade1",
+          "available": 40,
+          "retained": 40
+        },
+        {
+          "team": 0,
+          "room": "power0",
+          "available": 24,
+          "retained": 24
+        },
+        {
+          "team": 0,
+          "room": "power1",
+          "available": 24,
+          "retained": 24
+        },
+        {
+          "team": 0,
+          "room": "power2",
+          "available": 24,
+          "retained": 24
+        },
+        {
+          "team": 1,
+          "room": "office",
+          "available": 17,
+          "retained": 17
+        },
+        {
+          "team": 1,
+          "room": "meeting",
+          "available": 40,
+          "retained": 40
+        },
+        {
+          "team": 1,
+          "room": "control",
+          "available": 32,
+          "retained": 32
+        },
+        {
+          "team": 1,
+          "room": "factory0",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 1,
+          "room": "factory1",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 1,
+          "room": "factory2",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 1,
+          "room": "factory3",
+          "available": 68,
+          "retained": 52
+        },
+        {
+          "team": 1,
+          "room": "trade0",
+          "available": 40,
+          "retained": 40
+        },
+        {
+          "team": 1,
+          "room": "trade1",
+          "available": 40,
+          "retained": 40
+        },
+        {
+          "team": 1,
+          "room": "power0",
+          "available": 24,
+          "retained": 24
+        },
+        {
+          "team": 1,
+          "room": "power1",
+          "available": 24,
+          "retained": 24
+        },
+        {
+          "team": 1,
+          "room": "power2",
+          "available": 24,
+          "retained": 24
+        }
+      ],
+      "proxyIsUpperBound": false
+    },
+    "excluded": [
+      {
+        "id": "char_1029_yato2",
+        "name": "키린R 야토",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_cost&bd2[010]",
+            "name": "내구력 회복",
+            "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 +0.5, 아이룰루 +8"
+          },
+          {
+            "id": "control_token_prod_spd2[000]",
+            "name": "솔선수범",
+            "description": "아이루와 유쾌한 친구들 오퍼레이터와 함께 제어 센터에 배치 시, 모든 제조소의 생산력 +2% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_1030_noirc2",
+        "name": "레우스S 느와르 코르네",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_bd2[000]",
+            "name": "팀워크",
+            "description": "제어 센터에 배치 시, 제어 센터 내 아이루와 유쾌한 친구들 오퍼레이터 1명이 늘어날 때마다 아이룰루 +2"
+          },
+          {
+            "id": "control_token_tra_spd[000]",
+            "name": "비전 교섭술",
+            "description": "아이루와 유쾌한 친구들 오퍼레이터와 함께 제어 센터에 배치 시, 모든 무역소의 오더 수주 효율 +7% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_1034_jesca2",
+        "name": "제시카 더 리버레이티드",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_bd_spd[000]",
+            "name": "옛 친구 모임",
+            "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 +0.5, 제조소에 배치된 블랙스틸 월드와이드 오퍼레이터 1명당 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1035_wisdel",
+        "name": "위셔델",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_meeting&ord[001]",
+            "name": "공모 β",
+            "description": "제어 센터에 배치 시, 이네스가 응접실에 있으면 응접실의 단서 수집 속도 +5%, 외드레르가 무역소에 있으면 해당 무역소의 오더 상한 +2"
+          },
+          {
+            "id": "control_mp_expand_double[000]",
+            "name": "바벨의 깃발",
+            "description": "제어 센터에 배치 시, 기타 시설의 작업 중인 오퍼레이터의 시간당 컨디션 회복+0.1, 시빌라이트 에테르나가 제어 센터에 배치 시 추가로 +0.1 (제어 센터의 버프와 특별 비교 규칙 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_1040_blaze2",
+        "name": "블레이즈 디 이그나이팅 스파크",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_train_spd[011]",
+            "name": "단금지교",
+            "description": "제어 센터에 배치 시, 훈련실에서 스킬 마스터리 훈련 중인 오퍼레이터의 스킬 훈련 속도 +5% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_1044_hsgma2",
+        "name": "호시구마 더 브리처",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_train_spd[012]",
+            "name": "폭넓은 인맥",
+            "description": "제어 센터에 배치 시, 훈련실에서 스킬 마스터리 훈련 중인 오퍼레이터의 스킬 훈련 속도 +5% (동종 효과 중 가장 높은 수치만 적용)"
+          },
+          {
+            "id": "control_token_prod_spd3[000]",
+            "name": "동료애",
+            "description": "용문근위국 오퍼레이터와 함께 제어 센터에 배치 시, 모든 제조소의 생산력 +3% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_1045_svash2",
+        "name": "실버애쉬 더 레인프로스트",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_tra_limit&spd3[000]",
+            "name": "상업 판도",
+            "description": "제어 센터에 배치 시, 쉐라그 오퍼레이터가 3명 배치된 무역소의 오더 수주 효율 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_1051_headb2",
+        "name": "지마 더 레이징 타이드",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_meeting_bd[000]",
+            "name": "“예, 단장님!”",
+            "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 +0.5, 응접실에 배치된 우르수스 학생자치단 오퍼레이터 1명당 단서 수집 속도 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_2015_dusk",
+        "name": "시",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_cost&bd1[000]",
+            "name": "\"물건으로 인해 기뻐하지 말고\"",
+            "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 +0.05, 자신의 컨디션이 12 미만일 경우, 속세의 화식 +15"
+          },
+          {
+            "id": "control_mp_cost&bd2[000]",
+            "name": "\"자신으로 인해 슬퍼하지 말라\"",
+            "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 +0.5. 자신의 컨디션이 12 이상일 경우, 감지 정보 +10"
+          }
+        ]
+      },
+      {
+        "id": "char_2023_ling",
+        "name": "링",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_facCostReset[000]",
+            "name": "멈추지 않는 술잔",
+            "description": "제어 센터에 배치 시, 해당 제어 센터 내 모든 쉐이 오퍼레이터 본인의 컨디션 소모로 인해 받는 영향 제거"
+          },
+          {
+            "id": "control_costToBD[000]",
+            "name": "'광활한 산천'",
+            "description": "제어 센터에 배치 시, 자신의 컨디션이 12 초과할 경우 속세의 화식 +15, 자신의 컨디션이 12 이하일 경우 감지 정보 +10"
+          }
+        ]
+      },
+      {
+        "id": "char_2024_chyue",
+        "name": "총웨",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_cost&bd_up[000]",
+            "name": "자신을 아는 자",
+            "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 +0.5, 숙소 및 활동실을 제외한 시설에 배치된 쉐이 오퍼레이터 1명당 속세의 화식 +5 (최대 5명)"
+          },
+          {
+            "id": "control_mp_bd_cost_expand[000]",
+            "name": "외로운 빛과 함께",
+            "description": "제어 센터에 배치 시, 기타 시설의 작업 중인 오퍼레이터의 시간당 컨디션 회복 +0.05, 동시에 속세의 화식 20점당 추가로 +0.05 (제어 센터의 버프와 특별 비교 규칙 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_2027_wang",
+        "name": "왕",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_prod_tra_spd[000]",
+            "name": "임기응변",
+            "description": "제어 센터에 배치 시, 외세가 실리보다 크거나 같을 경우, 모든 무역소의 오더 수주 효율 +7%. 만약 실리가 외세보다 클 경우, 모든 제조소의 생산력 +2% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_206_gnosis",
+        "name": "노시스",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_tra_limit&spd[000]",
+            "name": "정밀 계산",
+            "description": "제어 센터에 배치 시, 무역소 내 쉐라그 오퍼레이터가 1명 증가할 때마다 오더 수주 효율 -15%, 오더 상한 +6"
+          }
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "훔",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_cost&faction2[000]",
+            "name": "굳세지만 유연하게",
+            "description": "제어 센터에 배치 시, 제어 센터 내 리 탐정사무소 오퍼레이터가 1명 증가할 때마다 해당 소속 오퍼레이터의 컨디션 회복량이 추가로 증가하고, 1명 증가할 때마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 +0.2"
+          }
+        ]
+      },
+      {
+        "id": "char_322_lmlee",
+        "name": "리",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_allCost_condChar[000]",
+            "name": "한가하고 덧없는 인생",
+            "description": "아와 함께 제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 +0.25"
+          }
+        ]
+      },
+      {
+        "id": "char_4004_pudd",
+        "name": "푸딩",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_token_prod_spd[000]",
+            "name": "오버클럭",
+            "description": "제어 센터에 배치 시, 2대 이상의 작업 플랫폼이 발전소에 배치된 경우, 모든 제조소의 생산력 +2% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_4098_vvana",
+        "name": "비비아나",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_prod_fraction[000]",
+            "name": "양초의 기사의 불빛",
+            "description": "제어 센터에 배치 시, 제조소에 배치된 기사 오퍼레이터 1명당 생산력 +7%"
+          }
+        ]
+      },
+      {
+        "id": "char_4110_delphn",
+        "name": "델핀",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_tra_limit&spd[010]",
+            "name": "계략의 달인",
+            "description": "제어 센터에 배치 시, 같은 무역소에 배치된 글래스고 오퍼레이터 1명당 오더 수주 효율 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_4132_ascln",
+        "name": "아스카론",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_train_spd[010]",
+            "name": "S.W.E.E.P. 리더",
+            "description": "제어 센터에 배치 시, 훈련실에서 스킬 마스터리 훈련 중인 오퍼레이터의 스킬 훈련 속도 +5% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_4134_cetsyr",
+        "name": "시빌라이트 에테르나",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_cost_double[001]",
+            "name": "'끝나지 않은 이야기'",
+            "description": "아미야와 함께 제어 센터에 배치 시, 자신과 아미야의 시간당 컨디션 회복 +0.1"
+          }
+        ]
+      },
+      {
+        "id": "char_4166_varkis",
+        "name": "바르카리스",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_meeting&mp_cost[100]",
+            "name": "영웅의 긍지 β",
+            "description": "제어 센터에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 미노스 오퍼레이터 1명당 응접실의 단서 수집 속도 +5%(최대 +25%, 동종 효과 중 가장 높은 수치만 적용). 사르곤 오퍼레이터와 함께 제어 센터에 배치 시, 자신의 시간당 컨디션 소모 +0.02"
+          }
+        ]
+      },
+      {
+        "id": "char_416_zumama",
+        "name": "유넥티스",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_pow_bot[000]",
+            "name": "괜찮을 거 같은데",
+            "description": "제어 센터에 배치 시, Lancet-2가 발전소에 배치된 경우, 발전소 +2개로 간주함 (시설 수량에만 영향을 줌)"
+          }
+        ]
+      },
+      {
+        "id": "char_4182_oblvns",
+        "name": "토가와 사키코",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_prod_bd_spd[010]",
+            "name": "풍부한 업무 경험",
+            "description": "제어 센터에 배치 시, 모든 귀금속류에 대한 제조소 생산력 +1%, 보유한 열정 20마다 모든 귀금속류에 대한 제조소 생산력 +1%"
+          },
+          {
+            "id": "control_mp_cost&bd3[000]",
+            "name": "씩씩한 아가씨",
+            "description": "제어 센터에 배치 시, 열정이 40 이상인 경우 자신의 시간당 컨디션 소모 +0.05"
+          }
+        ]
+      },
+      {
+        "id": "char_4183_mortis",
+        "name": "와카바 무츠미",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_bd&trade[000]",
+            "name": "연기의 괴물",
+            "description": "제어 센터에 배치 시, 열정 +20, 보유한 열정 8마다 자신의 시간당 컨디션 소모 +0.01, 모든 무역소의 오더 수주 효율 +1% (동종 효과 중 가장 높은 수치만 적용)"
+          },
+          {
+            "id": "control_mp_cost_reset[000]",
+            "name": "서로의 반쪽",
+            "description": "토가와 사키코와 함께 제어 센터에 배치 시, 자신의 컨디션 소모로 인해 받는 영향 제거"
+          }
+        ]
+      },
+      {
+        "id": "char_4184_dolris",
+        "name": "미스미 우이카",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_dorm_bd[000]",
+            "name": "아이돌 아우라",
+            "description": "제어 센터에 배치 시, 숙소 내 오퍼레이터 1명당 열정 +1"
+          },
+          {
+            "id": "control_dorm_rec2[000]",
+            "name": "공명하는 유대",
+            "description": "제어 센터에 배치 시, 모든 숙소 안에 배치된 모든 오퍼레이터의 시간당 컨디션 회복 +0.05(동종 효과 중 가장 높은 수치만 적용). 토가와 사키코와 함께 제어 센터에 배치 시, 토가와 사키코의 시간당 컨디션 회복 +0.1"
+          }
+        ]
+      },
+      {
+        "id": "char_4185_amoris",
+        "name": "유텐지 냐무",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_meeting_spd&bd[000]",
+            "name": "노력가",
+            "description": "제어 센터에 배치 시 열정 +10, 응접실의 단서 수집 속도 +5% (동종 효과 중 가장 높은 수치만 적용)"
+          },
+          {
+            "id": "control_mp&meet_spd[000]",
+            "name": "성과주의",
+            "description": "토가와 사키코와 같이 제어 센터에 배치 시 토가와 사키코의 시간당 컨디션 소모량 +0.05, 응접실의 단서 수집 속도 추가로 +5% (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_4186_tmoris",
+        "name": "야하타 우미리",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_hire_spd&bd[000]",
+            "name": "믿음직한 동료",
+            "description": "제어 센터에 배치 시, 열정 +10, 사무실의 인맥 레퍼런스 누적 속도 +10% (동종 효과 중 가장 높은 수치만 적용)"
+          },
+          {
+            "id": "control_tra_limit&spd2[000]",
+            "name": "패밀리의 인정",
+            "description": "제어 센터에 배치 시, 무역소 내 시라쿠사 오퍼레이터가 1명 증가할 때마다 오더 수주 효율 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4195_radian",
+        "name": "라이디언",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_dorm_rec_tag[001]",
+            "name": "무언의 자애",
+            "description": "제어 센터에 배치 시, 모든 숙소 안에 배치된 정예 오퍼레이터의 시간당 컨디션 회복 +0.1 (동종 효과 중 가장 높은 수치만 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_420_flamtl",
+        "name": "플레임테일",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_psk[000]",
+            "name": "피누스 실베스트리스 기사",
+            "description": "제어 센터에 배치 시, 제조소에 배치된 피누스 실베스트리스 기사단 오퍼레이터 1명당 작전기록류에 대한 생산력 +10%, 귀금속류에 대한 생산력 -10%"
+          }
+        ]
+      },
+      {
+        "id": "char_456_ash",
+        "name": "Ash",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_bd[000]",
+            "name": "정보 저장",
+            "description": "제어 센터에 배치 시, 제어 센터 내 레인보우 팀 오퍼레이터가 1명 증가할 때마다 정보 저장 +1"
+          }
+        ]
+      },
+      {
+        "id": "char_459_tachak",
+        "name": "Tachanka",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_bd[010]",
+            "name": "우르수스 특제 음료",
+            "description": "제어 센터에 배치 시, 제어 센터 내 우르수스 학생자치단 오퍼레이터가 1명 증가할 때마다 우르수스 특제 음료 +1"
+          }
+        ]
+      },
+      {
+        "id": "char_474_glady",
+        "name": "글래디아",
+        "room": "control",
+        "skills": [
+          {
+            "id": "control_mp_aegir1[000]",
+            "name": "조석의 파수꾼",
+            "description": "제어 센터에 배치 시, 숙소를 제외한 시설에 배치된 어비설 헌터스 오퍼레이터 1명당 자신의 시간당 컨디션 소모 +0.5, 반대의 경우 자신의 시간당 컨디션 회복 +0.5, 숙소 내에 배치한 어비설 헌터스 오퍼레이터의 컨디션이 최대인 경우 추가로 +0.5"
+          },
+          {
+            "id": "control_mp_aegir2[010]",
+            "name": "무리 사냥 β",
+            "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 +0.05, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 어비설 헌터스 오퍼레이터는 특수 버프 획득 (일부 스킬은 특수 중첩 규칙 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_1046_sbell2",
+        "name": "프라마닉스 더 프레리타",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_cost&char[001]",
+            "name": "히라에 대한 향수",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +35%, 시간당 컨디션 소모 -0.25, 만약 실버애쉬 더 레인프로스트가 제어 센터에 배치되어 있을 경우, 인맥 레퍼런스의 누적 속도가 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_197_poca",
+        "name": "로사",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue2[250]",
+            "name": "인망",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도+20%, 레퍼런스 서칭 1회 완료 시 마다 우르수스 학생자치단 단서 획득 확률 증가 (확률은 작업 시간과 모집 인원의 영향을 받음)"
+          }
+        ]
+      },
+      {
+        "id": "char_264_f12yin",
+        "name": "마운틴",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue2[230]",
+            "name": "내막",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +20%, 레퍼런스 서칭 1회 완료 시마다 블랙스틸 월드와이드 단서 획득 확률 증가 (확률은 작업 시간과 모집 인원의 영향을 받음)"
+          }
+        ]
+      },
+      {
+        "id": "char_343_tknogi",
+        "name": "츠키노기",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue[100]",
+            "name": "타인 통찰",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +35%, 모집 인원마다 단서 수집 속도가 추가로 +5% (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_4080_lin",
+        "name": "린",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_cost&extra[000]",
+            "name": "적재적소",
+            "description": "인사부 사무실에 배치 시, 모집 인원마다 인맥 레퍼런스의 누적 속도 +10% (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_4109_baslin",
+        "name": "베이스라인",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_bd_n1_n1[300]",
+            "name": "마음의 소리",
+            "description": "인사부 사무실에 배치 시, 모집 인원마다 무성의 공명 +15 (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_4110_delphn",
+        "name": "델핀",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue2[260]",
+            "name": "새로 사귄 옛 친구",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +20%, 레퍼런스 서칭 1회 완료 시마다 글래스고 단서 획득 확률 증가 (확률은 작업 시간과 모집 인원의 영향을 받음)"
+          }
+        ]
+      },
+      {
+        "id": "char_4224_turdus",
+        "name": "우쿠시크",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue[121]",
+            "name": "거리의 법칙",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +35%, 모집 인원마다 단서 수집 속도가 추가로 +5% (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_436_whispr",
+        "name": "위스퍼레인",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_bd_n1_n1[100]",
+            "name": "순유",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +20%, 모집 인원마다 기억 조각 +10개 획득 (초기 모집 인원은 포함하지 않음)"
+          },
+          {
+            "id": "hire_spd_bd_n1[000]",
+            "name": "추억 회상",
+            "description": "인사부 사무실에 배치 시, 기억 조각 1개마다 감지 정보 1점으로 전환, 컨디션 소진 시 모든 기억 조각과 자신이 누적한 감지 정보 초기화"
+          }
+        ]
+      },
+      {
+        "id": "char_455_nothin",
+        "name": "우요우",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue[101]",
+            "name": "호사가",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +35%, 모집 인원마다 단서 수집 속도가 추가로 +5% (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_457_blitz",
+        "name": "Blitz",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_blitz[000]",
+            "name": "언어학",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +20%, 정보 저장 1점당 누적 속도가 추가로 +5%, 우르수스 특제 음료 1병당 누적 속도가 추가로 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_466_qanik",
+        "name": "카니팔라트",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_cost&clue[000]",
+            "name": "구조대: 체력 확보",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +35%, 모집 인원마다 시간당 컨디션 회복이 추가로 -0.1 (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_473_mberry",
+        "name": "멀베리",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd_bd_n1_n1[200]",
+            "name": "구조대: 재앙 후 조사",
+            "description": "인사부 사무실에 배치 시, 모집 인원마다 속세의 화식 +10 (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_498_inside",
+        "name": "인사이더",
+        "room": "office",
+        "skills": [
+          {
+            "id": "hire_spd&clue[110]",
+            "name": "광활한 인맥",
+            "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 +30%, 모집 인원마다 단서 수집 속도가 추가로 +5% (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_1050_chen3",
+        "name": "첸 더 던스트릭",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd_bd[002]",
+            "name": "협객의 도",
+            "description": "응접실에 배치 시, 단서 수집 속도 20% 상승, 속세의 화식 10점당 추가로 1% 상승"
+          }
+        ]
+      },
+      {
+        "id": "char_2012_typhon",
+        "name": "티폰",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&sami[000]",
+            "name": "빙원 순회",
+            "description": "응접실에 배치 시, 단서 수집 속도 10% 상승, 기타 사미 오퍼레이터와 함께 응접실에 배치 시, 단서 수집 속도가 추가로 5% 상승, 자신의 시간당 컨디션 소모 +0.5"
+          }
+        ]
+      },
+      {
+        "id": "char_4026_vulpis",
+        "name": "불피스폴리아",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&bd[100]",
+            "name": "킬러의 휴가",
+            "description": "응접실에 배치 시, 스즈란과 함께 응접실에 배치 시, 단서 수집 속도가 추가로 30% 상승"
+          }
+        ]
+      },
+      {
+        "id": "char_4027_heyak",
+        "name": "오올헤약",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&condChar_mustget[000]",
+            "name": "문헌학 고문",
+            "description": "응접실에 배치 시, 응접실에서 자신만 업무 중이고 연속으로 소모한 컨디션이 16 초과 경우, 다음에 라인 랩 단서를 확정 획득"
+          }
+        ]
+      },
+      {
+        "id": "char_4052_surfer",
+        "name": "서퍼",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&sami[110]",
+            "name": "정보 탐색",
+            "description": "응접실에 배치 시, 단서 수집 속도 10% 상승, 기타 블랙스틸 월드와이드 오퍼레이터와 함께 응접실에 배치 시, 단서 수집 속도가 추가로 20% 상승"
+          }
+        ]
+      },
+      {
+        "id": "char_4102_threye",
+        "name": "발라크빈",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&bd[010]",
+            "name": "미래의 길",
+            "description": "응접실에 배치 시, 단서 수집 속도 10% 상승, 티폰과 함께 응접실에 배치 시, 단서 수집 속도가 추가로 15% 상승, 자신의 시간당 컨디션 소모 +0.5, 단서 보드 중 미보유 단서를 더 쉽게 획득"
+          }
+        ]
+      },
+      {
+        "id": "char_4124_iana",
+        "name": "Iana",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd_bd[000]",
+            "name": "정보 전문가",
+            "description": "응접실에 배치 시, 단서 수집 속도 5% 상승, 정보 저장 1점당 추가로 5% 상승"
+          }
+        ]
+      },
+      {
+        "id": "char_4131_odda",
+        "name": "오다",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&condChar_mustget[100]",
+            "name": "비밀 연락원",
+            "description": "응접실에 배치 시, 응접실에서 자신만 업무 중이고 연속으로 소모한 컨디션이 16 초과 경우, 다음에 로도스 아일랜드 제약회사 단서를 확정 획득"
+          }
+        ]
+      },
+      {
+        "id": "char_4142_laios",
+        "name": "라이오스",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd_bd[001]",
+            "name": "만복 상태의 의욕",
+            "description": "응접실에 배치 시, 마물 요리 1개당 단서 수집 속도가 추가로 2% 상승"
+          }
+        ]
+      },
+      {
+        "id": "char_4194_rmixer",
+        "name": "산크타 믹사파라토",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd_ext&P[000]",
+            "name": "간직한 동심",
+            "description": "응접실에 배치 시, 만약 피아메타가 숙소에 배치되어 있으면, 단서 수집 속도가 추가로 10% 상승"
+          }
+        ]
+      },
+      {
+        "id": "char_445_wscoot",
+        "name": "윈드스쿠트",
+        "room": "meeting",
+        "skills": [
+          {
+            "id": "meet_spd&clue[000]",
+            "name": "폭넓은 교제",
+            "description": "응접실에 배치 시, 모집 인원마다 단서 수집 속도 5% 상승 (초기 모집 인원은 포함하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_1027_greyy2",
+        "name": "그레이 더 라이트닝베어러",
+        "room": "power0",
+        "skills": [
+          {
+            "id": "power_count[000]",
+            "name": "아침 햇살",
+            "description": "발전소에 배치 시, 다른 발전소에 배치된 작업 플랫폼이 없을 경우, 발전소 +1개로 간주함 (시설 수량에만 영향을 줌)"
+          }
+        ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "저스티스 나이트",
+        "room": "power0",
+        "skills": [
+          {
+            "id": "power_prod_spd_P[000]",
+            "name": "'띠띠~, 가동!'",
+            "description": "발전소에 배치 시, 와일드메인이 배치된 제조소의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4093_frston",
+        "name": "Friston-3",
+        "room": "power0",
+        "skills": [
+          {
+            "id": "power_rec_spd_P[000]",
+            "name": "'유쾌한 대화'",
+            "description": "발전소에 배치 시, 켈시가 제어 센터에 배치되어 있으면 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4136_phonor",
+        "name": "PhonoR-0",
+        "room": "power0",
+        "skills": [
+          {
+            "id": "power_rec_spd_P[001]",
+            "name": "주술 공명",
+            "description": "발전소에 배치 시, 만약 로고스가 훈련실의 협조 위치에 배치되어 있으면 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4188_confes",
+        "name": "CONFESS-47",
+        "room": "power0",
+        "skills": [
+          {
+            "id": "power_rec_spd_ext&faction[000]",
+            "name": "정비 중",
+            "description": "발전소에 배치 시, 다른 라테라노 오퍼레이터가 발전소에 배치되어 있으면, 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4227_gallus",
+        "name": "GALLUS²",
+        "room": "power0",
+        "skills": [
+          {
+            "id": "power_rec_spd_ext&tag[000]",
+            "name": "닭려 매커니즘",
+            "description": "발전소에 배치 시, 다른 작업 플랫폼이 발전소에 배치되어 있을 경우, 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1027_greyy2",
+        "name": "그레이 더 라이트닝베어러",
+        "room": "power1",
+        "skills": [
+          {
+            "id": "power_count[000]",
+            "name": "아침 햇살",
+            "description": "발전소에 배치 시, 다른 발전소에 배치된 작업 플랫폼이 없을 경우, 발전소 +1개로 간주함 (시설 수량에만 영향을 줌)"
+          }
+        ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "저스티스 나이트",
+        "room": "power1",
+        "skills": [
+          {
+            "id": "power_prod_spd_P[000]",
+            "name": "'띠띠~, 가동!'",
+            "description": "발전소에 배치 시, 와일드메인이 배치된 제조소의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4093_frston",
+        "name": "Friston-3",
+        "room": "power1",
+        "skills": [
+          {
+            "id": "power_rec_spd_P[000]",
+            "name": "'유쾌한 대화'",
+            "description": "발전소에 배치 시, 켈시가 제어 센터에 배치되어 있으면 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4136_phonor",
+        "name": "PhonoR-0",
+        "room": "power1",
+        "skills": [
+          {
+            "id": "power_rec_spd_P[001]",
+            "name": "주술 공명",
+            "description": "발전소에 배치 시, 만약 로고스가 훈련실의 협조 위치에 배치되어 있으면 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4188_confes",
+        "name": "CONFESS-47",
+        "room": "power1",
+        "skills": [
+          {
+            "id": "power_rec_spd_ext&faction[000]",
+            "name": "정비 중",
+            "description": "발전소에 배치 시, 다른 라테라노 오퍼레이터가 발전소에 배치되어 있으면, 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4227_gallus",
+        "name": "GALLUS²",
+        "room": "power1",
+        "skills": [
+          {
+            "id": "power_rec_spd_ext&tag[000]",
+            "name": "닭려 매커니즘",
+            "description": "발전소에 배치 시, 다른 작업 플랫폼이 발전소에 배치되어 있을 경우, 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1027_greyy2",
+        "name": "그레이 더 라이트닝베어러",
+        "room": "power2",
+        "skills": [
+          {
+            "id": "power_count[000]",
+            "name": "아침 햇살",
+            "description": "발전소에 배치 시, 다른 발전소에 배치된 작업 플랫폼이 없을 경우, 발전소 +1개로 간주함 (시설 수량에만 영향을 줌)"
+          }
+        ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "저스티스 나이트",
+        "room": "power2",
+        "skills": [
+          {
+            "id": "power_prod_spd_P[000]",
+            "name": "'띠띠~, 가동!'",
+            "description": "발전소에 배치 시, 와일드메인이 배치된 제조소의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4093_frston",
+        "name": "Friston-3",
+        "room": "power2",
+        "skills": [
+          {
+            "id": "power_rec_spd_P[000]",
+            "name": "'유쾌한 대화'",
+            "description": "발전소에 배치 시, 켈시가 제어 센터에 배치되어 있으면 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4136_phonor",
+        "name": "PhonoR-0",
+        "room": "power2",
+        "skills": [
+          {
+            "id": "power_rec_spd_P[001]",
+            "name": "주술 공명",
+            "description": "발전소에 배치 시, 만약 로고스가 훈련실의 협조 위치에 배치되어 있으면 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4188_confes",
+        "name": "CONFESS-47",
+        "room": "power2",
+        "skills": [
+          {
+            "id": "power_rec_spd_ext&faction[000]",
+            "name": "정비 중",
+            "description": "발전소에 배치 시, 다른 라테라노 오퍼레이터가 발전소에 배치되어 있으면, 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4227_gallus",
+        "name": "GALLUS²",
+        "room": "power2",
+        "skills": [
+          {
+            "id": "power_rec_spd_ext&tag[000]",
+            "name": "닭려 매커니즘",
+            "description": "발전소에 배치 시, 다른 작업 플랫폼이 발전소에 배치되어 있을 경우, 드론 회복 속도 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1019_siege2",
+        "name": "비나 빅토리아",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&par[001]",
+            "name": "대외 무역 결의 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 해당 무역소에 글래스고 오퍼레이터가 있을 경우, 오더 수주 효율이 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_102_texas",
+        "name": "텍사스",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&cost_P[000]",
+            "name": "애증",
+            "description": "라플란드와 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 +0.3, 오더 수주 효율 +65%"
+          },
+          {
+            "id": "trade_ord_limit&cost_P[010]",
+            "name": "묵계",
+            "description": "엑시아와 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 -0.3"
+          }
+        ]
+      },
+      {
+        "id": "char_1033_swire2",
+        "name": "스와이어 디 엘리건트 위트",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_variable[000]",
+            "name": "투자 유치",
+            "description": "무역소에 배치 시, 현재 무역소에 배치된 오퍼레이터로 인해 늘어난 오더 상한만큼 오더 수주 효율 4%"
+          }
+        ]
+      },
+      {
+        "id": "char_1041_angel2",
+        "name": "엑시아 더 뉴 커버넌트",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_par[001]",
+            "name": "시내 특급배송",
+            "description": "무역소에 배치 시, 함께 배치된 라테라노 오퍼레이터 1명당 해당 무역소의 오더 수주 효율 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_140_whitew",
+        "name": "라플란드",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_limit&cost_P[001]",
+            "name": "속셈 β",
+            "description": "텍사스와 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 -0.1, 오더 수주 상한 +4"
+          }
+        ]
+      },
+      {
+        "id": "char_154_morgan",
+        "name": "모건",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_par[000]",
+            "name": "패거리의 나침반",
+            "description": "무역소에 배치 시, 함께 배치된 글래스고 오퍼레이터 1명당 해당 무역소의 오더 수주 효율 +20%, 시즈와 함께 무역소에 배치될 경우 오더 수주 효율이 추가로 +35%"
+          }
+        ]
+      },
+      {
+        "id": "char_272_strong",
+        "name": "제이",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_limit_diff[000]",
+            "name": "시장경제",
+            "description": "무역소에 배치 시, 현재 오더 수와 오더 수주 상한의 차이 1당, 오더 수주 효율 +4%"
+          },
+          {
+            "id": "trade_ord_limit_count[000]",
+            "name": "상인의 길",
+            "description": "무역소에 배치 시, 현재 무역소 내의 다른 오퍼레이터가 제공하는 오더 수주 효율 10%당 오더 수주 상한 -1(오더 최소 1개), 오더 개수 1개당 오더 수주 효율 +4% (일부 스킬은 특수 중첩 규칙 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_332_archet",
+        "name": "아르케토",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&dorm&lv[010]",
+            "name": "경건한 펀딩·β",
+            "description": "무역소에 배치 시, 모든 숙소의 레벨 1당 오더 수주 효율 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_383_snsant",
+        "name": "스노우상트",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_variable2[001]",
+            "name": "근면성실 β",
+            "description": "무역소에 배치 시, 해당 무역소 내의 오퍼레이터가 제공한 오더 수주 효율 5%당 효율 5% 추가 제공, 최대 35% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_402_tuye",
+        "name": "투예",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&gold[010]",
+            "name": "물류계획 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +5%, 순금 생산 라인 2개당 현재 무역소의 오더 수주 효율이 추가로 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_4032_provs",
+        "name": "프로바이조",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_law[000]",
+            "name": "계약법",
+            "description": "무역소에 배치 시, 다음 순금 오더의 납품 수가 4 미만일 경우, 위약 오더로 간주"
+          },
+          {
+            "id": "trade_ord_against[010]",
+            "name": "위약 배상β",
+            "description": "무역소에 배치 시, 다음 순금 오더가 위약 오더인 경우, 순금 납품 수가 추가로 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4037_demetr",
+        "name": "벨로네",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_ext[021]",
+            "name": "패밀리 경영 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 비질이 기반시설(어시스턴트 및 활동실 사용자 미포함)에 있으면 오더 수주 효율이 추가로 +10%"
+          },
+          {
+            "id": "trade_ord_limit&cost_P[020]",
+            "name": "미상환 채무",
+            "description": "비질과 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 -0.1, 오더 수주 상한 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4046_ebnhlz",
+        "name": "에벤홀츠",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_bd_n1[000]",
+            "name": "음감",
+            "description": "무역소에 배치 시, 숙소 내 오퍼레이터 1명당 감지 정보 +1, 동시에 감지 정보 1점당 무성의 공명 1점으로 전환"
+          },
+          {
+            "id": "trade_ord_spd_bd[010]",
+            "name": "서글픈 하모니",
+            "description": "무역소에 배치 시, 무성의 공명 2점당 오더 수주 효율 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4055_bgsnow",
+        "name": "파죰카",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&gold[100]",
+            "name": "유통망 확보",
+            "description": "무역소에 배치 시, 순금 생산 라인 1개당, 현재 무역소의 오더 수주 효율이 +5%"
+          },
+          {
+            "id": "trade_ord_line_durin[010]",
+            "name": "쎄루에르차 시민",
+            "description": "무역소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 두린족 오퍼레이터 1명당(최대 4명) 현재 무역소에 순금 생산 라인 1"
+          }
+        ]
+      },
+      {
+        "id": "char_4058_pepe",
+        "name": "페페",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_limit&trade&lv[000]",
+            "name": "팔방미인",
+            "description": "무역소에 배치 시, 해당 무역소의 레벨 1당 오더 상한 +1"
+          },
+          {
+            "id": "trade_ord_pepe[000]",
+            "name": "독특한 혜안",
+            "description": "무역소에 배치 시, 특별 독점 오더 고정 획득 (위약 오더로 간주하지 않음), 해당 오더는 다른 오더 수주 효율의 영향을 받지 않음"
+          }
+        ]
+      },
+      {
+        "id": "char_4063_quartz",
+        "name": "쿼츠",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&formula[000]",
+            "name": "정확한 스케줄",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 제조소에서 항목 1종 가공할 때마다, 해당 무역소의 수주 효율 추가로 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_4077_palico",
+        "name": "테라 대륙 조사단",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&limit&bd[000]",
+            "name": "귀요미 아이루",
+            "description": "무역소에 배치 시, 오더 수주 효율 +5%, 오더 상한 +2, 아이룰루가 1개 늘어날 때마다 오더 수주 효율 +3%"
+          }
+        ]
+      },
+      {
+        "id": "char_4083_chimes",
+        "name": "윈드차임스",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_cost&bd2[001]",
+            "name": "만리전서",
+            "description": "무역소에 배치 시, 무역소 내 오퍼레이터의 시간당 컨디션 소모 -0.1, 동시에 속세의 화식 10점당 추가로 -0.02"
+          }
+        ]
+      },
+      {
+        "id": "char_4088_hodrer",
+        "name": "외드레르",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_par&per[001]",
+            "name": "자수성가 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 이네스와 W가 작업 시설에 배치 시(어시스턴트 미포함), 오더 수주 효율이 각각 추가로 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4091_ulika",
+        "name": "U-Official",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&wt[000]",
+            "name": "순진한 협상가",
+            "description": "무역소에 배치 시, 오더 수주 효율 +10%, 해당 무역소가 수주한 순금 오더가 순금 2 확정 납품 (위약 오더로 간주하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_4116_blkkgt",
+        "name": "데겐블레허",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_variable3[000]",
+            "name": "챔피언의 품격",
+            "description": "무역소에 배치 시, 해당 무역소 내의 오퍼레이터가 제공한 오더 상한 5개당 오더 수주 효율 25% 제공, 최대 100% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_4137_udflow",
+        "name": "언더플로우",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_ext[001]",
+            "name": "대육지 교섭 대표 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 울피아누스가 기반시설(어시스턴트 및 활동실 사용자 미포함)에 있으면 오더 수주 효율이 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_4144_chilc",
+        "name": "칠책",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_bd[100]",
+            "name": "익숙한 깊은 향",
+            "description": "무역소에 배치 시, 마물 요리 1개당 오더 수주 효율 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4147_mitm",
+        "name": "미틈",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&meet[010]",
+            "name": "타고난 고문",
+            "description": "무역소에 배치 시, 오더 수주 효율 +15%, 응접실 레벨 1레벨당 추가로 수주 효율 5% 제공, 최대 30% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_4163_rosesa",
+        "name": "로즈솔트",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_limit&trade&lv[001]",
+            "name": "돈은 기다리지 않아",
+            "description": "무역소에 배치 시, 해당 무역소의 레벨 1당 오더 상한 +1"
+          }
+        ]
+      },
+      {
+        "id": "char_4193_lemuen",
+        "name": "르무엔",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&multiPar[100]",
+            "name": "동반자",
+            "description": "무역소에 배치 시, 오더 수주 효율 +20%, 엑시아와 함께 무역소에 배치될 경우 수주 효율이 추가로 +25%"
+          }
+        ]
+      },
+      {
+        "id": "char_4203_kichi",
+        "name": "키치세이",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&share[002]",
+            "name": "알뜰 경영 β",
+            "description": "무역소에 배치 시, 무역소 내 자신을 제외한 작업 중인 오퍼레이터 1명당 오더 수주 효율 +20%"
+          }
+        ]
+      },
+      {
+        "id": "char_4204_mantra",
+        "name": "만트라",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&tag[010]",
+            "name": "정예 소대",
+            "description": "무역소에 배치 시, 오더 수주 효율 +25%, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 정예 오퍼레이터가 배치된 시설 1개당 오더 수주 효율이 추가로 +2% (최대 10개)"
+          }
+        ]
+      },
+      {
+        "id": "char_4222_taraxa",
+        "name": "타락사쿰",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&tag[020]",
+            "name": "'가르칠만하구나!'",
+            "description": "무역소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 쉐이 오퍼레이터가 배치된 시설 1개당 오더 수주 효율 +4% (최대 5개)"
+          }
+        ]
+      },
+      {
+        "id": "char_4228_closur",
+        "name": "클로저",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_closure[000]",
+            "name": "특별 오더",
+            "description": "무역소에 배치 시, 오더 수주 효율 +10%, 클로저의 특별 오더 고정 획득 (위약 오더로 간주하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_427_vigil",
+        "name": "비질",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd&meet[000]",
+            "name": "신도시 교역",
+            "description": "무역소에 배치 시, 오더 수주 효율 +25%, 응접실 레벨 1레벨당 추가로 수주 효율 5% 제공, 최대 40% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_455_nothin",
+        "name": "우요우",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_spd_bd_n2[000]",
+            "name": "\"원하는 자가 걸려든다\"",
+            "description": "무역소에 배치 시, 숙소 내 오퍼레이터 1명당 \n속세의 화식 +1, 속세의 화식 1점당 오더 수주 효율 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_478_kirara",
+        "name": "키라라",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_ord_line_gold[010]",
+            "name": "주문 흐름 가시화 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +5%, 순금 생산 라인 2개당 현재 무역소에 순금 생산 라인이 추가로 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_493_firwhl",
+        "name": "파이어휘슬",
+        "room": "trade0",
+        "skills": [
+          {
+            "id": "trade_cost[000]",
+            "name": "분위기 업",
+            "description": "무역소에 배치 시, 무역소 내 오퍼레이터의 시간당 컨디션 소모 -0.1"
+          },
+          {
+            "id": "trade_ord_spd&share[000]",
+            "name": "대신 부탁",
+            "description": "무역소에 배치 시, 무역소 내 자신을 제외한 작업 중인 오퍼레이터 1명당 오더 수주 효율 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_1019_siege2",
+        "name": "비나 빅토리아",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&par[001]",
+            "name": "대외 무역 결의 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 해당 무역소에 글래스고 오퍼레이터가 있을 경우, 오더 수주 효율이 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_102_texas",
+        "name": "텍사스",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&cost_P[000]",
+            "name": "애증",
+            "description": "라플란드와 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 +0.3, 오더 수주 효율 +65%"
+          },
+          {
+            "id": "trade_ord_limit&cost_P[010]",
+            "name": "묵계",
+            "description": "엑시아와 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 -0.3"
+          }
+        ]
+      },
+      {
+        "id": "char_1033_swire2",
+        "name": "스와이어 디 엘리건트 위트",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_variable[000]",
+            "name": "투자 유치",
+            "description": "무역소에 배치 시, 현재 무역소에 배치된 오퍼레이터로 인해 늘어난 오더 상한만큼 오더 수주 효율 4%"
+          }
+        ]
+      },
+      {
+        "id": "char_1041_angel2",
+        "name": "엑시아 더 뉴 커버넌트",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_par[001]",
+            "name": "시내 특급배송",
+            "description": "무역소에 배치 시, 함께 배치된 라테라노 오퍼레이터 1명당 해당 무역소의 오더 수주 효율 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_140_whitew",
+        "name": "라플란드",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_limit&cost_P[001]",
+            "name": "속셈 β",
+            "description": "텍사스와 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 -0.1, 오더 수주 상한 +4"
+          }
+        ]
+      },
+      {
+        "id": "char_154_morgan",
+        "name": "모건",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_par[000]",
+            "name": "패거리의 나침반",
+            "description": "무역소에 배치 시, 함께 배치된 글래스고 오퍼레이터 1명당 해당 무역소의 오더 수주 효율 +20%, 시즈와 함께 무역소에 배치될 경우 오더 수주 효율이 추가로 +35%"
+          }
+        ]
+      },
+      {
+        "id": "char_272_strong",
+        "name": "제이",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_limit_diff[000]",
+            "name": "시장경제",
+            "description": "무역소에 배치 시, 현재 오더 수와 오더 수주 상한의 차이 1당, 오더 수주 효율 +4%"
+          },
+          {
+            "id": "trade_ord_limit_count[000]",
+            "name": "상인의 길",
+            "description": "무역소에 배치 시, 현재 무역소 내의 다른 오퍼레이터가 제공하는 오더 수주 효율 10%당 오더 수주 상한 -1(오더 최소 1개), 오더 개수 1개당 오더 수주 효율 +4% (일부 스킬은 특수 중첩 규칙 적용)"
+          }
+        ]
+      },
+      {
+        "id": "char_332_archet",
+        "name": "아르케토",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&dorm&lv[010]",
+            "name": "경건한 펀딩·β",
+            "description": "무역소에 배치 시, 모든 숙소의 레벨 1당 오더 수주 효율 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_383_snsant",
+        "name": "스노우상트",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_variable2[001]",
+            "name": "근면성실 β",
+            "description": "무역소에 배치 시, 해당 무역소 내의 오퍼레이터가 제공한 오더 수주 효율 5%당 효율 5% 추가 제공, 최대 35% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_402_tuye",
+        "name": "투예",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&gold[010]",
+            "name": "물류계획 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +5%, 순금 생산 라인 2개당 현재 무역소의 오더 수주 효율이 추가로 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_4032_provs",
+        "name": "프로바이조",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_law[000]",
+            "name": "계약법",
+            "description": "무역소에 배치 시, 다음 순금 오더의 납품 수가 4 미만일 경우, 위약 오더로 간주"
+          },
+          {
+            "id": "trade_ord_against[010]",
+            "name": "위약 배상β",
+            "description": "무역소에 배치 시, 다음 순금 오더가 위약 오더인 경우, 순금 납품 수가 추가로 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4037_demetr",
+        "name": "벨로네",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_ext[021]",
+            "name": "패밀리 경영 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 비질이 기반시설(어시스턴트 및 활동실 사용자 미포함)에 있으면 오더 수주 효율이 추가로 +10%"
+          },
+          {
+            "id": "trade_ord_limit&cost_P[020]",
+            "name": "미상환 채무",
+            "description": "비질과 함께 같은 무역소에 배치 시, 시간당 컨디션 소모 -0.1, 오더 수주 상한 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4046_ebnhlz",
+        "name": "에벤홀츠",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_bd_n1[000]",
+            "name": "음감",
+            "description": "무역소에 배치 시, 숙소 내 오퍼레이터 1명당 감지 정보 +1, 동시에 감지 정보 1점당 무성의 공명 1점으로 전환"
+          },
+          {
+            "id": "trade_ord_spd_bd[010]",
+            "name": "서글픈 하모니",
+            "description": "무역소에 배치 시, 무성의 공명 2점당 오더 수주 효율 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4055_bgsnow",
+        "name": "파죰카",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&gold[100]",
+            "name": "유통망 확보",
+            "description": "무역소에 배치 시, 순금 생산 라인 1개당, 현재 무역소의 오더 수주 효율이 +5%"
+          },
+          {
+            "id": "trade_ord_line_durin[010]",
+            "name": "쎄루에르차 시민",
+            "description": "무역소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 두린족 오퍼레이터 1명당(최대 4명) 현재 무역소에 순금 생산 라인 1"
+          }
+        ]
+      },
+      {
+        "id": "char_4058_pepe",
+        "name": "페페",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_limit&trade&lv[000]",
+            "name": "팔방미인",
+            "description": "무역소에 배치 시, 해당 무역소의 레벨 1당 오더 상한 +1"
+          },
+          {
+            "id": "trade_ord_pepe[000]",
+            "name": "독특한 혜안",
+            "description": "무역소에 배치 시, 특별 독점 오더 고정 획득 (위약 오더로 간주하지 않음), 해당 오더는 다른 오더 수주 효율의 영향을 받지 않음"
+          }
+        ]
+      },
+      {
+        "id": "char_4063_quartz",
+        "name": "쿼츠",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&formula[000]",
+            "name": "정확한 스케줄",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 제조소에서 항목 1종 가공할 때마다, 해당 무역소의 수주 효율 추가로 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_4077_palico",
+        "name": "테라 대륙 조사단",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&limit&bd[000]",
+            "name": "귀요미 아이루",
+            "description": "무역소에 배치 시, 오더 수주 효율 +5%, 오더 상한 +2, 아이룰루가 1개 늘어날 때마다 오더 수주 효율 +3%"
+          }
+        ]
+      },
+      {
+        "id": "char_4083_chimes",
+        "name": "윈드차임스",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_cost&bd2[001]",
+            "name": "만리전서",
+            "description": "무역소에 배치 시, 무역소 내 오퍼레이터의 시간당 컨디션 소모 -0.1, 동시에 속세의 화식 10점당 추가로 -0.02"
+          }
+        ]
+      },
+      {
+        "id": "char_4088_hodrer",
+        "name": "외드레르",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_par&per[001]",
+            "name": "자수성가 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 이네스와 W가 작업 시설에 배치 시(어시스턴트 미포함), 오더 수주 효율이 각각 추가로 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4091_ulika",
+        "name": "U-Official",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&wt[000]",
+            "name": "순진한 협상가",
+            "description": "무역소에 배치 시, 오더 수주 효율 +10%, 해당 무역소가 수주한 순금 오더가 순금 2 확정 납품 (위약 오더로 간주하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_4116_blkkgt",
+        "name": "데겐블레허",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_variable3[000]",
+            "name": "챔피언의 품격",
+            "description": "무역소에 배치 시, 해당 무역소 내의 오퍼레이터가 제공한 오더 상한 5개당 오더 수주 효율 25% 제공, 최대 100% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_4137_udflow",
+        "name": "언더플로우",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_ext[001]",
+            "name": "대육지 교섭 대표 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +30%, 울피아누스가 기반시설(어시스턴트 및 활동실 사용자 미포함)에 있으면 오더 수주 효율이 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_4144_chilc",
+        "name": "칠책",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_bd[100]",
+            "name": "익숙한 깊은 향",
+            "description": "무역소에 배치 시, 마물 요리 1개당 오더 수주 효율 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4147_mitm",
+        "name": "미틈",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&meet[010]",
+            "name": "타고난 고문",
+            "description": "무역소에 배치 시, 오더 수주 효율 +15%, 응접실 레벨 1레벨당 추가로 수주 효율 5% 제공, 최대 30% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_4163_rosesa",
+        "name": "로즈솔트",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_limit&trade&lv[001]",
+            "name": "돈은 기다리지 않아",
+            "description": "무역소에 배치 시, 해당 무역소의 레벨 1당 오더 상한 +1"
+          }
+        ]
+      },
+      {
+        "id": "char_4193_lemuen",
+        "name": "르무엔",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&multiPar[100]",
+            "name": "동반자",
+            "description": "무역소에 배치 시, 오더 수주 효율 +20%, 엑시아와 함께 무역소에 배치될 경우 수주 효율이 추가로 +25%"
+          }
+        ]
+      },
+      {
+        "id": "char_4203_kichi",
+        "name": "키치세이",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&share[002]",
+            "name": "알뜰 경영 β",
+            "description": "무역소에 배치 시, 무역소 내 자신을 제외한 작업 중인 오퍼레이터 1명당 오더 수주 효율 +20%"
+          }
+        ]
+      },
+      {
+        "id": "char_4204_mantra",
+        "name": "만트라",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&tag[010]",
+            "name": "정예 소대",
+            "description": "무역소에 배치 시, 오더 수주 효율 +25%, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 정예 오퍼레이터가 배치된 시설 1개당 오더 수주 효율이 추가로 +2% (최대 10개)"
+          }
+        ]
+      },
+      {
+        "id": "char_4222_taraxa",
+        "name": "타락사쿰",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&tag[020]",
+            "name": "'가르칠만하구나!'",
+            "description": "무역소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 쉐이 오퍼레이터가 배치된 시설 1개당 오더 수주 효율 +4% (최대 5개)"
+          }
+        ]
+      },
+      {
+        "id": "char_4228_closur",
+        "name": "클로저",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_closure[000]",
+            "name": "특별 오더",
+            "description": "무역소에 배치 시, 오더 수주 효율 +10%, 클로저의 특별 오더 고정 획득 (위약 오더로 간주하지 않음)"
+          }
+        ]
+      },
+      {
+        "id": "char_427_vigil",
+        "name": "비질",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd&meet[000]",
+            "name": "신도시 교역",
+            "description": "무역소에 배치 시, 오더 수주 효율 +25%, 응접실 레벨 1레벨당 추가로 수주 효율 5% 제공, 최대 40% 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_455_nothin",
+        "name": "우요우",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_spd_bd_n2[000]",
+            "name": "\"원하는 자가 걸려든다\"",
+            "description": "무역소에 배치 시, 숙소 내 오퍼레이터 1명당 \n속세의 화식 +1, 속세의 화식 1점당 오더 수주 효율 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_478_kirara",
+        "name": "키라라",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_ord_line_gold[010]",
+            "name": "주문 흐름 가시화 β",
+            "description": "무역소에 배치 시, 오더 수주 효율 +5%, 순금 생산 라인 2개당 현재 무역소에 순금 생산 라인이 추가로 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_493_firwhl",
+        "name": "파이어휘슬",
+        "room": "trade1",
+        "skills": [
+          {
+            "id": "trade_cost[000]",
+            "name": "분위기 업",
+            "description": "무역소에 배치 시, 무역소 내 오퍼레이터의 시간당 컨디션 소모 -0.1"
+          },
+          {
+            "id": "trade_ord_spd&share[000]",
+            "name": "대신 부탁",
+            "description": "무역소에 배치 시, 무역소 내 자신을 제외한 작업 중인 오퍼레이터 1명당 오더 수주 효율 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_1036_fang2",
+        "name": "팽 더 파이어 샤픈드",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd&fraction[000]",
+            "name": "재회의 시간",
+            "description": "제조소에 배치 시, 해당 제조소 내 예비작전팀 A1 오퍼레이터 1명당 자신의 생산력 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_1047_halo2",
+        "name": "아스트젠 더 라이트체이서",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_skill_limit[000]",
+            "name": "탐사 배낭",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_1051_headb2",
+        "name": "지마 더 레이징 타이드",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_formula_spd&bd[001]",
+            "name": "형제 같은 의리",
+            "description": "제조소에 배치 시, 작전기록류에 대한 생산력 +30%, 우르수스 학생자치단과 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_194_leto",
+        "name": "레토",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_formula_spd_P[000]",
+            "name": "환난지교",
+            "description": "제조소에 배치 시, 만약 굼이 무역소에 배치되어 있다면, 작전기록류에 대한 생산력 +35%"
+          }
+        ]
+      },
+      {
+        "id": "char_2025_shu",
+        "name": "슈",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[300]",
+            "name": "두툼한 이삭, 기쁨의 추수",
+            "description": "제조소에 배치 시, 속세의 화식 3점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_243_waaifu",
+        "name": "와이후",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_cost_all[000]",
+            "name": "팀워크",
+            "description": "제조소에 배치 시, 해당 제조소 내의 모든 오퍼레이터 본인이 컨디션 소모로 인해 받는 영향 제거"
+          },
+          {
+            "id": "manu_prod_spd_variable2[000]",
+            "name": "협동의식",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 매 5%의 생산력(시설 수량에 따라 제공하는 생산력 미포함)당 5%의 생산력을 추가 제공, 최대 40%의 생산력 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_391_rosmon",
+        "name": "로즈몬티스",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd_n1[000]",
+            "name": "초감각",
+            "description": "제조소에 배치 시, 숙소 내 오퍼레이터 1명당 감지 정보 +1, 이와 동시에, 감지 정보 1점당 생각의 사슬 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[010]",
+            "name": "의식의 실체",
+            "description": "제조소에 배치 시, 생각의 사슬 1점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4048_doroth",
+        "name": "도로시",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[010]",
+            "name": "오리지늄 아츠 이론 응용",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4054_malist",
+        "name": "미니멀리스트",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_constrLv[000]",
+            "name": "그래픽 디자인",
+            "description": "제조소에 배치 시, 기반시설 내 활동실을 제외한 시설마다 레벨당 공사용 로봇 +1대, 최대 64대"
+          },
+          {
+            "id": "manu_prod_spd_bd[110]",
+            "name": "로봇 어시스트 β",
+            "description": "제조소에 배치 시, 공사용 로봇 8대당 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4062_totter",
+        "name": "토터",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd_reduce[000]",
+            "name": "흐려진 시야",
+            "description": "제조소에 배치 시, 생산력 +30%, 자신의 컨디션 낙차 4당 생산력 -5%"
+          },
+          {
+            "id": "manu_prod_spd_addition&cost[000]",
+            "name": "창밖 눈보라",
+            "description": "제조소에 배치 시, 자신의 컨디션 낙차가 12 이상일 경우, 생산력 +10%, 창고 용량 상한 +6"
+          }
+        ]
+      },
+      {
+        "id": "char_4066_highmo",
+        "name": "하이모어",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_skill_change[000]",
+            "name": "의식 호환",
+            "description": "제조소에 배치 시, 해당 제조소 내 모든 라인테크류, 피누스 실베스트리스류 스킬을 전부 표준화류 스킬로 간주"
+          }
+        ]
+      },
+      {
+        "id": "char_4077_palico",
+        "name": "테라 대륙 조사단",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd&limit&bd[000]",
+            "name": "믿음직한 동반자들",
+            "description": "제조소에 배치 시, 창고 용량 상한 +8, 생산력 +5%, 아이룰루가 1개 늘어날 때마다 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4078_bdhkgt",
+        "name": "지에윈",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_bd_to_bd[000]",
+            "name": "고대 주술",
+            "description": "제조소에 배치 시, 속세의 화식 5점당 주술 결정 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[201]",
+            "name": "흥망성쇠",
+            "description": "제조소에 배치 시, 주술 결정 1점당 생산력 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_4105_almond",
+        "name": "아몬드",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[000]",
+            "name": "중요한 역할",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 블랙스틸 월드와이드 오퍼레이터(최대 3명) 1명당 귀금속류에 대한 생산력 +2%, 시간당 컨디션 소모 -0.15"
+          }
+        ]
+      },
+      {
+        "id": "char_4106_bryota",
+        "name": "브라이오피타",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[020]",
+            "name": "아르바이트 노하우",
+            "description": "제조소에 배치 시, 해당 제조소 내 금속 공예류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4126_fuze",
+        "name": "Fuze",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_bd[000]",
+            "name": "착실하고 과묵한 자",
+            "description": "제조소에 배치 시, 생산력 +20%, 우르수스 특제 음료 1병당 창고 용량 상한 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4141_marcil",
+        "name": "마르실",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[400]",
+            "name": "의외로 맛있어",
+            "description": "제조소에 배치 시, 마물 요리 1개당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4178_alanna",
+        "name": "알라나",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_token_prod_spd[010]",
+            "name": "기계 정통 β",
+            "description": "제조소에 배치 시, 발전소에 배치된 작업 플랫폼 1개당 귀금속류에 대한 생산력 +10%"
+          },
+          {
+            "id": "manu_prod_spd_double[000]",
+            "name": "'거들기!'",
+            "description": "워미와 함께 같은 제조소에 배치 시, 귀금속류에 대한 생산력 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_4198_christ",
+        "name": "미스 크리스틴",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd_double[100]",
+            "name": "만찬의 보답",
+            "description": "트라고디아와 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 +30%"
+          }
+        ]
+      },
+      {
+        "id": "char_4208_wintim",
+        "name": "스네구로치카",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_prod_spd&manu[100]",
+            "name": "프로세스 개선",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 생산력이 전부 0이 되고(시설 수량에 따라 제공하는 생산력 미포함), 해당 제조소 내의 오퍼레이터 1명당 해당 제조소의 생산력 +10%, 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_4212_nasti",
+        "name": "내스티",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[100]",
+            "name": "높은 원가",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 라인 랩 오퍼레이터(최대 5명) 1명당 귀금속류에 대한 생산력 +3%"
+          }
+        ]
+      },
+      {
+        "id": "char_437_mizuki",
+        "name": "미즈키",
+        "room": "factory0",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[000]",
+            "name": "의식 협의",
+            "description": "제조소에 배치 시, 해당 제조소 내 표준화류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1036_fang2",
+        "name": "팽 더 파이어 샤픈드",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd&fraction[000]",
+            "name": "재회의 시간",
+            "description": "제조소에 배치 시, 해당 제조소 내 예비작전팀 A1 오퍼레이터 1명당 자신의 생산력 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_1047_halo2",
+        "name": "아스트젠 더 라이트체이서",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_skill_limit[000]",
+            "name": "탐사 배낭",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_1051_headb2",
+        "name": "지마 더 레이징 타이드",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_formula_spd&bd[001]",
+            "name": "형제 같은 의리",
+            "description": "제조소에 배치 시, 작전기록류에 대한 생산력 +30%, 우르수스 학생자치단과 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_194_leto",
+        "name": "레토",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_formula_spd_P[000]",
+            "name": "환난지교",
+            "description": "제조소에 배치 시, 만약 굼이 무역소에 배치되어 있다면, 작전기록류에 대한 생산력 +35%"
+          }
+        ]
+      },
+      {
+        "id": "char_2025_shu",
+        "name": "슈",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[300]",
+            "name": "두툼한 이삭, 기쁨의 추수",
+            "description": "제조소에 배치 시, 속세의 화식 3점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_243_waaifu",
+        "name": "와이후",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_cost_all[000]",
+            "name": "팀워크",
+            "description": "제조소에 배치 시, 해당 제조소 내의 모든 오퍼레이터 본인이 컨디션 소모로 인해 받는 영향 제거"
+          },
+          {
+            "id": "manu_prod_spd_variable2[000]",
+            "name": "협동의식",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 매 5%의 생산력(시설 수량에 따라 제공하는 생산력 미포함)당 5%의 생산력을 추가 제공, 최대 40%의 생산력 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_391_rosmon",
+        "name": "로즈몬티스",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd_n1[000]",
+            "name": "초감각",
+            "description": "제조소에 배치 시, 숙소 내 오퍼레이터 1명당 감지 정보 +1, 이와 동시에, 감지 정보 1점당 생각의 사슬 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[010]",
+            "name": "의식의 실체",
+            "description": "제조소에 배치 시, 생각의 사슬 1점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4048_doroth",
+        "name": "도로시",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[010]",
+            "name": "오리지늄 아츠 이론 응용",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4054_malist",
+        "name": "미니멀리스트",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_constrLv[000]",
+            "name": "그래픽 디자인",
+            "description": "제조소에 배치 시, 기반시설 내 활동실을 제외한 시설마다 레벨당 공사용 로봇 +1대, 최대 64대"
+          },
+          {
+            "id": "manu_prod_spd_bd[110]",
+            "name": "로봇 어시스트 β",
+            "description": "제조소에 배치 시, 공사용 로봇 8대당 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4062_totter",
+        "name": "토터",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd_reduce[000]",
+            "name": "흐려진 시야",
+            "description": "제조소에 배치 시, 생산력 +30%, 자신의 컨디션 낙차 4당 생산력 -5%"
+          },
+          {
+            "id": "manu_prod_spd_addition&cost[000]",
+            "name": "창밖 눈보라",
+            "description": "제조소에 배치 시, 자신의 컨디션 낙차가 12 이상일 경우, 생산력 +10%, 창고 용량 상한 +6"
+          }
+        ]
+      },
+      {
+        "id": "char_4066_highmo",
+        "name": "하이모어",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_skill_change[000]",
+            "name": "의식 호환",
+            "description": "제조소에 배치 시, 해당 제조소 내 모든 라인테크류, 피누스 실베스트리스류 스킬을 전부 표준화류 스킬로 간주"
+          }
+        ]
+      },
+      {
+        "id": "char_4077_palico",
+        "name": "테라 대륙 조사단",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd&limit&bd[000]",
+            "name": "믿음직한 동반자들",
+            "description": "제조소에 배치 시, 창고 용량 상한 +8, 생산력 +5%, 아이룰루가 1개 늘어날 때마다 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4078_bdhkgt",
+        "name": "지에윈",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_bd_to_bd[000]",
+            "name": "고대 주술",
+            "description": "제조소에 배치 시, 속세의 화식 5점당 주술 결정 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[201]",
+            "name": "흥망성쇠",
+            "description": "제조소에 배치 시, 주술 결정 1점당 생산력 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_4105_almond",
+        "name": "아몬드",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[000]",
+            "name": "중요한 역할",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 블랙스틸 월드와이드 오퍼레이터(최대 3명) 1명당 귀금속류에 대한 생산력 +2%, 시간당 컨디션 소모 -0.15"
+          }
+        ]
+      },
+      {
+        "id": "char_4106_bryota",
+        "name": "브라이오피타",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[020]",
+            "name": "아르바이트 노하우",
+            "description": "제조소에 배치 시, 해당 제조소 내 금속 공예류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4126_fuze",
+        "name": "Fuze",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_bd[000]",
+            "name": "착실하고 과묵한 자",
+            "description": "제조소에 배치 시, 생산력 +20%, 우르수스 특제 음료 1병당 창고 용량 상한 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4141_marcil",
+        "name": "마르실",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[400]",
+            "name": "의외로 맛있어",
+            "description": "제조소에 배치 시, 마물 요리 1개당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4178_alanna",
+        "name": "알라나",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_token_prod_spd[010]",
+            "name": "기계 정통 β",
+            "description": "제조소에 배치 시, 발전소에 배치된 작업 플랫폼 1개당 귀금속류에 대한 생산력 +10%"
+          },
+          {
+            "id": "manu_prod_spd_double[000]",
+            "name": "'거들기!'",
+            "description": "워미와 함께 같은 제조소에 배치 시, 귀금속류에 대한 생산력 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_4198_christ",
+        "name": "미스 크리스틴",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd_double[100]",
+            "name": "만찬의 보답",
+            "description": "트라고디아와 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 +30%"
+          }
+        ]
+      },
+      {
+        "id": "char_4208_wintim",
+        "name": "스네구로치카",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_prod_spd&manu[100]",
+            "name": "프로세스 개선",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 생산력이 전부 0이 되고(시설 수량에 따라 제공하는 생산력 미포함), 해당 제조소 내의 오퍼레이터 1명당 해당 제조소의 생산력 +10%, 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_4212_nasti",
+        "name": "내스티",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[100]",
+            "name": "높은 원가",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 라인 랩 오퍼레이터(최대 5명) 1명당 귀금속류에 대한 생산력 +3%"
+          }
+        ]
+      },
+      {
+        "id": "char_437_mizuki",
+        "name": "미즈키",
+        "room": "factory1",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[000]",
+            "name": "의식 협의",
+            "description": "제조소에 배치 시, 해당 제조소 내 표준화류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1036_fang2",
+        "name": "팽 더 파이어 샤픈드",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd&fraction[000]",
+            "name": "재회의 시간",
+            "description": "제조소에 배치 시, 해당 제조소 내 예비작전팀 A1 오퍼레이터 1명당 자신의 생산력 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_1047_halo2",
+        "name": "아스트젠 더 라이트체이서",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_skill_limit[000]",
+            "name": "탐사 배낭",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_1051_headb2",
+        "name": "지마 더 레이징 타이드",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_formula_spd&bd[001]",
+            "name": "형제 같은 의리",
+            "description": "제조소에 배치 시, 작전기록류에 대한 생산력 +30%, 우르수스 학생자치단과 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_194_leto",
+        "name": "레토",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_formula_spd_P[000]",
+            "name": "환난지교",
+            "description": "제조소에 배치 시, 만약 굼이 무역소에 배치되어 있다면, 작전기록류에 대한 생산력 +35%"
+          }
+        ]
+      },
+      {
+        "id": "char_2025_shu",
+        "name": "슈",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[300]",
+            "name": "두툼한 이삭, 기쁨의 추수",
+            "description": "제조소에 배치 시, 속세의 화식 3점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_243_waaifu",
+        "name": "와이후",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_cost_all[000]",
+            "name": "팀워크",
+            "description": "제조소에 배치 시, 해당 제조소 내의 모든 오퍼레이터 본인이 컨디션 소모로 인해 받는 영향 제거"
+          },
+          {
+            "id": "manu_prod_spd_variable2[000]",
+            "name": "협동의식",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 매 5%의 생산력(시설 수량에 따라 제공하는 생산력 미포함)당 5%의 생산력을 추가 제공, 최대 40%의 생산력 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_391_rosmon",
+        "name": "로즈몬티스",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd_n1[000]",
+            "name": "초감각",
+            "description": "제조소에 배치 시, 숙소 내 오퍼레이터 1명당 감지 정보 +1, 이와 동시에, 감지 정보 1점당 생각의 사슬 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[010]",
+            "name": "의식의 실체",
+            "description": "제조소에 배치 시, 생각의 사슬 1점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4048_doroth",
+        "name": "도로시",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[010]",
+            "name": "오리지늄 아츠 이론 응용",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4054_malist",
+        "name": "미니멀리스트",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_constrLv[000]",
+            "name": "그래픽 디자인",
+            "description": "제조소에 배치 시, 기반시설 내 활동실을 제외한 시설마다 레벨당 공사용 로봇 +1대, 최대 64대"
+          },
+          {
+            "id": "manu_prod_spd_bd[110]",
+            "name": "로봇 어시스트 β",
+            "description": "제조소에 배치 시, 공사용 로봇 8대당 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4062_totter",
+        "name": "토터",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd_reduce[000]",
+            "name": "흐려진 시야",
+            "description": "제조소에 배치 시, 생산력 +30%, 자신의 컨디션 낙차 4당 생산력 -5%"
+          },
+          {
+            "id": "manu_prod_spd_addition&cost[000]",
+            "name": "창밖 눈보라",
+            "description": "제조소에 배치 시, 자신의 컨디션 낙차가 12 이상일 경우, 생산력 +10%, 창고 용량 상한 +6"
+          }
+        ]
+      },
+      {
+        "id": "char_4066_highmo",
+        "name": "하이모어",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_skill_change[000]",
+            "name": "의식 호환",
+            "description": "제조소에 배치 시, 해당 제조소 내 모든 라인테크류, 피누스 실베스트리스류 스킬을 전부 표준화류 스킬로 간주"
+          }
+        ]
+      },
+      {
+        "id": "char_4077_palico",
+        "name": "테라 대륙 조사단",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd&limit&bd[000]",
+            "name": "믿음직한 동반자들",
+            "description": "제조소에 배치 시, 창고 용량 상한 +8, 생산력 +5%, 아이룰루가 1개 늘어날 때마다 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4078_bdhkgt",
+        "name": "지에윈",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_bd_to_bd[000]",
+            "name": "고대 주술",
+            "description": "제조소에 배치 시, 속세의 화식 5점당 주술 결정 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[201]",
+            "name": "흥망성쇠",
+            "description": "제조소에 배치 시, 주술 결정 1점당 생산력 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_4105_almond",
+        "name": "아몬드",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[000]",
+            "name": "중요한 역할",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 블랙스틸 월드와이드 오퍼레이터(최대 3명) 1명당 귀금속류에 대한 생산력 +2%, 시간당 컨디션 소모 -0.15"
+          }
+        ]
+      },
+      {
+        "id": "char_4106_bryota",
+        "name": "브라이오피타",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[020]",
+            "name": "아르바이트 노하우",
+            "description": "제조소에 배치 시, 해당 제조소 내 금속 공예류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4126_fuze",
+        "name": "Fuze",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_bd[000]",
+            "name": "착실하고 과묵한 자",
+            "description": "제조소에 배치 시, 생산력 +20%, 우르수스 특제 음료 1병당 창고 용량 상한 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4141_marcil",
+        "name": "마르실",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[400]",
+            "name": "의외로 맛있어",
+            "description": "제조소에 배치 시, 마물 요리 1개당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4178_alanna",
+        "name": "알라나",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_token_prod_spd[010]",
+            "name": "기계 정통 β",
+            "description": "제조소에 배치 시, 발전소에 배치된 작업 플랫폼 1개당 귀금속류에 대한 생산력 +10%"
+          },
+          {
+            "id": "manu_prod_spd_double[000]",
+            "name": "'거들기!'",
+            "description": "워미와 함께 같은 제조소에 배치 시, 귀금속류에 대한 생산력 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_4198_christ",
+        "name": "미스 크리스틴",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd_double[100]",
+            "name": "만찬의 보답",
+            "description": "트라고디아와 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 +30%"
+          }
+        ]
+      },
+      {
+        "id": "char_4208_wintim",
+        "name": "스네구로치카",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_prod_spd&manu[100]",
+            "name": "프로세스 개선",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 생산력이 전부 0이 되고(시설 수량에 따라 제공하는 생산력 미포함), 해당 제조소 내의 오퍼레이터 1명당 해당 제조소의 생산력 +10%, 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_4212_nasti",
+        "name": "내스티",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[100]",
+            "name": "높은 원가",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 라인 랩 오퍼레이터(최대 5명) 1명당 귀금속류에 대한 생산력 +3%"
+          }
+        ]
+      },
+      {
+        "id": "char_437_mizuki",
+        "name": "미즈키",
+        "room": "factory2",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[000]",
+            "name": "의식 협의",
+            "description": "제조소에 배치 시, 해당 제조소 내 표준화류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_1036_fang2",
+        "name": "팽 더 파이어 샤픈드",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd&fraction[000]",
+            "name": "재회의 시간",
+            "description": "제조소에 배치 시, 해당 제조소 내 예비작전팀 A1 오퍼레이터 1명당 자신의 생산력 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_1047_halo2",
+        "name": "아스트젠 더 라이트체이서",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_skill_limit[000]",
+            "name": "탐사 배낭",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_1051_headb2",
+        "name": "지마 더 레이징 타이드",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_formula_spd&bd[001]",
+            "name": "형제 같은 의리",
+            "description": "제조소에 배치 시, 작전기록류에 대한 생산력 +30%, 우르수스 학생자치단과 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 추가로 +10%"
+          }
+        ]
+      },
+      {
+        "id": "char_194_leto",
+        "name": "레토",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_formula_spd_P[000]",
+            "name": "환난지교",
+            "description": "제조소에 배치 시, 만약 굼이 무역소에 배치되어 있다면, 작전기록류에 대한 생산력 +35%"
+          }
+        ]
+      },
+      {
+        "id": "char_2025_shu",
+        "name": "슈",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[300]",
+            "name": "두툼한 이삭, 기쁨의 추수",
+            "description": "제조소에 배치 시, 속세의 화식 3점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_243_waaifu",
+        "name": "와이후",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_cost_all[000]",
+            "name": "팀워크",
+            "description": "제조소에 배치 시, 해당 제조소 내의 모든 오퍼레이터 본인이 컨디션 소모로 인해 받는 영향 제거"
+          },
+          {
+            "id": "manu_prod_spd_variable2[000]",
+            "name": "협동의식",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 매 5%의 생산력(시설 수량에 따라 제공하는 생산력 미포함)당 5%의 생산력을 추가 제공, 최대 40%의 생산력 제공"
+          }
+        ]
+      },
+      {
+        "id": "char_391_rosmon",
+        "name": "로즈몬티스",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd_n1[000]",
+            "name": "초감각",
+            "description": "제조소에 배치 시, 숙소 내 오퍼레이터 1명당 감지 정보 +1, 이와 동시에, 감지 정보 1점당 생각의 사슬 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[010]",
+            "name": "의식의 실체",
+            "description": "제조소에 배치 시, 생각의 사슬 1점당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4048_doroth",
+        "name": "도로시",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[010]",
+            "name": "오리지늄 아츠 이론 응용",
+            "description": "제조소에 배치 시, 해당 제조소 내 라인테크류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4054_malist",
+        "name": "미니멀리스트",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_constrLv[000]",
+            "name": "그래픽 디자인",
+            "description": "제조소에 배치 시, 기반시설 내 활동실을 제외한 시설마다 레벨당 공사용 로봇 +1대, 최대 64대"
+          },
+          {
+            "id": "manu_prod_spd_bd[110]",
+            "name": "로봇 어시스트 β",
+            "description": "제조소에 배치 시, 공사용 로봇 8대당 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4062_totter",
+        "name": "토터",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd_reduce[000]",
+            "name": "흐려진 시야",
+            "description": "제조소에 배치 시, 생산력 +30%, 자신의 컨디션 낙차 4당 생산력 -5%"
+          },
+          {
+            "id": "manu_prod_spd_addition&cost[000]",
+            "name": "창밖 눈보라",
+            "description": "제조소에 배치 시, 자신의 컨디션 낙차가 12 이상일 경우, 생산력 +10%, 창고 용량 상한 +6"
+          }
+        ]
+      },
+      {
+        "id": "char_4066_highmo",
+        "name": "하이모어",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_skill_change[000]",
+            "name": "의식 호환",
+            "description": "제조소에 배치 시, 해당 제조소 내 모든 라인테크류, 피누스 실베스트리스류 스킬을 전부 표준화류 스킬로 간주"
+          }
+        ]
+      },
+      {
+        "id": "char_4077_palico",
+        "name": "테라 대륙 조사단",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd&limit&bd[000]",
+            "name": "믿음직한 동반자들",
+            "description": "제조소에 배치 시, 창고 용량 상한 +8, 생산력 +5%, 아이룰루가 1개 늘어날 때마다 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4078_bdhkgt",
+        "name": "지에윈",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_bd_to_bd[000]",
+            "name": "고대 주술",
+            "description": "제조소에 배치 시, 속세의 화식 5점당 주술 결정 1점으로 전환"
+          },
+          {
+            "id": "manu_prod_spd_bd[201]",
+            "name": "흥망성쇠",
+            "description": "제조소에 배치 시, 주술 결정 1점당 생산력 +2%"
+          }
+        ]
+      },
+      {
+        "id": "char_4105_almond",
+        "name": "아몬드",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[000]",
+            "name": "중요한 역할",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 블랙스틸 월드와이드 오퍼레이터(최대 3명) 1명당 귀금속류에 대한 생산력 +2%, 시간당 컨디션 소모 -0.15"
+          }
+        ]
+      },
+      {
+        "id": "char_4106_bryota",
+        "name": "브라이오피타",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[020]",
+            "name": "아르바이트 노하우",
+            "description": "제조소에 배치 시, 해당 제조소 내 금속 공예류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      },
+      {
+        "id": "char_4126_fuze",
+        "name": "Fuze",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_bd[000]",
+            "name": "착실하고 과묵한 자",
+            "description": "제조소에 배치 시, 생산력 +20%, 우르수스 특제 음료 1병당 창고 용량 상한 +2"
+          }
+        ]
+      },
+      {
+        "id": "char_4141_marcil",
+        "name": "마르실",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd_bd[400]",
+            "name": "의외로 맛있어",
+            "description": "제조소에 배치 시, 마물 요리 1개당 생산력 +1%"
+          }
+        ]
+      },
+      {
+        "id": "char_4178_alanna",
+        "name": "알라나",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_token_prod_spd[010]",
+            "name": "기계 정통 β",
+            "description": "제조소에 배치 시, 발전소에 배치된 작업 플랫폼 1개당 귀금속류에 대한 생산력 +10%"
+          },
+          {
+            "id": "manu_prod_spd_double[000]",
+            "name": "'거들기!'",
+            "description": "워미와 함께 같은 제조소에 배치 시, 귀금속류에 대한 생산력 +15%"
+          }
+        ]
+      },
+      {
+        "id": "char_4198_christ",
+        "name": "미스 크리스틴",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd_double[100]",
+            "name": "만찬의 보답",
+            "description": "트라고디아와 함께 같은 제조소에 배치 시, 작전기록류에 대한 생산력 +30%"
+          }
+        ]
+      },
+      {
+        "id": "char_4208_wintim",
+        "name": "스네구로치카",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_prod_spd&manu[100]",
+            "name": "프로세스 개선",
+            "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 생산력이 전부 0이 되고(시설 수량에 따라 제공하는 생산력 미포함), 해당 제조소 내의 오퍼레이터 1명당 해당 제조소의 생산력 +10%, 창고 용량 상한 +5"
+          }
+        ]
+      },
+      {
+        "id": "char_4212_nasti",
+        "name": "내스티",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_formula_spd&cost_bd[100]",
+            "name": "높은 원가",
+            "description": "제조소에 배치 시, 기반시설(어시스턴트 및 활동실 사용자 미포함) 내 배치된 라인 랩 오퍼레이터(최대 5명) 1명당 귀금속류에 대한 생산력 +3%"
+          }
+        ]
+      },
+      {
+        "id": "char_437_mizuki",
+        "name": "미즈키",
+        "room": "factory3",
+        "skills": [
+          {
+            "id": "manu_skill_spd1[000]",
+            "name": "의식 협의",
+            "description": "제조소에 배치 시, 해당 제조소 내 표준화류 스킬 1개당 자신의 생산력 +5%"
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "응접실 기본 속도·분위기 공식은 검토 중인 실험식입니다. 종류별 확률과 단서 자동 획득은 계산하지 않습니다.",
+      "무역소는 순금 거래·재료 충분·교대 시 납품을 가정한 기대 작업량 근사입니다. 품질 우대 없는 기본 분포와 충분히 누적된 분포의 두 시나리오 기대값 범위를 표시합니다. 실제 수익 보장 구간이나 신뢰구간이 아니며 초기 3/5시간의 확률 변화와 개별 주문의 교대 이월을 재현하지 않습니다. 배치 비교는 성숙 시나리오 수익 기준입니다. 고품질 분포는 3레벨의 관측된 조합만 지원합니다.",
+      "첫 24시간과 첫 교대 사이클만 검사합니다. 반복 운영의 지속 가능성과 실제 게임의 최고 효율을 보장하지 않습니다.",
+      "미지원 숙소 스킬을 가진 인원은 자동 휴식 배치에서도 제외합니다. 해당 인원의 회복은 계산하지 않습니다.",
+      "테라아카이브의 공개 탐색 구조를 참고해 독립 구현한 실험판입니다. 원본 엔진과 결과가 동일하다는 보장은 없습니다.",
+      "제한 탐색은 전체 최적해나 99% 정확도를 보장하지 않습니다. 미지원 스킬은 기존 모델과 동일하게 제외합니다.",
+      "시작점 구성에는 근사 점수를 사용하고, 보고하는 배치는 기존 컨디션·숙소·교대 시뮬레이터로 재계산합니다."
+    ]
+  },
+  "previousFactoryFiles": {
+    "preserved": true,
+    "sha256": {
+      "factory-precompute.mjs": "f1a058b3c6641e3de78d56954156946f212a5fae6d212600c733fb6a0b0cb2b1",
+      "factory-precompute-cli.mjs": "5e2ab223b099bd0d4f6195509f763af3f8b91bfdf4b3d241f440f2b524213a35",
+      "factory-precompute.test.mjs": "d67c3e2975b225bf20ed4b6a6bb8e01043681949afe1da5a9a0f6e86c1070ffb",
+      "factory-local.ndjson.gz": "3281e91cf6801a9bdeab5951a484474d2d3de1e69eef91b416f195d910267e0f",
+      "factory-local.ndjson.gz.metrics.json": "2ded4c6aee76247bb41d97188acc80cec913d97bbc28e7fd9578141000992974",
+      "FACTORY-PRECOMPUTE.md": "91ec9f937b59f762e709ecc45e7faf065b5cc44f37a16120fa252d8a8bdf441d"
+    }
+  },
+  "warnings": [
+    "Measurements depend on the machine. A short runtime is not evidence of near-optimality.",
+    "The 415-owned example still excludes unsupported effects; it is not an all-skills game-accuracy test.",
+    "No production site deployment or remote Actions run."
+  ]
+}
