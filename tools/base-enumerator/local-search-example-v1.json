@@ -1,0 +1,285 @@
+{
+  "format": "current-roster-local-search-1",
+  "modelVersion": "24h-cycle-lab-7",
+  "fingerprint": "0cfc9267f2a3439a4f1bd0ef54587a84d5a7e735982cfc0315712f93f6c6e721",
+  "preparationMs": 302.499481,
+  "complete": true,
+  "modelOptimalityProven": false,
+  "gameOptimalityProven": false,
+  "reason": null,
+  "best": {
+    "plan": {
+      "groups": [
+        {
+          "team": 0,
+          "room": "office",
+          "operators": []
+        },
+        {
+          "team": 0,
+          "room": "meeting",
+          "operators": [
+            "char_4017_puzzle"
+          ]
+        },
+        {
+          "team": 0,
+          "room": "control",
+          "operators": []
+        },
+        {
+          "team": 0,
+          "room": "trading",
+          "operators": [
+            "char_283_midn"
+          ]
+        },
+        {
+          "team": 0,
+          "room": "power",
+          "operators": []
+        },
+        {
+          "team": 1,
+          "room": "office",
+          "operators": [
+            "char_503_rang"
+          ]
+        },
+        {
+          "team": 1,
+          "room": "meeting",
+          "operators": [
+            "char_497_ctable"
+          ]
+        },
+        {
+          "team": 1,
+          "room": "control",
+          "operators": []
+        },
+        {
+          "team": 1,
+          "room": "trading",
+          "operators": [
+            "char_252_bibeak",
+            "char_254_vodfox",
+            "char_486_takila"
+          ]
+        },
+        {
+          "team": 1,
+          "room": "power",
+          "operators": []
+        }
+      ]
+    },
+    "score": [
+      1.125,
+      1,
+      1.6099999999999997,
+      0,
+      0,
+      0,
+      792.4053925728372
+    ],
+    "at24": {
+      "hour": 24,
+      "produced": {
+        "F_GOLD": 0,
+        "F_EXP": 0,
+        "F_DIAMOND": 0
+      },
+      "collected": {
+        "F_GOLD": 0,
+        "F_EXP": 0,
+        "F_DIAMOND": 0
+      },
+      "pending": {
+        "F_GOLD": 0,
+        "F_EXP": 0,
+        "F_DIAMOND": 0
+      },
+      "inventory": {},
+      "trade": {
+        "model": "baseline-mature-scenarios-v2",
+        "estimated": true,
+        "generated": {
+          "lmd": 19017.729421748092,
+          "gold": 33.540938295550966,
+          "orders": 9.92483937446964
+        },
+        "collected": {
+          "lmd": 19017.729421748092,
+          "gold": 33.54093829555098,
+          "orders": 9.924839374469634
+        },
+        "pending": {
+          "trading": {
+            "lmd": 0,
+            "gold": 0,
+            "orders": 0
+          }
+        },
+        "hourlyLmd": 792.4053925728372,
+        "rangeKind": "baseline-versus-mature-scenario-expectations",
+        "confidenceLevel": null,
+        "rankingBasis": "mature",
+        "range": {
+          "generatedLmd": [
+            17313.274336283182,
+            19017.729421748092
+          ],
+          "collectedLmd": [
+            17313.274336283186,
+            19017.729421748092
+          ]
+        },
+        "baseline": {
+          "generated": {
+            "lmd": 17313.274336283182,
+            "gold": 33.260176991150445,
+            "orders": 11.469026548672572
+          },
+          "collected": {
+            "lmd": 17313.274336283186,
+            "gold": 33.260176991150445,
+            "orders": 11.46902654867257
+          }
+        }
+      },
+      "officeEquivalentHours": 27,
+      "meetingEquivalentHours": 38.63999999999999,
+      "missingSkillPolicyHours": 24,
+      "morale": {
+        "char_252_bibeak": 13.200000000000006,
+        "char_254_vodfox": 13.200000000000006,
+        "char_283_midn": 24,
+        "char_4017_puzzle": 24,
+        "char_486_takila": 13.200000000000006,
+        "char_497_ctable": 12,
+        "char_503_rang": 12
+      },
+      "hourly": {
+        "office": 1.125,
+        "meeting": 1.6099999999999997,
+        "products": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        }
+      },
+      "completedShifts": 2
+    },
+    "cycle": {
+      "hour": 24,
+      "produced": {
+        "F_GOLD": 0,
+        "F_EXP": 0,
+        "F_DIAMOND": 0
+      },
+      "collected": {
+        "F_GOLD": 0,
+        "F_EXP": 0,
+        "F_DIAMOND": 0
+      },
+      "pending": {
+        "F_GOLD": 0,
+        "F_EXP": 0,
+        "F_DIAMOND": 0
+      },
+      "inventory": {},
+      "trade": {
+        "model": "baseline-mature-scenarios-v2",
+        "estimated": true,
+        "generated": {
+          "lmd": 19017.729421748092,
+          "gold": 33.540938295550966,
+          "orders": 9.92483937446964
+        },
+        "collected": {
+          "lmd": 19017.729421748092,
+          "gold": 33.54093829555098,
+          "orders": 9.924839374469634
+        },
+        "pending": {
+          "trading": {
+            "lmd": 0,
+            "gold": 0,
+            "orders": 0
+          }
+        },
+        "hourlyLmd": 792.4053925728372,
+        "rangeKind": "baseline-versus-mature-scenario-expectations",
+        "confidenceLevel": null,
+        "rankingBasis": "mature",
+        "range": {
+          "generatedLmd": [
+            17313.274336283182,
+            19017.729421748092
+          ],
+          "collectedLmd": [
+            17313.274336283186,
+            19017.729421748092
+          ]
+        },
+        "baseline": {
+          "generated": {
+            "lmd": 17313.274336283182,
+            "gold": 33.260176991150445,
+            "orders": 11.469026548672572
+          },
+          "collected": {
+            "lmd": 17313.274336283186,
+            "gold": 33.260176991150445,
+            "orders": 11.46902654867257
+          }
+        }
+      },
+      "officeEquivalentHours": 27,
+      "meetingEquivalentHours": 38.63999999999999,
+      "missingSkillPolicyHours": 24,
+      "morale": {
+        "char_252_bibeak": 13.200000000000006,
+        "char_254_vodfox": 13.200000000000006,
+        "char_283_midn": 24,
+        "char_4017_puzzle": 24,
+        "char_486_takila": 13.200000000000006,
+        "char_497_ctable": 12,
+        "char_503_rang": 12
+      },
+      "hourly": {
+        "office": 1.125,
+        "meeting": 1.6099999999999997,
+        "products": {
+          "F_GOLD": 0,
+          "F_EXP": 0,
+          "F_DIAMOND": 0
+        }
+      },
+      "completedShifts": 2
+    },
+    "cycleStatus": "completed"
+  },
+  "errors": 0,
+  "lastError": null,
+  "selection": {
+    "rejectedLocal": 2
+  },
+  "stats": {
+    "plans": 1659,
+    "nodes": 7478,
+    "conflicts": 3201,
+    "complete": true,
+    "reason": null
+  },
+  "elapsedMs": 664.918672,
+  "excluded": [],
+  "warnings": [
+    "응접실 기본 속도·분위기 공식은 검토 중인 실험식입니다. 종류별 확률과 단서 자동 획득은 계산하지 않습니다.",
+    "무역소는 순금 거래·재료 충분·교대 시 납품을 가정한 기대 작업량 근사입니다. 품질 우대 없는 기본 분포와 충분히 누적된 분포의 두 시나리오 기대값 범위를 표시합니다. 실제 수익 보장 구간이나 신뢰구간이 아니며 초기 3/5시간의 확률 변화와 개별 주문의 교대 이월을 재현하지 않습니다. 배치 비교는 성숙 시나리오 수익 기준입니다. 고품질 분포는 3레벨의 관측된 조합만 지원합니다.",
+    "첫 24시간과 첫 교대 사이클만 검사합니다. 반복 운영의 지속 가능성과 실제 게임의 최고 효율을 보장하지 않습니다.",
+    "Experimental catalog composition; a limited search is not an optimality proof.",
+    "Local snapshots are all-active only. Final fatigue, dorm and shift effects use the existing simulator."
+  ]
+}

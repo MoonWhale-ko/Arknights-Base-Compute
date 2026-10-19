@@ -1,0 +1,210 @@
+{
+  "format": "facility-expansion-experiment-1",
+  "fingerprint": "0cfc9267f2a3439a4f1bd0ef54587a84d5a7e735982cfc0315712f93f6c6e721",
+  "modelVersion": "24h-cycle-lab-7",
+  "complete": true,
+  "scope": "Four local candidate catalogs; control/dorm profiles only. Global solver is a small bounded composition experiment, not deployed.",
+  "facilities": [
+    {
+      "room": "TRADING",
+      "file": "local-trading-v1.ndjson.gz",
+      "mode": "local-combinations",
+      "operatorsExamined": 415,
+      "supportedOperators": 45,
+      "supportedProfiles": 58,
+      "unsupportedProfiles": 55,
+      "unsupportedOperators": 34,
+      "combinations": 31827,
+      "programs": 1628,
+      "bySeats": [
+        1,
+        58,
+        1640,
+        30128
+      ],
+      "rawBytes": 1816774,
+      "gzipBytes": 155793,
+      "records": 33457,
+      "rawSha256": "704569d4b9b99257abd103e499d874cd69236291100dd337ad525ff0c1132f5d",
+      "gzipSha256": "fae699b5fa7ee3d9d72bbf2cc57a1359d07180f01f0bb12fa165d01df26153d1",
+      "seconds": 1.475353358,
+      "loadMs": 45.72187000000008,
+      "probe": {
+        "filterMs": 38.51907499999993,
+        "candidates": 10471,
+        "rejectedCombinations": 230,
+        "excludedOperators": 34,
+        "assumption": "All owned, maximum development, level 3, exchange inactive, missing clues 1/3."
+      },
+      "dependencies": [
+        "facilityLevel",
+        "controlCount",
+        "exportRecovery"
+      ]
+    },
+    {
+      "room": "POWER",
+      "file": "local-power-v1.ndjson.gz",
+      "mode": "local-combinations",
+      "operatorsExamined": 415,
+      "supportedOperators": 30,
+      "supportedProfiles": 41,
+      "unsupportedProfiles": 6,
+      "unsupportedOperators": 6,
+      "combinations": 42,
+      "programs": 8,
+      "bySeats": [
+        1,
+        41
+      ],
+      "rawBytes": 22584,
+      "gzipBytes": 3505,
+      "records": 52,
+      "rawSha256": "0f864c1353e96419e166e89f47d22141054fe06c0b84f74e7e28aacc6be6e687",
+      "gzipSha256": "33f788e465e74e62ef95c6f1adbb3707214e3667dc234d039f738b2e3297238b",
+      "seconds": 0.031509990000000015,
+      "loadMs": 0.35921299999995426,
+      "probe": {
+        "filterMs": 0.9529790000001412,
+        "candidates": 25,
+        "rejectedCombinations": 0,
+        "excludedOperators": 6,
+        "assumption": "All owned, maximum development, level 3, exchange inactive, missing clues 1/3."
+      },
+      "dependencies": [
+        "controlCount",
+        "mlynar",
+        "exportRecovery"
+      ]
+    },
+    {
+      "room": "HIRE",
+      "file": "local-hire-v1.ndjson.gz",
+      "mode": "local-combinations",
+      "operatorsExamined": 415,
+      "supportedOperators": 23,
+      "supportedProfiles": 29,
+      "unsupportedProfiles": 16,
+      "unsupportedOperators": 14,
+      "combinations": 30,
+      "programs": 16,
+      "bySeats": [
+        1,
+        29
+      ],
+      "rawBytes": 25267,
+      "gzipBytes": 3972,
+      "records": 48,
+      "rawSha256": "2e7c2741d61f7f5e11d7cbe2c8cbc6ac5cb41696ef8417784308dbeb67bc8308",
+      "gzipSha256": "d37854dc9f4bff0b0b20c5bef7df19ca3d4608bb2fcb9f21b2426a7e06b7818e",
+      "seconds": 0.009633546000000024,
+      "loadMs": 0.376308999999992,
+      "probe": {
+        "filterMs": 0.8837149999999383,
+        "candidates": 18,
+        "rejectedCombinations": 0,
+        "excludedOperators": 14,
+        "assumption": "All owned, maximum development, level 3, exchange inactive, missing clues 1/3."
+      },
+      "dependencies": [
+        "dormLevelSum",
+        "eliteRoomCount",
+        "hireThreshold",
+        "controlCount",
+        "mlynar",
+        "exportRecovery"
+      ]
+    },
+    {
+      "room": "MEETING",
+      "file": "local-meeting-v1.ndjson.gz",
+      "mode": "local-combinations",
+      "operatorsExamined": 415,
+      "supportedOperators": 46,
+      "supportedProfiles": 107,
+      "unsupportedProfiles": 19,
+      "unsupportedOperators": 11,
+      "combinations": 5693,
+      "programs": 760,
+      "bySeats": [
+        1,
+        107,
+        5585
+      ],
+      "rawBytes": 251095,
+      "gzipBytes": 35466,
+      "records": 6455,
+      "rawSha256": "b811f757aec8e763e95dd17b736e21bf779c0e1dd68a8e446b92093ae26dcb8c",
+      "gzipSha256": "b4d1820e821349b162f38dc88c185550ab4bb9b9eb324b4f15e9fc6c917513ec",
+      "seconds": 0.19811690799999998,
+      "loadMs": 5.21569599999998,
+      "probe": {
+        "filterMs": 14.174719000000096,
+        "candidates": 528,
+        "rejectedCombinations": 293,
+        "excludedOperators": 11,
+        "assumption": "All owned, maximum development, level 3, exchange inactive, missing clues 1/3."
+      },
+      "dependencies": [
+        "clueExchangeActive",
+        "missingClues",
+        "globalMissing",
+        "meetingBonus",
+        "ambienceTotal",
+        "workedHours",
+        "controlCount",
+        "mlynar",
+        "exportRecovery"
+      ]
+    }
+  ],
+  "contextProfiles": {
+    "file": "local-context-profiles-v1.ndjson.gz",
+    "rawBytes": 109685,
+    "gzipBytes": 12933,
+    "records": 2,
+    "rawSha256": "e1a6832e3a0772c3b760bf020fb0e9a04fc9b6a9126dc0f5ce0d8bbf45629989",
+    "gzipSha256": "3fee241b98a61021cb4cc29e17edd350a4ff9ad582d4448c3d29ddb13526d269",
+    "rooms": [
+      {
+        "room": "CONTROL",
+        "mode": "profiles-only",
+        "supportedProfiles": 42,
+        "supportedOperators": 38,
+        "unsupportedProfiles": 48,
+        "fullFiveSeatEnumeration": false
+      },
+      {
+        "room": "DORMITORY",
+        "mode": "profiles-only",
+        "supportedProfiles": 70,
+        "supportedOperators": 56,
+        "unsupportedProfiles": 31,
+        "fullFiveSeatEnumeration": false
+      }
+    ]
+  },
+  "seconds": 1.8416046849999999,
+  "peakProcessRssMiB": 145.71484375,
+  "nodeVersion": "v24.19.0",
+  "platform": "linux",
+  "previousFactoryFiles": {
+    "preserved": true,
+    "sha256": {
+      "factory-precompute.mjs": "f1a058b3c6641e3de78d56954156946f212a5fae6d212600c733fb6a0b0cb2b1",
+      "factory-precompute-cli.mjs": "5e2ab223b099bd0d4f6195509f763af3f8b91bfdf4b3d241f440f2b524213a35",
+      "factory-precompute.test.mjs": "d67c3e2975b225bf20ed4b6a6bb8e01043681949afe1da5a9a0f6e86c1070ffb",
+      "factory-local.ndjson.gz": "3281e91cf6801a9bdeab5951a484474d2d3de1e69eef91b416f195d910267e0f",
+      "factory-local.ndjson.gz.metrics.json": "2ded4c6aee76247bb41d97188acc80cec913d97bbc28e7fd9578141000992974",
+      "FACTORY-PRECOMPUTE.md": "91ec9f937b59f762e709ecc45e7faf065b5cc44f37a16120fa252d8a8bdf441d"
+    }
+  },
+  "warnings": [
+    "No previously unsupported skills are newly implemented by this experiment.",
+    "Trade uses the existing baseline/mature scenario expectations, not confidence bounds.",
+    "Meeting speed/ambience remains the existing experimental formula; no clue probability estimates.",
+    "Power output stores recovery skill bonuses, not a full 24h drone production ledger.",
+    "Full-base correctness, repeated-shift sustainability and practical global runtime remain unverified.",
+    "No site deployment or long-running remote compute was started."
+  ]
+}
