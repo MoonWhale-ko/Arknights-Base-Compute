@@ -70,10 +70,11 @@ export function terraSnapshot(model,placements,morale,worked={},simulation={}){
    let speed=Math.max(0,baseSpeed+(extra/100));
    const diff=all.filter(s=>s.capConv?.t==='diff').reduce((n,s)=>n+s.capConv.rate,0),pending=simulation.tradeInventory?.[r.id]?.orders??0;
    if(diff)speed=Math.max(0,speed+diff*([6,8,10][r.level-1]-6-pending)/100);
-   const pepe=all.some(s=>s.buffId.startsWith('trade_ord_pepe'));
-   const estimated=pepe?{seconds:16200,gold:0,lmd:1000,probabilities:null}:{...baseline};
-   if(pepe)speed=1;
-   trading.push({room:r,order:estimated,baselineOrder:pepe?estimated:baseline,capacity:Math.max(0,[6,8,10][r.level-1]+capacityBonus),multiplier:peers.length?speed:0,baselineMultiplier:peers.length?(pepe?1:Math.max(0,baseSpeed)):0,approximation:'terra-efficiency-equivalent'});
+   const pepe=all.some(s=>s.buffId.startsWith('trade_ord_pepe')),closure=all.some(s=>s.buffId.startsWith('trade_ord_closure')),twoGold=all.some(s=>s.buffId.startsWith('trade_ord_spd&wt'));
+   const fixedOrder=pepe||closure||twoGold;
+   const estimated=pepe?{seconds:16200,gold:0,lmd:1000,probabilities:null}:closure||twoGold?{seconds:8640,gold:2,lmd:closure?1200:1000,probabilities:[1,0,0]}:{...baseline};
+   if(fixedOrder)speed=pepe?1:Math.max(0,baseSpeed);
+   trading.push({room:r,order:estimated,baselineOrder:fixedOrder?estimated:baseline,capacity:Math.max(0,[6,8,10][r.level-1]+capacityBonus),multiplier:peers.length?speed:0,baselineMultiplier:peers.length?(pepe?1:Math.max(0,baseSpeed)):0,approximation:fixedOrder?'fixed-order-expected-work':'terra-efficiency-equivalent'});
   }
  }
  dormRates(model,placements,morale,tokens,rates,thresholds);

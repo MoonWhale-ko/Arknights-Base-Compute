@@ -32,3 +32,14 @@ test('integrated two and three crews agree with small exhaustive enumeration',()
  for(;;){const x=iter.advance();if(x.done)break;if(!x.plan)continue;const v=score(model,simulate(model,x.plan));if(v&&(!best||compare(v,best)>0))best=v;}
  const got=solveHeuristic(model,{maxMilliseconds:3000,exactThreshold:100000});assert.equal(got.stats.evaluationErrors,0);assert.deepEqual(got.best?.score??null,best);
 }});
+test('Closure replaces the order pool and does not multiply Tequila payout',()=>{
+ const a=fixture({TRADING:['클로저']}),b=fixture({TRADING:['클로저','테킬라']});
+ const first=a.snap().trading[0],second=b.snap().trading[0];
+ assert.deepEqual(first.order,{seconds:8640,gold:2,lmd:1200,probabilities:[1,0,0]});
+ assert.equal(second.order.lmd,1200);near(second.multiplier-first.multiplier,.01);
+ near(second.multiplier,second.baselineMultiplier);
+});
+test('U-Official forces a two-gold order without quality payout',()=>{
+ const f=fixture({TRADING:['U-Official','바이비크','테킬라']});const s=f.snap().trading[0];
+ assert.equal(s.order.gold,2);assert.equal(s.order.lmd,1000);assert.equal(s.order.seconds,8640);near(s.multiplier,s.baselineMultiplier);
+});
