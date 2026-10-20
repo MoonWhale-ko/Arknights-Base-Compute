@@ -88,10 +88,10 @@ export function scenarioAt(groups,rank){
  for(let i=0;i<groups.length;i++)for(const state of groups[i].states){const left=count-(state?1:0),ways=left>=0?(table[i+1][left]??0n):0n;if(rank<ways){if(state){progress[groups[i].id]=state;count--;}break;}rank-=ways;}
  return progress;
 }
-export function buildModel(catalog,input,progress=input.progress){
- const buffs=Object.fromEntries(Object.values(catalog.buffs).map(b=>[b.id,rule(b)])),pool=Object.keys(progress).sort().map(id=>({...catalog.characters[id],...progress[id],skills:unlock(catalog.characters[id],progress[id],buffs)}));
+export function buildModel(catalog,input,progress=input.progress,{operatorFactory,workTypes=TYPES}={}){
+ const buffs=Object.fromEntries(Object.values(catalog.buffs).map(b=>[b.id,rule(b)])),pool=Object.keys(progress).sort().map(id=>operatorFactory?operatorFactory(catalog.characters[id],progress[id]):({...catalog.characters[id],...progress[id],skills:unlock(catalog.characters[id],progress[id],buffs)}));
  const byId=Object.fromEntries(pool.map(o=>[o.id,o])),warnings=[],excluded=[];
- const cap=r=>r.type==='CONTROL'?r.level:r.type==='DORMITORY'?5:r.type==='MEETING'?2:['POWER','HIRE'].includes(r.type)?1:r.level;
+ const cap=r=>r.type==='CONTROL'?r.level:r.type==='DORMITORY'?5:r.type==='MEETING'?2:['POWER','HIRE','TRAINING','WORKSHOP'].includes(r.type)?1:r.level;
  const rooms=Object.entries(input.base.rooms).map(([id,r])=>({id,...r,capacity:cap(r),recipe:r.type==='MANUFACTURE'?catalog.recipes[input.products[id]]:null}));
  const maxFactory=Math.max(0,...rooms.filter(r=>r.type==='MANUFACTURE').map(r=>r.level));
  for(const r of rooms)if(r.recipe)requireValue(r.recipe.unlockLevel<=maxFactory,'생산 품목 개방 조건 미충족');
@@ -101,7 +101,7 @@ export function buildModel(catalog,input,progress=input.progress){
   const bad=op.skills.filter(s=>s.room===r.type&&s.kind==='unsupported');if(bad.length)excluded.push({id:op.id,name:op.name,room:r.id,skills:bad.map(s=>({id:s.id,name:s.name,description:s.description}))});
  }
  for(const [id,ids] of Object.entries(input.dormSupport))for(const name of ids)requireValue(canPlace(byId[name],rooms.find(r=>r.id===id)),`${byId[name].name}: 숙소 지원 스킬이 없거나 미지원입니다.`);
- const work=rooms.filter(r=>TYPES.includes(r.type)),tasks=[];
+ const work=rooms.filter(r=>workTypes.includes(r.type)),tasks=[];
  for(const r of work){const fixed=input.residents.filter(x=>x.room===r.id).map(x=>x.id);requireValue(fixed.length<=r.capacity,'상주자 정원 초과');for(const id of fixed)requireValue(canPlace(byId[id],r),'상주자 스킬 없음 또는 미지원');}
  if(input.options.optimizeDormSupport)for(const r of rooms.filter(r=>r.type==='DORMITORY')){const fixed=input.dormSupport[r.id]??[];const candidates=pool.filter(op=>!reservedKeys.has(op.identity??op.id)&&canPlace(op,r)).map(o=>o.id);tasks.push({team:-1,room:r.id,type:r.type,level:r.level,recipe:null,capacity:5-fixed.length,candidates,fixed,symmetryKey:null,identityMap:Object.fromEntries(pool.map(op=>[op.id,op.identity??op.id]))});}
  for(let t=0;t<input.options.teams;t++)for(const r of work){
@@ -156,7 +156,7 @@ export function simulate(model,plan,{record=false}={}){
  const baselineTotals={lmd:0,gold:0,orders:0},baselineCollected={lmd:0,gold:0,orders:0},baselineInventory=structuredClone(tradeInventory);
  const collectBaseline=()=>{for(const state of Object.values(baselineInventory))for(const k of ['lmd','gold','orders']){baselineCollected[k]+=state[k];state[k]=0;}};
  const collectTrade=()=>{collectBaseline();for(const s of Object.values(tradeInventory))for(const k of ['lmd','gold','orders']){tradeCollected[k]+=s[k];s[k]=0;}};
- let clock=0,team=0,shiftStart=0,completedShifts=0,placements=[],officeHours=0,meetingHours=0,preferenceHours=0,at24=null,cycle=null,status='ok',reason='',steps=0,lastAssignments=new Map();
+ let clock=0,team=0,shiftStart=0,completedShifts=0,placements=[],officeHours=0,meetingHours=0,preferenceHours=0,droneRecovered=0,at24=null,cycle=null,status='ok',reason='',steps=0,lastAssignments=new Map();
  const log=(type,extra={})=>{if(record)events.push({hour:clock,type,...extra});};
  function rest(previous){
   const w=work.map(r=>({room:r,ops:plan.groups.find(g=>g.team===team&&g.room===r.id).operators.map(id=>byId[id])})),busy=new Set(w.flatMap(p=>p.ops.map(x=>x.id))),reserved=new Set(Object.values(input.dormSupport).flat()),distance=new Map();
@@ -175,10 +175,10 @@ export function simulate(model,plan,{record=false}={}){
  function enter(){placements=rest();const assignments=new Map(placements.flatMap(p=>p.ops.map(op=>[op.id,p.room.id])));for(const op of pool)if(lastAssignments.get(op.id)!==assignments.get(op.id))worked[op.id]=0;lastAssignments=assignments;log('shift',{team,rooms:placements.map(p=>({id:p.room.id,operators:p.ops.map(x=>x.id)}))});}
  function exchange(){for(const p of placements.filter(p=>p.room.type==='DORMITORY')){const target=p.ops.at(-1);if(!target)continue;const provider=p.ops.find(op=>skills(op,'DORMITORY').some(s=>s.kind==='exchange')&&morale[op.id]>=op.maxMorale-EPS);if(provider&&provider.id!==target.id&&morale[target.id]<target.maxMorale-EPS){const old=morale[target.id];morale[target.id]=morale[provider.id];morale[provider.id]=old;log('exchange',{room:p.room.id,provider:provider.id,target:target.id});}}}
  function resultPoint(){const pending=emptyTotals();for(const [id,s] of Object.entries(inventory)){const recipe=rooms.find(r=>r.id===id).recipe;pending[recipe.category]+=recipe.category==='F_EXP'?s.count/recipe.count*recipe.xp:s.count;}
-  return {hour:clock,produced:{...totals},collected:{...collected},pending,inventory:structuredClone(inventory),trade:{model:TRADE_MODEL,estimated:true,generated:{...tradeTotals},collected:{...tradeCollected},pending:structuredClone(tradeInventory),hourlyLmd:tradeTotals.lmd/clock,rangeKind:'baseline-versus-mature-scenario-expectations',confidenceLevel:null,rankingBasis:'mature',range:{generatedLmd:[Math.min(baselineTotals.lmd,tradeTotals.lmd),Math.max(baselineTotals.lmd,tradeTotals.lmd)],collectedLmd:[Math.min(baselineCollected.lmd,tradeCollected.lmd),Math.max(baselineCollected.lmd,tradeCollected.lmd)]},baseline:{generated:{...baselineTotals},collected:{...baselineCollected}}},officeEquivalentHours:officeHours,meetingEquivalentHours:meetingHours,missingSkillPolicyHours:preferenceHours,morale:{...morale},hourly:{office:officeHours/clock,meeting:meetingHours/clock,products:Object.fromEntries(CATS.map(k=>[k,totals[k]/clock]))},completedShifts};}
+  return {hour:clock,produced:{...totals},collected:{...collected},pending,inventory:structuredClone(inventory),trade:{model:model.engineVersion?'terra27-efficiency-scenarios':TRADE_MODEL,estimated:true,generated:{...tradeTotals},collected:{...tradeCollected},pending:structuredClone(tradeInventory),hourlyLmd:tradeTotals.lmd/clock,rangeKind:'baseline-versus-mature-scenario-expectations',confidenceLevel:null,rankingBasis:'mature',range:{generatedLmd:[Math.min(baselineTotals.lmd,tradeTotals.lmd),Math.max(baselineTotals.lmd,tradeTotals.lmd)],collectedLmd:[Math.min(baselineCollected.lmd,tradeCollected.lmd),Math.max(baselineCollected.lmd,tradeCollected.lmd)]},baseline:{generated:{...baselineTotals},collected:{...baselineCollected}}},officeEquivalentHours:officeHours,meetingEquivalentHours:meetingHours,missingSkillPolicyHours:preferenceHours,morale:{...morale},hourly:{office:officeHours/clock,meeting:meetingHours/clock,products:Object.fromEntries(CATS.map(k=>[k,totals[k]/clock]))},completedShifts,...(model.engineVersion?{drones:{recovered:droneRecovered,used:0,storageCapApplied:false}}:{})};}
  enter();exchange();
  while(clock<o.maxHours-EPS&&steps++<100000){
-  const snap=snapshot(model,placements,morale,worked);if([...residentIds].some(id=>snap.rates[id]<-EPS)){status='invalid';reason='상주자의 무소모 조건이 유지되지 않습니다.';break;}
+  const snap=snapshot(model,placements,morale,worked,{clock,inventory,tradeInventory});if([...residentIds].some(id=>snap.rates[id]<-EPS)){status='invalid';reason='상주자의 무소모 조건이 유지되지 않습니다.';break;}
   const rotating=placements.filter(p=>p.room.type!=='DORMITORY').flatMap(p=>p.ops).filter(op=>!residentIds.has(op.id)),depleting=rotating.filter(op=>snap.rates[op.id]<-EPS||morale[op.id]<=EPS);
   const rotate=o.rotation==='12h'?clock-shiftStart>=12-EPS:o.rotation==='first'?depleting.some(op=>morale[op.id]<=EPS):depleting.length>0&&depleting.every(op=>morale[op.id]<=EPS);
   if(rotate){
@@ -191,13 +191,17 @@ export function simulate(model,plan,{record=false}={}){
   // If no worker can ever trigger a depletion shift, a cycle is undefined, not forced to 12h.
   const noCycle=o.rotation!=='12h'&&!depleting.length;
   let dt=Math.min(o.maxHours-clock,Math.floor(clock+EPS)+1-clock,at24?Infinity:24-clock,o.rotation==='12h'?12-(clock-shiftStart):Infinity);
+  if(snap.stepHours)dt=Math.min(dt,snap.stepHours);
+  if(snap.nextChangeHours>EPS)dt=Math.min(dt,snap.nextChangeHours);
+  for(const [id,thresholds] of Object.entries(snap.thresholds??{}))for(const threshold of thresholds){const rate=snap.rates[id],distance=(threshold-morale[id])/rate;if(Number.isFinite(distance)&&distance>EPS)dt=Math.min(dt,distance);}
   for(const op of pool){const rate=snap.rates[op.id];if(rate< -EPS&&morale[op.id]>EPS)dt=Math.min(dt,morale[op.id]/-rate);if(rate>EPS&&morale[op.id]<op.maxMorale-EPS)dt=Math.min(dt,(op.maxMorale-morale[op.id])/rate);}
   for(const f of snap.factories){const s=inventory[f.room.id],r=f.room.recipe;if(f.multiplier>EPS&&s.count*r.weight<f.capacity-EPS)dt=Math.min(dt,(r.seconds-s.progress)/(f.multiplier*3600));}
   for(const f of snap.trading){const s=tradeInventory[f.room.id];if(f.multiplier>EPS&&s.orders<f.capacity-EPS)dt=Math.min(dt,(f.capacity-s.orders)*f.order.seconds/(f.multiplier*3600));}
   if(!(dt>EPS)&&!(Math.abs(clock-24)<EPS&&!at24)){status='invalid';reason='시간 진행이 불가능한 상태입니다.';break;}
   for(const f of snap.factories){const s=inventory[f.room.id],r=f.room.recipe;if(s.count*r.weight>=f.capacity-EPS)continue;s.progress+=dt*f.multiplier*3600;if(s.progress>=r.seconds-EPS){s.progress=Math.max(0,s.progress-r.seconds);s.count+=r.count;totals[r.category]+=r.category==='F_EXP'?r.xp:r.count;log('product',{room:f.room.id,category:r.category,amount:r.category==='F_EXP'?r.xp:r.count});}}
   for(const f of snap.trading){const s=tradeInventory[f.room.id],orders=Math.max(0,Math.min(f.capacity-s.orders,dt*f.multiplier*3600/f.order.seconds));for(const [k,v] of Object.entries({orders,gold:orders*f.order.gold,lmd:orders*f.order.lmd})){s[k]+=v;tradeTotals[k]+=v;}}
-  for(const f of snap.trading){const state=baselineInventory[f.room.id],orders=Math.max(0,Math.min(f.capacity-state.orders,dt*f.multiplier*3600/f.baselineOrder.seconds));for(const [k,v] of Object.entries({orders,gold:orders*f.baselineOrder.gold,lmd:orders*f.baselineOrder.lmd})){state[k]+=v;baselineTotals[k]+=v;}}
+  for(const f of snap.trading){const state=baselineInventory[f.room.id],orders=Math.max(0,Math.min(f.capacity-state.orders,dt*(f.baselineMultiplier??f.multiplier)*3600/f.baselineOrder.seconds));for(const [k,v] of Object.entries({orders,gold:orders*f.baselineOrder.gold,lmd:orders*f.baselineOrder.lmd})){state[k]+=v;baselineTotals[k]+=v;}}
+  if(snap.power)droneRecovered+=dt*10*Math.max(0,1+snap.power.reduce((n,f)=>n+f.bonus,0));
   officeHours+=dt*snap.offices.reduce((n,f)=>n+f.multiplier,0);meetingHours+=dt*snap.meetings.reduce((n,f)=>n+f.multiplier,0);preferenceHours+=dt*snap.meetings.reduce((n,f)=>n+f.preference,0);
   for(const op of pool)morale[op.id]=Math.max(0,Math.min(op.maxMorale,morale[op.id]+snap.rates[op.id]*dt));for(const p of placements.filter(p=>p.room.type!=='DORMITORY'))for(const op of p.ops)worked[op.id]+=dt;clock+=dt;
   if(Math.abs(clock-24)<EPS&&!at24){at24=resultPoint();log('24h');}
@@ -205,7 +209,7 @@ export function simulate(model,plan,{record=false}={}){
   if(o.extraActions){const next=rest(placements);if(stable(next.map(p=>p.ops.map(x=>x.id)))!==stable(placements.map(p=>p.ops.map(x=>x.id)))){placements=next;log('dormChange',{rooms:placements.filter(p=>p.room.type==='DORMITORY').map(p=>({id:p.room.id,operators:p.ops.map(x=>x.id)}))});}exchange();}
  }
  // A shift boundary coinciding with the safety cap is a real completed event.
- if(!cycle&&clock>=o.maxHours-EPS){const s=snapshot(model,placements,morale,worked),rot=placements.filter(p=>p.room.type!=='DORMITORY').flatMap(p=>p.ops).filter(op=>!residentIds.has(op.id)&&(s.rates[op.id]<-EPS||morale[op.id]<=EPS));const boundary=o.rotation==='12h'?clock-shiftStart>=12-EPS:o.rotation==='first'?rot.some(op=>morale[op.id]<=EPS):rot.length&&rot.every(op=>morale[op.id]<=EPS);if(boundary&&completedShifts+1===o.teams){for(const [id,state] of Object.entries(inventory)){const recipe=rooms.find(r=>r.id===id).recipe;collected[recipe.category]+=recipe.category==='F_EXP'?state.count/recipe.count*recipe.xp:state.count;state.count=0;}completedShifts++;if(Math.abs(clock-24)<EPS)at24=resultPoint();cycle=resultPoint();}}
+ if(!cycle&&clock>=o.maxHours-EPS){const s=snapshot(model,placements,morale,worked,{clock,inventory,tradeInventory}),rot=placements.filter(p=>p.room.type!=='DORMITORY').flatMap(p=>p.ops).filter(op=>!residentIds.has(op.id)&&(s.rates[op.id]<-EPS||morale[op.id]<=EPS));const boundary=o.rotation==='12h'?clock-shiftStart>=12-EPS:o.rotation==='first'?rot.some(op=>morale[op.id]<=EPS):rot.length&&rot.every(op=>morale[op.id]<=EPS);if(boundary&&completedShifts+1===o.teams){for(const [id,state] of Object.entries(inventory)){const recipe=rooms.find(r=>r.id===id).recipe;collected[recipe.category]+=recipe.category==='F_EXP'?state.count/recipe.count*recipe.xp:state.count;state.count=0;}completedShifts++;if(Math.abs(clock-24)<EPS)at24=resultPoint();cycle=resultPoint();}}
  if(cycle&&clock>=o.maxHours-EPS){collectTrade();cycle=resultPoint();if(Math.abs(clock-24)<EPS)at24=resultPoint();}
  if(!at24&&Math.abs(clock-24)<EPS)at24=resultPoint();
  if(!cycle&&!reason)reason='첫 사이클이 검사 상한 내에 완료되지 않았습니다.';

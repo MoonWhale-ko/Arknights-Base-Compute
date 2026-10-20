@@ -2,7 +2,8 @@ import {group} from './rules.mjs';
 import {expectedOrder} from './trading.mjs';
 const EVAL_EPS=1e-8;
 export const skills=(o,type)=>o.skills.filter(s=>s.room===type),active=(o,m)=>m[o.id]>EVAL_EPS;
-export function snapshot(model,placements,morale,worked){
+export function snapshot(model,placements,morale,worked,context){
+ if(model.snapshotEvaluator)return model.snapshotEvaluator(model,placements,morale,worked,context);
  if(!model.snapshotCache)return calculateSnapshot(model,placements,morale,worked);
  const key=JSON.stringify(placements.map(p=>[p.room.id,p.ops.map(o=>[o.id,morale[o.id],worked[o.id]??0]) ]));
  if(model.snapshotCache.has(key)){model.snapshotHits=(model.snapshotHits??0)+1;return model.snapshotCache.get(key);}

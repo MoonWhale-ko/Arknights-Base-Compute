@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "owned": 432,
+  "layout": "243",
+  "elapsedMs": 10000.455955,
+  "stats": {
+    "simulations": 16,
+    "proxyEvaluations": 37192,
+    "invalidPlans": 0,
+    "evaluationErrors": 0,
+    "cacheHits": 0,
+    "startsCompleted": 0,
+    "improvementRounds": 0,
+    "acceptedMoves": 0
+  },
+  "score": [
+    1.6250000000000002,
+    0.892156862745098,
+    2.397794117647059,
+    3.4166666666666665,
+    1333.3333333333333,
+    0,
+    625.2536873156346
+  ],
+  "modelVersion": "terra27-time-simulator-1",
+  "errors": [],
+  "optimalityProven": false
+}

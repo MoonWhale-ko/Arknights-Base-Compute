@@ -1,5 +1,5 @@
 // Independent implementation of a facility-greedy, seeded, local-improvement
-// search. No third-party executable code or precomputed universal rosters.
+// search. The optional Terra adapter supplies third-party skill evaluation.
 import {Enumerator,simulate,score,compare,subsetCount,stable} from './core.mjs';
 import {snapshot} from './evaluator.mjs';
 
@@ -55,6 +55,7 @@ function proxy(model,selection,teamCache){
   out[out.length-2]-=pool.reduce((n,op)=>n+Math.max(0,-snap.rates[op.id]*12-op.maxMorale),0)/teams;
   out[out.length-1]+=placements.filter(p=>p.room.type==='POWER').reduce((n,p)=>n+p.ops.flatMap(op=>op.skills.filter(s=>s.room==='POWER')).reduce((v,s)=>v+(s.prod??0),0),0)/teams;
   out[out.length-1]+=placements.filter(p=>p.room.type==='CONTROL').reduce((n,p)=>n+p.ops.flatMap(op=>op.skills.filter(s=>s.room==='CONTROL')).reduce((v,s)=>v+(['ccRecovery','ccFaction','globalDorm','ccProd'].includes(s.kind)?s.amount??0:0),0),0)/teams;
+  out[out.length-1]+=(snap.roleMerit??0)/teams;
  }
  out[out.length-1]+=Object.values(support).reduce((n,ids)=>n+supportMerit(model,ids),0);
  return out;
@@ -66,14 +67,15 @@ function heuristicWeight(model,task,id){
 export function shortlist(model,task,top=40){
  const ranked=[...task.candidates].sort((a,b)=>heuristicWeight(model,task,b)-heuristicWeight(model,task,a)||a.localeCompare(b));
  const chosen=new Set(ranked.slice(0,top));
- for(const id of ranked)if(model.byId[id].skills.some(s=>s.room===task.type&&(special.has(s.kind)||s.cap||s.tradeLimit||s.roomDrain||s.drain<0||s.kind==='allRest'||s.kind==='singleRest'||s.kind==='selfAllRest'||s.kind==='selfSingleRest')))chosen.add(id);
+ for(const id of ranked)if(model.byId[id].skills.some(s=>s.room===task.type&&(s.linked||special.has(s.kind)||s.cap||s.tradeLimit||s.roomDrain||s.drain<0||s.kind==='allRest'||s.kind==='singleRest'||s.kind==='selfAllRest'||s.kind==='selfSingleRest')))chosen.add(id);
  return [...chosen];
 }
 function anchors(model,task,candidates,variant){
  const roots=[[]],families=new Set();
  for(const id of candidates){const ss=model.byId[id].skills.filter(s=>s.room===task.type);
-  const keys=ss.filter(s=>special.has(s.kind)).map(s=>[s.kind,s.group??'',s.kind==='quality'?s.quality:''].join(':'));
+  const keys=ss.filter(s=>special.has(s.kind)||s.linked).map(s=>s.linked?'linked:'+s.id:[s.kind,s.group??'',s.kind==='quality'?s.quality:''].join(':'));
   if(keys.some(key=>!families.has(key))){roots.push([id]);for(const key of keys)families.add(key);}
+  for(const s of ss)if(s.terra?.partners?.length){const group=[id,...s.terra.partners];if(group.every(x=>candidates.includes(x)))roots.push(group);}
  }
  if(task.type==='MANUFACTURE')for(const id of candidates.filter(id=>model.byId[id].skills.some(s=>['bubble','vermeil'].includes(s.kind)))){
   const capacity=candidates.filter(x=>x!==id).sort((a,b)=>model.byId[b].skills.reduce((n,s)=>n+(s.cap??0),0)-model.byId[a].skills.reduce((n,s)=>n+(s.cap??0),0));
@@ -151,7 +153,8 @@ export function solveHeuristic(model,{maxMilliseconds=10000,maxEvaluations=10000
   for(let variant=0;variant<starts&&!stoppedEvaluation();variant++){
    let selection=variant&&bestSelection?bestSelection.map(ids=>[...ids]):empty.map(()=>[]);
    if(variant&&variant%2===1)selection=empty.map(()=>[]);
-   const types=variant%2?['CONTROL','HIRE','MEETING','MANUFACTURE','TRADING','POWER','DORMITORY']:['HIRE','MEETING','CONTROL','MANUFACTURE','TRADING','POWER','DORMITORY'];
+   if(variant&&model.startingSelections?.length)selection=model.startingSelections[(variant-1)%model.startingSelections.length].map(ids=>[...ids]);
+   const types=variant%2?['CONTROL','HIRE','MEETING','MANUFACTURE','TRADING','POWER','TRAINING','WORKSHOP','DORMITORY']:['HIRE','MEETING','CONTROL','MANUFACTURE','TRADING','POWER','TRAINING','WORKSHOP','DORMITORY'];
    const order=model.tasks.map((_,i)=>i).sort((a,b)=>types.indexOf(model.tasks[a].type)-types.indexOf(model.tasks[b].type)||(variant%3===2?model.tasks[b].team-model.tasks[a].team:model.tasks[a].team-model.tasks[b].team)||a-b);
    if(!variant)improvementOrder=order;
    for(const index of order){if(stoppedEvaluation())break;construct(selection,index,variant);evaluate(selection);}
