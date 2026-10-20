@@ -1,3 +1,5 @@
+> 현재 특수 스킬 통합판은 [heuristic.html](heuristic.html) 또는 `heuristic-cli.mjs --engine terra`입니다. 구현·검증·가정은 [TERRA-INTEGRATION.md](TERRA-INTEGRATION.md)를 확인하세요. 아래 내용의 `index.html`·`standalone.html`은 이전 실험 엔진 설명입니다. 운영 사이트에는 배포하지 않았습니다.
+
 # 기반시설 조건별 최고 배치 사전 계산기 · 실험판 3
 
 시설 구성과 보유·스킬 해금 조건을 생성하고, 각 조건에서 지원 모델 기준 최고 배치 한 건을 저장하는 로컬 프로그램입니다. 기존 사이트에 배포하지 않았습니다.

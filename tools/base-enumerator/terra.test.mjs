@@ -57,3 +57,27 @@ test('Gnosis with E1 Jaye/SilverAsh/Cliffheart produces the known 125 percent sk
  const f=fixture({CONTROL:['노시스'],TRADING:['제이','실버애쉬','클리프하트']});const a=f.snap().trading[0];
  assert.equal(a.capacity,30);near(a.multiplier,1.03+1.25);
 });
+test('meeting level and dorm ambience follow the published additive table',()=>{
+ for(const [level,bonus] of [[1,.07],[2,.09],[3,.11]]){const f=fixture({MEETING:['12F'],DORMITORY:[]},{MEETING:level});f.placements.find(p=>p.room.type==='DORMITORY').room.ambience=4000;near(f.snap().meetings[0].multiplier,1+bonus+.15+.05+.2);}
+});
+test('rest optimization swaps upcoming workers toward faster dorms without moving fixed supporters',()=>{
+ const f=fixture({'DORMITORY-0':['시즈','Lancet-2'],'DORMITORY-1':['모건']},{'DORMITORY-0':1,'DORMITORY-1':5});
+ for(const key in f.morale)f.morale[key]=0;f.morale[id('시즈')]=24;
+ const before=f.placements.map(p=>p.ops.map(o=>o.id)),distance=new Map([[id('Lancet-2'),1],[id('모건'),4]]),reserved=new Set([id('시즈')]);
+ const after=f.model.restOptimizer(f.model,f.placements,f.morale,{}, {reserved,distance,waiting:[f.model.byId[id('Lancet-2')],f.model.byId[id('모건')]]});
+ assert.deepEqual(f.placements.map(p=>p.ops.map(o=>o.id)),before);assert.equal(after[0].ops[0].id,id('시즈'));
+ assert.ok(after[1].ops.some(o=>o.id===id('Lancet-2')));const ids=after.flatMap(p=>p.ops.map(o=>o.id));assert.equal(new Set(ids).size,ids.length);
+});
+test('Aegis retains base clue speed without her conditional missing-clue partner',()=>{
+ const f=fixture({MEETING:['아이기스']});const a=f.snap().meetings[0];assert.equal(a.preference,0);near(a.multiplier,1.11+.25+.10);
+});
+test('Scout missing-clue skill remains active without its optional control-center speed partner',()=>{const f=fixture({MEETING:['로도스 아일랜드 정찰대']});assert.equal(f.snap().meetings[0].preference,1);});
+test('every maximum-unlock operator facility profile evaluates finite at full/threshold/zero morale',()=>{
+ let profiles=0;
+ for(const op of terra.J)for(const room of new Set(op.skills.map(s=>s.room).filter(r=>r!=='RECYCLE'))){const f=fixture({[room]:[op.name]});for(const morale of [24,12,0]){f.morale[op.id]=morale;const snap=f.snap();assert.ok(Object.values(snap.rates).every(Number.isFinite),`${op.name}/${room}/${morale}`);for(const row of [...snap.factories,...snap.offices,...snap.meetings,...snap.trading,...snap.power])assert.ok(Number.isFinite(row.multiplier??row.bonus),`${op.name}/${room} efficiency`);}profiles++;}
+ assert.equal(profiles,terra.J.reduce((n,o)=>n+new Set(o.skills.map(s=>s.room).filter(r=>r!=='RECYCLE')).size,0));assert.ok(profiles>0);
+});
+test('Totter uses actual morale deficit instead of the source assumed 12-point deficit',()=>{
+ const f=fixture({MANUFACTURE:['토터']});const at=morale=>{f.morale[id('토터')]=morale;return f.snap();};
+ const full=at(24),four=at(20),twelve=at(12);near(full.factories[0].multiplier,1.31);near(four.factories[0].multiplier,1.26);near(twelve.factories[0].multiplier,1.26);assert.equal(twelve.factories[0].capacity-full.factories[0].capacity,6);assert.ok(full.thresholds[id('토터')].includes(20));
+});
