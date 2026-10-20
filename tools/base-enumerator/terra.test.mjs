@@ -43,3 +43,17 @@ test('U-Official forces a two-gold order without quality payout',()=>{
  const f=fixture({TRADING:['U-Official','바이비크','테킬라']});const s=f.snap().trading[0];
  assert.equal(s.order.gold,2);assert.equal(s.order.lmd,1000);assert.equal(s.order.seconds,8640);near(s.multiplier,s.baselineMultiplier);
 });
+test('Jaye uses actual level capacity and E0 slows as pending orders grow',()=>{
+ for(const level of [1,2,3]){const f=fixture({TRADING:['제이']},{TRADING:level});const op=f.placements[0].ops[0];op.terra=terra.kt(terra.K.get(op.id),0,1);
+ const a=f.snap().trading[0],b=terraSnapshot(f.model,f.placements,f.morale,{}, {tradeInventory:{TRADING:{orders:3}}}).trading[0];
+ near(a.multiplier,1.01+[6,8,10][level-1]*.04);near(a.multiplier-b.multiplier,.12);
+ }
+});
+test('E1 Jaye lowers capacity by other worker efficiency and cancels pending-count decay',()=>{
+ const f=fixture({TRADING:['제이','실버애쉬','클리프하트']});const a=f.snap().trading[0],b=terraSnapshot(f.model,f.placements,f.morale,{}, {tradeInventory:{TRADING:{orders:5}}}).trading[0];
+ assert.equal(a.capacity,15);near(a.multiplier,1.03+.35+.60);near(a.multiplier,b.multiplier);
+});
+test('Gnosis with E1 Jaye/SilverAsh/Cliffheart produces the known 125 percent skill bonus',()=>{
+ const f=fixture({CONTROL:['노시스'],TRADING:['제이','실버애쉬','클리프하트']});const a=f.snap().trading[0];
+ assert.equal(a.capacity,30);near(a.multiplier,1.03+1.25);
+});

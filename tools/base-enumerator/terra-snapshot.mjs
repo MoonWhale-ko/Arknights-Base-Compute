@@ -41,7 +41,22 @@ export function terraSnapshot(model,placements,morale,worked={},simulation={}){
  for(const p of placements){const r=p.room;if(r.type==='DORMITORY')continue;
   const peers=at(p),ctx={...context,ambient,product:r.recipe?.category==='F_GOLD'?'gold':r.recipe?.category==='F_EXP'?'exp':r.recipe?'originium':undefined};
   const matched=peers.flatMap(o=>relevant(o,r.type,ctx.product).filter(s=>gated(s,o,peers,roomOf)).map(s=>({op:o,skill:s}))),all=matched.map(x=>x.skill);
-  const effects=peers.map(o=>{const e=engine.operatorEffect(o,r.type,peers,ctx);for(const x of e.crossIn){const provider=effective.get(x.from);if(!provider?.skills.some(s=>s.room===x.fromRoom&&s.crossBuff?.partner===o.id&&s.crossBuff?.room===r.type))e.efficiency-=x.value;}return e;}),plain=engine.combineOutput(effects,peers),conversion=engine.capacityConversion(effects,r.type,ambient,peers),aura=engine.facilityAura(r.type,peers,ambient,plain,ctx.product),capacityBonus=effects.reduce((n,e)=>n+e.cap,0)+engine.capacityAura(r.type,ambient,peers);
+  const effects=peers.map(o=>{const e=engine.operatorEffect(o,r.type,peers,ctx);for(const x of e.crossIn){const provider=effective.get(x.from);if(!provider?.skills.some(s=>s.room===x.fromRoom&&s.crossBuff?.partner===o.id&&s.crossBuff?.room===r.type))e.efficiency-=x.value;}return e;});
+  // Remove the source engine's representative Jaye constants before using
+  // this room's actual capacity and current expected pending-order count.
+  const jayeIndex=peers.findIndex(o=>relevant(o,r.type,ctx.product).some(s=>s.capConv?.t==='diff'));
+  if(r.type==='TRADING'&&jayeIndex>=0){
+   const e=effects[jayeIndex],own=all.filter(s=>s.buffId.startsWith('trade_ord_limit_count')),rate=all.find(s=>s.capConv?.t==='diff').capConv.rate;
+   e.capConv=e.capConv.filter(x=>x.conv.t!=='diff');
+   e.efficiency-=own.reduce((n,s)=>n+s.value,0);e.cap-=own.reduce((n,s)=>n+(s.cap??0),0);
+   const others=engine.combineOutput(effects,peers),negativeAura=Math.min(0,engine.facilityAura(r.type,peers,ambient,others,ctx.product));
+   const startingCapacity=[6,8,10][r.level-1]+effects.reduce((n,x)=>n+x.cap,0)+engine.capacityAura(r.type,ambient,peers);
+   const lost=own.length?Math.min(Math.max(0,startingCapacity-1),Math.floor(Math.max(0,others+negativeAura)/10+EPS)):0;
+   e.cap-=lost;
+   const capacity=Math.max(1,startingCapacity-lost),pending=simulation.tradeInventory?.[r.id]?.orders??0;
+   e.efficiency+=rate*Math.max(0,capacity-(own.length?0:pending));
+  }
+  const plain=engine.combineOutput(effects,peers),conversion=engine.capacityConversion(effects,r.type,ambient,peers),aura=engine.facilityAura(r.type,peers,ambient,plain,ctx.product),capacityBonus=effects.reduce((n,e)=>n+e.cap,0)+engine.capacityAura(r.type,ambient,peers);
   let added=all.reduce((n,s)=>n+(s.drainRoom??0),0),recovery=all.reduce((n,s)=>n+(s.recoverRoom??0)+(s.recoverRoomPer?s.recoverRoomPer.value*peers.filter(o=>engine.inFaction(o,s.recoverRoomPer.faction)).length:0),0);
   if(r.type==='CONTROL')recovery+=.05*Math.max(0,p.ops.length-1);
   for(const op of p.ops){const own=matched.filter(x=>x.op.id===op.id).map(x=>x.skill);let ownDrain=own.reduce((n,s)=>n+(s.moraleDrain??0),0);
@@ -68,8 +83,6 @@ export function terraSnapshot(model,placements,morale,worked={},simulation={}){
    const qualityFactor=Math.min(1+qualityCount*.5,2),violationFactor=Math.max(1-qualityCount,0)*Math.min(1+plain/100,3);
    const specialGain=effects.reduce((n,e)=>n+e.orderFix,0)*Math.min(1+plain/100,3),extra=special?specialGain:quality+payout*qualityFactor+violation*violationFactor;
    let speed=Math.max(0,baseSpeed+(extra/100));
-   const diff=all.filter(s=>s.capConv?.t==='diff').reduce((n,s)=>n+s.capConv.rate,0),pending=simulation.tradeInventory?.[r.id]?.orders??0;
-   if(diff)speed=Math.max(0,speed+diff*([6,8,10][r.level-1]-6-pending)/100);
    const pepe=all.some(s=>s.buffId.startsWith('trade_ord_pepe')),closure=all.some(s=>s.buffId.startsWith('trade_ord_closure')),twoGold=all.some(s=>s.buffId.startsWith('trade_ord_spd&wt'));
    const fixedOrder=pepe||closure||twoGold;
    const estimated=pepe?{seconds:16200,gold:0,lmd:1000,probabilities:null}:closure||twoGold?{seconds:8640,gold:2,lmd:closure?1200:1000,probabilities:[1,0,0]}:{...baseline};
